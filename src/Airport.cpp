@@ -5,6 +5,8 @@ Airport::Airport(const string &code, const string &name, const string &city,
                  const string &country, const pair<float, float> &position)
     : code(code), name(name), city(city), country(country), position(position) {}
 
+Airport::Airport(const string &code) : code(code) {}
+
 string Airport::getCode() const
 {
     return code;
@@ -53,4 +55,9 @@ pair<float, float> Airport::getPosition() const
 void Airport::setPosition(const pair<float, float> &pos)
 {
     position = pos;
+}
+
+bool Airport::operator==(const Airport &other)
+{
+    return code == other.code;
 }

@@ -1,3 +1,6 @@
+#ifndef AIRPORT_H
+#define AIRPORT_H
+
 #include <string>
 #include <utility>
 
@@ -12,6 +15,7 @@ class Airport
 public:
     Airport(const std::string &code, const std::string &name, const std::string &city,
             const std::string &country, const std::pair<float, float> &position);
+    Airport(const std::string &code);
 
     std::string getCode() const;
     void setCode(const std::string &c);
@@ -27,6 +31,8 @@ public:
 
     std::pair<float, float> getPosition() const;
     void setPosition(const std::pair<float, float> &pos);
+
+    bool operator==(const Airport &other);
 };
 
-
+#endif
