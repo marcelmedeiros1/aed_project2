@@ -103,6 +103,19 @@ int FlightNetwork::numFlightsCity(const string &city) const
     }
     return res;
 }
+int FlightNetwork::numFlightsAirline(Airline &airline) const
+{
+    int res = 0;
+    for (Vertex<Airport> *v : airportsGraph.getVertexSet())
+    {
+        vector<Edge<Airport>> adj = v->getAdj();
+        for(Edge<Airport> e : adj){
+            if(e.getInfo() == airline.getCode()) res++;
+        }
+    }
+    return res;
+}
+
 
 set<string> FlightNetwork::getDiffCountriesAirport(const Airport &airport) const
 {
