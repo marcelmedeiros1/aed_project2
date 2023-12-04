@@ -21,8 +21,8 @@ public:
     int getGlobalNumOfFlights() const;
     std::pair<int, int> numFlightsAirport(const Airport &airport);
     int numFlightsCity(const std::string &city) const;
-    int numDiffCountriesAirport(const Airport &airport) const;
-    int numDiffCountriesCity(const std::string &city) const;
+    std::set<std::string> getDiffCountriesAirport(const Airport &airport) const;
+    std::set<std::string> getDiffCountriesCity(const std::string &city) const;
 };
 
 #endif

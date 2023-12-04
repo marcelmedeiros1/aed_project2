@@ -104,7 +104,7 @@ int FlightNetwork::numFlightsCity(const string &city) const
     return res;
 }
 
-int FlightNetwork::numDiffCountriesAirport(const Airport &airport) const
+set<string> FlightNetwork::getDiffCountriesAirport(const Airport &airport) const
 {
     set<string> countries;
     Vertex<Airport> *airport_vertex = airportsGraph.findVertex(airport);
@@ -115,10 +115,10 @@ int FlightNetwork::numDiffCountriesAirport(const Airport &airport) const
         countries.insert(destiny->getInfo().getCountry());
     }
 
-    return countries.size();
+    return countries;
 }
 
-int FlightNetwork::numDiffCountriesCity(const string &city) const
+set<string> FlightNetwork::getDiffCountriesCity(const string &city) const
 {
     set<string> countries;
     for (const Vertex<Airport> *v : airportsGraph.getVertexSet())
@@ -126,5 +126,5 @@ int FlightNetwork::numDiffCountriesCity(const string &city) const
             for (const Edge<Airport> &e : v->getAdj())
                 countries.insert(e.getDest()->getInfo().getCountry());
 
-    return countries.size();
+    return countries;
 }
