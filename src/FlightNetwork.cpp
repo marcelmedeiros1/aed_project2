@@ -1,7 +1,4 @@
 #include "../inc/FlightNetwork.hpp"
-#include <set>
-#include <string>
-
 using namespace std;
 
 FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airports_filename, const string &flights_filename)
@@ -57,7 +54,8 @@ FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airp
     }
 }
 
-Graph<Airport> FlightNetwork::getAiportsGraph(){
+Graph<Airport> FlightNetwork::getAiportsGraph()
+{
     return airportsGraph;
 }
 
@@ -76,28 +74,57 @@ int FlightNetwork::getGlobalNumOfFlights() const
     return total;
 }
 
-pair<int,int> FlightNetwork::numFlights(Airport &airport){
-    
-    vector<Edge<Airport>> res = airportsGraph.EdgesAtDistanceDFS(airport,0);
+pair<int, int> FlightNetwork::numFlightsAirport(const Airport &airport)
+{
+
+    vector<Edge<Airport>> res = airportsGraph.EdgesAtDistanceDFS(airport, 0);
 
     int numFlights = 0;
     set<string> differentAirlines;
-    for(Edge<Airport> e : res){
+    for (Edge<Airport> e : res)
+    {
         differentAirlines.insert(e.getInfo());
         numFlights++;
     }
 
-    pair<int,int> final{numFlights,differentAirlines.size()};
+    pair<int, int> final{numFlights, differentAirlines.size()};
 
     return final;
-
 }
-int FlightNetwork::numFlightsCity(std::string city){
+int FlightNetwork::numFlightsCity(const string &city) const
+{
     int res = 0;
-    for(Vertex<Airport>* v : airportsGraph.getVertexSet()){
+    for (Vertex<Airport> *v : airportsGraph.getVertexSet())
+    {
         Airport air = v->getInfo();
         vector<Edge<Airport>> adj = v->getAdj();
-        if(air.getCity() == city) res += adj.size(); 
+        if (air.getCity() == city)
+            res += adj.size();
     }
     return res;
+}
+
+int FlightNetwork::numDiffCountriesAirport(const Airport &airport) const
+{
+    set<string> countries;
+    Vertex<Airport> *airport_vertex = airportsGraph.findVertex(airport);
+
+    for (const Edge<Airport> &e : airport_vertex->getAdj())
+    {
+        Vertex<Airport> *destiny = e.getDest();
+        countries.insert(destiny->getInfo().getCountry());
+    }
+
+    return countries.size();
+}
+
+int FlightNetwork::numDiffCountriesCity(const string &city) const
+{
+    set<string> countries;
+    for (const Vertex<Airport> *v : airportsGraph.getVertexSet())
+        if (v->getInfo().getCity() == city)
+            for (const Edge<Airport> &e : v->getAdj())
+                countries.insert(e.getDest()->getInfo().getCountry());
+
+    return countries.size();
 }

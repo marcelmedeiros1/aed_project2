@@ -6,6 +6,7 @@
 #include "Airline.hpp"
 #include <fstream>
 #include <sstream>
+#include <set>
 #include <cmath>
 
 class FlightNetwork
@@ -14,12 +15,14 @@ class FlightNetwork
 
 public:
     FlightNetwork(const std::string &airlines_filename, const std::string &airports_filename, const std::string &flights_filename);
+    Graph<Airport> getAiportsGraph();
 
     int getGlobalNumOfAirports() const;
     int getGlobalNumOfFlights() const;
-    std::pair<int,int> numFlights(Airport &airport);
-    int numFlightsCity(std::string city);
-    Graph<Airport> getAiportsGraph();
+    std::pair<int, int> numFlightsAirport(const Airport &airport);
+    int numFlightsCity(const std::string &city) const;
+    int numDiffCountriesAirport(const Airport &airport) const;
+    int numDiffCountriesCity(const std::string &city) const;
 };
 
 #endif

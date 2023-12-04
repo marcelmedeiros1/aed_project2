@@ -3,6 +3,7 @@
 
 #include <string>
 #include <vector>
+#include <queue>
 
 template <class T>
 class Edge;
@@ -87,11 +88,10 @@ public:
     std::vector<T> dfs() const;
     std::vector<T> dfs(const T &source) const;
 
-    std::vector<T> bfs(const T &source) const;
-
     std::vector<T> nodesAtDistanceDFS(const T &source, int k);
-
     std::vector<Edge<T>> EdgesAtDistanceDFS(const T &source, int k);
+
+    std::vector<T> bfs(const T &source) const;
 };
 
 /*
@@ -344,69 +344,114 @@ std::vector<T> Graph<T>::dfs(const T &source) const
     return res;
 }
 
-
 template <class T>
-std::vector<T> Graph<T>::nodesAtDistanceDFS(const T &source, int k) {
+std::vector<T> Graph<T>::nodesAtDistanceDFS(const T &source, int k)
+{
     std::vector<T> res;
     Vertex<T> *aux;
 
-    for(auto v : vertexSet){
+    for (auto v : vertexSet)
+    {
         v->setVisited(false);
     }
 
     aux = this->findVertex(source);
 
-    nodesAtDistanceDFSVisit(aux,k,res);
+    nodesAtDistanceDFSVisit(aux, k, res);
 
     return res;
 }
 
 template <class T>
-void nodesAtDistanceDFSVisit(Vertex<T> *v, int k, std::vector<T> &res) {
+void nodesAtDistanceDFSVisit(Vertex<T> *v, int k, std::vector<T> &res)
+{
     v->setVisited(true);
-    if(k==0) {
+    if (k == 0)
+    {
         res.push_back(v->getInfo());
         return;
     }
-    for(Edge<T> e : v->getAdj()){
+    for (Edge<T> e : v->getAdj())
+    {
         auto w = e.getDest();
-        if(!w->isVisited()){
-            nodesAtDistanceDFSVisit(w,k-1,res);
+        if (!w->isVisited())
+        {
+            nodesAtDistanceDFSVisit(w, k - 1, res);
         }
     }
 }
 
 template <class T>
-std::vector<Edge<T>> Graph<T>::EdgesAtDistanceDFS(const T &source, int k) {
-    std::vector<Edge<T>> res;
-    Vertex<T> *aux;
-
-    for(auto v : vertexSet){
-        v->setVisited(false);
-    }
-
-    aux = this->findVertex(source);
-
-    nodesAtDistanceDFSVisit(aux,k,res);
-
-    return res;
-}
-
-template <class T>
-void nodesAtDistanceDFSVisit(Vertex<T> *v, int k, std::vector<Edge<T>> &res) {
+void nodesAtDistanceDFSVisit(Vertex<T> *v, int k, std::vector<Edge<T>> &res)
+{
     v->setVisited(true);
-    if(k==0) {
-        for(auto aux : v->getAdj()){
+    if (k == 0)
+    {
+        for (auto aux : v->getAdj())
+        {
             res.push_back(aux);
         }
         return;
     }
-    for(Edge<T> e : v->getAdj()){
+    for (Edge<T> e : v->getAdj())
+    {
         auto w = e.getDest();
-        if(!w->isVisited()){
-            nodesAtDistanceDFSVisit(w,k-1,res);
+        if (!w->isVisited())
+        {
+            nodesAtDistanceDFSVisit(w, k - 1, res);
         }
     }
+}
+
+template <class T>
+std::vector<Edge<T>> Graph<T>::EdgesAtDistanceDFS(const T &source, int k)
+{
+    std::vector<Edge<T>> res;
+    Vertex<T> *aux;
+
+    for (auto v : vertexSet)
+    {
+        v->setVisited(false);
+    }
+
+    aux = this->findVertex(source);
+
+    nodesAtDistanceDFSVisit(aux, k, res);
+
+    return res;
+}
+
+template <class T>
+std::vector<T> Graph<T>::bfs(const T &source) const
+{
+    std::vector<T> res;
+    std::queue<Vertex<T> *> aux;
+
+    for (Vertex<T> *v : vertexSet)
+        v->setVisited(false);
+
+    Vertex<T> *source_vertex = findVertex(source);
+    source_vertex->setVisited(true);
+    aux.push(source_vertex);
+
+    while (!aux.empty())
+    {
+        Vertex<T> *curr = aux.front();
+        aux.pop();
+        res.push_back(curr->getInfo());
+
+        for (const Edge<T> &e : curr->getAdj())
+        {
+            Vertex<T> *neighbor = e.getDest();
+            if (!neighbor->isVisited())
+            {
+                neighbor->setVisited(true);
+                aux.push(neighbor);
+            }
+        }
+    }
+
+    return res;
 }
 
 #endif

@@ -2,6 +2,8 @@
 #include <iostream>
 #include <stdexcept>
 
+// g++ -o flightNetworkTest flightNetworkTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
+
 void testNumOfAirports()
 {
     FlightNetwork flightnetwork("../data/airlines.csv", "../data/airports.csv", "../data/flights.csv");
@@ -10,7 +12,6 @@ void testNumOfAirports()
         std::cerr << "Error: getGlobalNumOfAirports()" << std::endl;
         throw std::runtime_error("Test failed");
     }
-    
 }
 
 void testTotalNumOfFlights()
@@ -22,9 +23,6 @@ void testTotalNumOfFlights()
         throw std::runtime_error("Test failed");
     }
 }
-
-
-
 
 int main()
 {

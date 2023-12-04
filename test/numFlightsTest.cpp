@@ -5,19 +5,23 @@
 
 using namespace std;
 
-//g++ -o numFlightsTest numFlightsTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
-void testNumFlights(){
+// g++ -o numFlightsTest numFlightsTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
+
+void testNumFlights()
+{
     FlightNetwork flightnetwork("../data/airlines.csv", "../data/airports.csv", "../data/flights.csv");
-    Airport airport("LAE","Nadzab","Nadzab","Papua New Guinea",{-6.569828,146.726242});
-    pair<int,int> res = flightnetwork.numFlights(airport);
-    
-    if(res.first == 11 && res.second == 2) return;
-        std::cerr << "Error: FlightNework.numFlights();" << std::endl;
-        throw std::runtime_error("Test failed");
+    Airport airport("LAE", "Nadzab", "Nadzab", "Papua New Guinea", {-6.569828, 146.726242});
+    pair<int, int> res = flightnetwork.numFlightsAirport(airport);
+
+    if (res.first == 11 && res.second == 2)
+        return;
+    std::cerr << "Error: FlightNework.numFlights();" << std::endl;
+    throw std::runtime_error("Test failed");
 }
 
-int main(){
-try
+int main()
+{
+    try
     {
         testNumFlights();
 

@@ -6,17 +6,20 @@
 
 using namespace std;
 
-//g++ -o numFlightsTest numFlightsTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
-void testNumFlightsCity(){
+// g++ -o numFlightsTest numFlightsTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
+
+void testNumFlightsCity()
+{
     FlightNetwork flightnetwork("../data/airlines.csv", "../data/airports.csv", "../data/flights.csv");
     string city = "Port Moresby";
     int res = flightnetwork.numFlightsCity(city);
-    
+
     cout << res << endl;
 }
 
-int main(){
-try
+int main()
+{
+    try
     {
         testNumFlightsCity();
 
