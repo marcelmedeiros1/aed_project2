@@ -1,5 +1,7 @@
 #include "../inc/FlightNetwork.hpp"
 #include <set>
+#include <string>
+
 using namespace std;
 
 FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airports_filename, const string &flights_filename)
@@ -89,5 +91,13 @@ pair<int,int> FlightNetwork::numFlights(Airport &airport){
 
     return final;
 
-
+}
+int FlightNetwork::numFlightsCity(std::string city){
+    int res = 0;
+    for(Vertex<Airport>* v : airportsGraph.getVertexSet()){
+        Airport air = v->getInfo();
+        vector<Edge<Airport>> adj = v->getAdj();
+        if(air.getCity() == city) res += adj.size(); 
+    }
+    return res;
 }
