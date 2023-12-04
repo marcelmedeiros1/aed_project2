@@ -1,4 +1,5 @@
 #include "../inc/FlightNetwork.hpp"
+#include <set>
 using namespace std;
 
 FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airports_filename, const string &flights_filename)
@@ -54,6 +55,10 @@ FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airp
     }
 }
 
+Graph<Airport> FlightNetwork::getAiportsGraph(){
+    return airportsGraph;
+}
+
 int FlightNetwork::getGlobalNumOfAirports() const
 {
     return airportsGraph.getNumVertex();
@@ -67,4 +72,22 @@ int FlightNetwork::getGlobalNumOfFlights() const
         total += curr_airport->getAdj().size();
 
     return total;
+}
+
+pair<int,int> FlightNetwork::numFlights(Airport &airport){
+    
+    vector<Edge<Airport>> res = airportsGraph.EdgesAtDistanceDFS(airport,0);
+
+    int numFlights = 0;
+    set<string> differentAirlines;
+    for(Edge<Airport> e : res){
+        differentAirlines.insert(e.getInfo());
+        numFlights++;
+    }
+
+    pair<int,int> final{numFlights,differentAirlines.size()};
+
+    return final;
+
+
 }

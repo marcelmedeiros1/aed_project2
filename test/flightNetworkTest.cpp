@@ -10,6 +10,7 @@ void testNumOfAirports()
         std::cerr << "Error: getGlobalNumOfAirports()" << std::endl;
         throw std::runtime_error("Test failed");
     }
+    
 }
 
 void testTotalNumOfFlights()
@@ -21,6 +22,9 @@ void testTotalNumOfFlights()
         throw std::runtime_error("Test failed");
     }
 }
+
+
+
 
 int main()
 {

@@ -17,6 +17,8 @@ public:
 
     int getGlobalNumOfAirports() const;
     int getGlobalNumOfFlights() const;
+    std::pair<int,int> numFlights(Airport &airport);
+    Graph<Airport> getAiportsGraph();
 };
 
 #endif
