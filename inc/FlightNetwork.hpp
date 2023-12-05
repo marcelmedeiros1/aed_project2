@@ -8,6 +8,7 @@
 #include <sstream>
 #include <set>
 #include <cmath>
+#include <tuple>
 
 class FlightNetwork
 {
@@ -24,6 +25,7 @@ public:
     int numFlightsAirline(Airline &airline) const;
     std::set<std::string> getDiffCountriesAirport(const Airport &airport) const;
     std::set<std::string> getDiffCountriesCity(const std::string &city) const;
+    std::tuple<std::set<std::string>, std::set<std::string>, std::set<std::string>> getAirportDestinations(const Airport &airport) const;
 };
 
 #endif

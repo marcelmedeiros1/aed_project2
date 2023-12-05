@@ -109,13 +109,14 @@ int FlightNetwork::numFlightsAirline(Airline &airline) const
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
     {
         vector<Edge<Airport>> adj = v->getAdj();
-        for(Edge<Airport> e : adj){
-            if(e.getInfo() == airline.getCode()) res++;
+        for (Edge<Airport> e : adj)
+        {
+            if (e.getInfo() == airline.getCode())
+                res++;
         }
     }
     return res;
 }
-
 
 set<string> FlightNetwork::getDiffCountriesAirport(const Airport &airport) const
 {
@@ -140,4 +141,21 @@ set<string> FlightNetwork::getDiffCountriesCity(const string &city) const
                 countries.insert(e.getDest()->getInfo().getCountry());
 
     return countries;
+}
+
+tuple<set<string>, set<string>, set<string>> FlightNetwork::getAirportDestinations(const Airport &airport) const
+{
+    set<string> airports, cities, countries;
+
+    Vertex<Airport> *airport_vertex = airportsGraph.findVertex(airport);
+    for (const Edge<Airport> &e : airport_vertex->getAdj())
+    {
+        Vertex<Airport> *destination = e.getDest();
+
+        airports.insert(destination->getInfo().getName());
+        cities.insert(destination->getInfo().getCity());
+        countries.insert(destination->getInfo().getCountry());
+    }
+
+    return {airports, cities, countries};
 }
