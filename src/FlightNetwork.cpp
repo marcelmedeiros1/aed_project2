@@ -143,19 +143,77 @@ set<string> FlightNetwork::getDiffCountriesCity(const string &city) const
     return countries;
 }
 
-tuple<set<string>, set<string>, set<string>> FlightNetwork::getAirportDestinations(const Airport &airport) const
+set<string> FlightNetwork::getAirportsDestinations(const Airport &airport) const
 {
-    set<string> airports, cities, countries;
-
+    set<string> airports;
     Vertex<Airport> *airport_vertex = airportsGraph.findVertex(airport);
+
     for (const Edge<Airport> &e : airport_vertex->getAdj())
     {
         Vertex<Airport> *destination = e.getDest();
-
         airports.insert(destination->getInfo().getName());
+    }
+
+    return airports;
+}
+
+set<string> FlightNetwork::getCitiesDestinations(const Airport &airport) const
+{
+    set<string> cities;
+    Vertex<Airport> *airport_vertex = airportsGraph.findVertex(airport);
+
+    for (const Edge<Airport> &e : airport_vertex->getAdj())
+    {
+        Vertex<Airport> *destination = e.getDest();
         cities.insert(destination->getInfo().getCity());
+    }
+
+    return cities;
+}
+
+set<string> FlightNetwork::getCountriesDestinations(const Airport &airport) const
+{
+    set<string> countries;
+    Vertex<Airport> *airport_vertex = airportsGraph.findVertex(airport);
+
+    for (const Edge<Airport> &e : airport_vertex->getAdj())
+    {
+        Vertex<Airport> *destination = e.getDest();
         countries.insert(destination->getInfo().getCountry());
     }
 
-    return {airports, cities, countries};
+    return countries;
+}
+
+set<string> FlightNetwork::getReachableAirports(const Airport &airport, const int &distance)
+{
+    set<string> reachableAirports;
+    vector<Airport> aux = airportsGraph.nodesAtDistanceDFS(airport, distance);
+
+    for (const Airport &air : aux)
+        reachableAirports.insert(air.getName());
+
+    return reachableAirports;
+}
+
+set<string> FlightNetwork::getReachableCities(const Airport &airport, const int &distance)
+{
+    set<string> reachableCities;
+    vector<Airport> aux = airportsGraph.nodesAtDistanceDFS(airport, distance);
+
+    for (const Airport &air : aux)
+        reachableCities.insert(air.getCity());
+
+    return reachableCities;
+}
+
+set<string> FlightNetwork::getReachableCountries(const Airport &airport, const int &distance)
+{
+    set<string> reachableCountries;
+    vector<Airport> aux = airportsGraph.nodesAtDistanceDFS(airport, distance);
+
+    for (const Airport &air : aux)
+        reachableCountries.insert(air.getCountry());
+
+    return reachableCountries;
 }
