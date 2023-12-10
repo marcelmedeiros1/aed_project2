@@ -217,3 +217,30 @@ set<string> FlightNetwork::getReachableCountries(const Airport &airport, const i
 
     return reachableCountries;
 }
+
+int FlightNetwork::maximumTrip(vector<pair<string,string>>& airports){
+    int maxStops = -1;
+    
+    for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){
+        const Airport& sourceAirport = sourceVertex->getInfo();
+
+        vector<pair<int,Airport>> shortestPaths = airportsGraph.bfsDistance(sourceVertex);
+
+        for(const auto& destinationPair : shortestPaths){
+            const Airport& destinationAirport = destinationPair.second;
+            int stops = destinationPair.first ; 
+
+            if(stops > maxStops){
+                maxStops = stops;
+                airports.clear();
+                airports.push_back({sourceAirport.getName(),destinationAirport.getName()});
+            } else if(stops == maxStops){
+                airports.push_back({sourceAirport.getName(),destinationAirport.getName()});
+
+            }
+        }
+        
+    }
+
+    return maxStops;
+}

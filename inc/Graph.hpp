@@ -4,6 +4,7 @@
 #include <string>
 #include <vector>
 #include <queue>
+#include <unordered_map>
 
 template <class T>
 class Edge;
@@ -39,6 +40,7 @@ public:
 
     const std::vector<Edge<T>> &getAdj() const;
     void setAdj(const std::vector<Edge<T>> &adj_vec);
+
 
     friend class Graph<T>;
 };
@@ -92,6 +94,9 @@ public:
     std::vector<Edge<T>> EdgesAtDistanceDFS(const T &source, int k);
 
     std::vector<T> bfs(const T &source) const;
+    std::vector<std::pair<int,T>> bfsDistance(Vertex<T>* source); 
+    std::vector<std::pair<int,T>> dijkstra(const T& source);
+
 };
 
 /*
@@ -453,5 +458,106 @@ std::vector<T> Graph<T>::bfs(const T &source) const
 
     return res;
 }
+
+template <class T>
+std::vector<std::pair<int,T>> Graph<T>::bfsDistance(Vertex<T>* source){
+    std::vector<std::pair<int,T>> res;
+    std::queue<Vertex<T> *> aux;
+
+    for (Vertex<T> *v : vertexSet)
+        v->setVisited(false);
+
+    source->setVisited(true);
+    aux.push(source);
+    int distance = 0;
+
+    while (!aux.empty())
+    {
+        Vertex<T> *curr = aux.front();
+        aux.pop();
+        res.push_back({distance,curr->getInfo()});
+    
+        for (const Edge<T> &e : curr->getAdj())
+        {
+            Vertex<T> *neighbor = e.getDest();
+            if (!neighbor->isVisited())
+            {
+                neighbor->setVisited(true);
+                aux.push(neighbor);
+            }
+
+        }
+        distance++;
+    }
+
+    return res;
+}
+
+
+
+/*Using Dijkstra algorithm to find shortest paths in the graph
+template <class T>
+struct DijkstraInfo {
+    Vertex<T>* vertex;
+    double distance;
+
+    DijkstraInfo(Vertex<T>* v, double d) : vertex(v), distance(d) {}
+
+    bool operator>(const DijkstraInfo& other) const {
+        return distance > other.distance;
+    }
+
+
+};
+
+template <class T>
+std::vector<std::pair<int, T>> Graph<T>::dijkstra(const T& source) {
+    std::vector<std::pair<int, T>> shortestPaths;
+
+    // Priority queue to select the vertex with the minimum distance
+    std::priority_queue<DijkstraInfo<T>, std::vector<DijkstraInfo<T>>, std::greater<>> pq;
+
+    // Initialize distances to all vertices as infinity
+    std::unordered_map<Vertex<T>*, double> distances;
+    for (Vertex<T>* vertex : vertexSet) {
+        distances[vertex] = 1000000000000000000000.0;
+    }
+
+    // Set the distance of the source vertex to 0
+    Vertex<T>* sourceVertex = this->findVertex(source);
+    distances[sourceVertex] = 0;
+    pq.push(DijkstraInfo<T>(sourceVertex, 0));
+
+    while (!pq.empty()) {
+        DijkstraInfo<T> currentInfo = pq.top();
+        pq.pop();
+
+        Vertex<T>* currentVertex = currentInfo.vertex;
+        double currentDistance = currentInfo.distance;
+
+        // Update the distances of neighboring vertices
+        for (const Edge<T>& edge : currentVertex->getAdj()) {
+            Vertex<T>* neighborVertex = edge.getDest();
+            double edgeWeight = edge.getWeight();
+
+            double newDistance = currentDistance + edgeWeight;
+
+            if (newDistance < distances[neighborVertex]) {
+                distances[neighborVertex] = newDistance;
+                pq.push(DijkstraInfo<T>(neighborVertex, newDistance));
+            }
+        }
+    }
+
+    // Convert the distances to the desired format (pair of stops and airport)
+    for (const auto& entry : distances) {
+        Vertex<T>* vertex = entry.first;
+        double distance = entry.second;
+        shortestPaths.emplace_back(static_cast<int>(distance), vertex->getInfo());
+    }
+
+    return shortestPaths;
+}
+*/
 
 #endif
