@@ -255,9 +255,7 @@ set<string> FlightNetwork::getGreatestTraffic(const int &k){
     );
     set<string> greatest;
 
-     for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){
-        aux.insert(sourceVertex);
-    }
+     for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){aux.insert(sourceVertex);}
     cout << aux.size() << endl;
     cout << getGlobalNumOfAirports() << endl;
     for (auto it = aux.begin(); it != aux.end() && greatest.size() < k; ++it)
