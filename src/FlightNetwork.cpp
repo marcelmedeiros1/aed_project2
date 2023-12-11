@@ -245,24 +245,24 @@ int FlightNetwork::maximumTrip(vector<pair<string,string>>& airports){
 
     return maxStops;
 }
-bool compareVerticesByCapacity(const Vertex<Airport>* v1, const Vertex<Airport>* v2) {
-    return v1->getAdj().size() > v2->getAdj().size();
-}
+
 set<string> FlightNetwork::getGreatestTraffic(const int &k){
 
-    std::multiset<Vertex<Airport>*, std::function<bool(const Vertex<Airport>*, const Vertex<Airport>*)>> aux(
-        compareVerticesByCapacity
+    std::multiset<Vertex<Airport>*, std::function<bool(Vertex<Airport>*, Vertex<Airport>*)>> aux(
+        [](Vertex<Airport>* v1, Vertex<Airport>* v2) {
+            return v1->getAdj().size() > v2->getAdj().size();
+        }
     );
     set<string> greatest;
 
      for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){
         aux.insert(sourceVertex);
     }
-
+    cout << aux.size() << endl;
+    cout << getGlobalNumOfAirports() << endl;
     for (auto it = aux.begin(); it != aux.end() && greatest.size() < k; ++it)
     {
         Vertex<Airport>* sourceVertex = *it;
-        cout << sourceVertex->getInfo().getName() << ": " << sourceVertex->getAdj().size() << endl;
         greatest.insert(sourceVertex->getInfo().getName());
     }
     return greatest;
