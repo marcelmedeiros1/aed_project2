@@ -9,8 +9,9 @@ void testGetGreatestTraffic()
     FlightNetwork flightnetwork("../data/airlines.csv", "../data/airports.csv", "../data/flights.csv");
     
     set<string> res = flightnetwork.getGreatestTraffic(10);
-
-
+    for(auto a : res){
+        cout << a << endl;
+    }
 }
 
 int main()
