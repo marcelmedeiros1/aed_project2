@@ -33,6 +33,7 @@ public:
     void setPosition(const std::pair<float, float> &pos);
 
     bool operator==(const Airport &other);
+    bool operator<(const Airport &other);
 };
 
 #endif

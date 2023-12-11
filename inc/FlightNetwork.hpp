@@ -32,7 +32,7 @@ public:
     std::set<std::string> getReachableCities(const Airport &airport, const int &distance);    // 3) vi.
     std::set<std::string> getReachableCountries(const Airport &airport, const int &distance); // 3) vi.
     int maximumTrip(std::vector<std::pair<std::string,std::string>>& airports);               // 3) vii.
-
+    std::set<std::string> getGreatestTraffic(const int &k);                                   // 3) viii.
 };
 
 #endif

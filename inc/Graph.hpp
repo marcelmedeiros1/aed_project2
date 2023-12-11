@@ -40,8 +40,7 @@ public:
 
     const std::vector<Edge<T>> &getAdj() const;
     void setAdj(const std::vector<Edge<T>> &adj_vec);
-
-
+    bool operator <(Vertex<T> *other) {return this->adj.size() > other->getAdj().size();}
     friend class Graph<T>;
 };
 
@@ -63,7 +62,7 @@ public:
 
     double getWeight() const;
     void setWeight(double weight);
-
+    
     friend class Graph<T>;
     friend class Vertex<T>;
 };
