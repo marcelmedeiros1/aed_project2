@@ -5,7 +5,7 @@
 #include <vector>
 #include <queue>
 #include <unordered_map>
-
+using namespace std;
 template <class T>
 class Edge;
 
@@ -22,6 +22,7 @@ class Vertex
     std::vector<Edge<T>> adj;
     bool visited;
     bool processing;
+    int indegree;
 
 public:
     Vertex(T in);
@@ -34,6 +35,9 @@ public:
 
     bool isProcessing() const;
     void setProcessing(bool p);
+
+    void setInDegree(int i);
+    int getInDegree();
 
     void addEdge(Vertex<T> *dest, std::string in, double w);
     bool removeEdgeTo(Vertex<T> *d);
@@ -95,6 +99,7 @@ public:
     std::vector<T> bfs(const T &source) const;
     std::vector<std::pair<int,T>> bfsDistance(Vertex<T>* source); 
     std::vector<std::pair<int,T>> dijkstra(const T& source);
+    void inDegree(Vertex<T>* source);
 
 };
 
@@ -140,7 +145,16 @@ void Vertex<T>::setProcessing(bool p)
 {
     processing = p;
 }
-
+template <class T>
+void Vertex<T>::setInDegree(int i)
+{
+    indegree=i;
+}
+template <class T>
+int Vertex<T>::getInDegree()
+{
+    return indegree;
+}
 template <class T>
 void Vertex<T>::addEdge(Vertex<T> *d, std::string in, double w)
 {
@@ -490,6 +504,21 @@ std::vector<std::pair<int,T>> Graph<T>::bfsDistance(Vertex<T>* source){
     }
 
     return res;
+}
+template <class T>
+void Graph<T>::inDegree(Vertex<T> * source){
+    int res=0;
+    if(source == NULL) return;
+    
+    for(auto it = vertexSet.begin(); it!= vertexSet.end(); ++it){
+        Vertex<T> * aux = *it;
+        std::vector<Edge<T>> adj = aux->getAdj();
+        for(auto ed : adj){
+            if(ed.getDest() == source) res++;
+        }
+    }
+    source->setInDegree(res);
+
 }
 
 

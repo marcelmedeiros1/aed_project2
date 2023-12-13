@@ -247,16 +247,17 @@ int FlightNetwork::maximumTrip(vector<pair<string,string>>& airports){
 }
 
 set<string> FlightNetwork::getGreatestTraffic(const int &k){
+    for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){airportsGraph.inDegree(sourceVertex);}
 
     std::multiset<Vertex<Airport>*, std::function<bool(Vertex<Airport>*, Vertex<Airport>*)>> aux(
-        [](Vertex<Airport>* v1, Vertex<Airport>* v2) {
-            return v1->getAdj().size() > v2->getAdj().size();
-        }
-    );
+    [](Vertex<Airport>* v1, Vertex<Airport>* v2) {
+        
+        return (v1->getAdj().size()+v1->getInDegree()) > (v2->getAdj().size()+v2->getInDegree());
+    }
+);
     set<string> greatest;
 
-     for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){aux.insert(sourceVertex);}
-
+    for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){aux.insert(sourceVertex);}
     for (auto it = aux.begin(); it != aux.end() && greatest.size() < k; ++it)
     {
         Vertex<Airport>* sourceVertex = *it;
