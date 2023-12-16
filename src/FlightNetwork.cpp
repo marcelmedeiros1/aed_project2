@@ -220,25 +220,30 @@ set<string> FlightNetwork::getReachableCountries(const Airport &airport, const i
     return reachableCountries;
 }
 
-int FlightNetwork::maximumTrip(vector<pair<string,string>>& airports){
+int FlightNetwork::maximumTrip(vector<pair<string, string>> &airports)
+{
     int maxStops = -1;
-    
-    for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){
-        const Airport& sourceAirport = sourceVertex->getInfo();
 
-        vector<pair<int,Airport>> shortestPaths = airportsGraph.bfsDistance(sourceVertex);
+    for (Vertex<Airport> *sourceVertex : airportsGraph.getVertexSet())
+    {
+        const Airport &sourceAirport = sourceVertex->getInfo();
 
-        for(const auto& destinationPair : shortestPaths){
-            const Airport& destinationAirport = destinationPair.second;
-            int stops = destinationPair.first ; 
+        vector<pair<int, Airport>> shortestPaths = airportsGraph.bfsDistance(sourceVertex);
 
-            if(stops > maxStops){
+        for (const auto &destinationPair : shortestPaths)
+        {
+            const Airport &destinationAirport = destinationPair.second;
+            int stops = destinationPair.first;
+
+            if (stops > maxStops)
+            {
                 maxStops = stops;
                 airports.clear();
-                airports.push_back({sourceAirport.getName(),destinationAirport.getName()});
-            } else if(stops == maxStops){
-                airports.push_back({sourceAirport.getName(),destinationAirport.getName()});
-
+                airports.push_back({sourceAirport.getName(), destinationAirport.getName()});
+            }
+            else if (stops == maxStops)
+            {
+                airports.push_back({sourceAirport.getName(), destinationAirport.getName()});
             }
         }
     }
@@ -246,22 +251,72 @@ int FlightNetwork::maximumTrip(vector<pair<string,string>>& airports){
     return maxStops;
 }
 
-set<string> FlightNetwork::getGreatestTraffic(const int &k){
-    for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){airportsGraph.inDegree(sourceVertex);}
-
-    std::multiset<Vertex<Airport>*, std::function<bool(Vertex<Airport>*, Vertex<Airport>*)>> aux(
-    [](Vertex<Airport>* v1, Vertex<Airport>* v2) {
-        
-        return (v1->getAdj().size()+v1->getInDegree()) > (v2->getAdj().size()+v2->getInDegree());
+set<string> FlightNetwork::getGreatestTraffic(const int &k)
+{
+    for (Vertex<Airport> *sourceVertex : airportsGraph.getVertexSet())
+    {
+        airportsGraph.inDegree(sourceVertex);
     }
-);
+
+    multiset<Vertex<Airport> *, function<bool(Vertex<Airport> *, Vertex<Airport> *)>> aux(
+        [](Vertex<Airport> *v1, Vertex<Airport> *v2)
+        {
+            return (v1->getAdj().size() + v1->getInDegree()) > (v2->getAdj().size() + v2->getInDegree());
+        });
     set<string> greatest;
 
-    for(Vertex<Airport>* sourceVertex : airportsGraph.getVertexSet()){aux.insert(sourceVertex);}
+    for (Vertex<Airport> *sourceVertex : airportsGraph.getVertexSet())
+    {
+        aux.insert(sourceVertex);
+    }
     for (auto it = aux.begin(); it != aux.end() && greatest.size() < k; ++it)
     {
-        Vertex<Airport>* sourceVertex = *it;
+        Vertex<Airport> *sourceVertex = *it;
         greatest.insert(sourceVertex->getInfo().getName());
     }
     return greatest;
+}
+
+void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i)
+{
+    v->setNum(i);
+    v->setLow(i);
+    i++;
+    int children = 0;
+
+    for (const Edge<Airport> &e : v->getAdj())
+    {
+        Vertex<Airport> *w = e.getDest();
+
+        if (w->getNum() == 0)
+        {
+            children++;
+            dfs_art(g, w, l, i);
+            v->setLow(min(v->getLow(), w->getLow()));
+
+            if (v->getNum() != 1 && w->getLow() >= v->getNum())
+                l.insert(v->getInfo().getName());
+        }
+        else if (w->getNum() > 0)
+            v->setLow(min(v->getLow(), w->getNum()));
+    }
+
+    if (v->getNum() == 1 && children > 1)
+        l.insert(v->getInfo().getName());
+}
+
+set<string> FlightNetwork::getEssentialAirports()
+{
+    set<string> res;
+    int i = 0;
+
+    for (Vertex<Airport> *v : airportsGraph.getVertexSet())
+        v->setNum(0);
+
+    i++;
+    for (Vertex<Airport> *v : airportsGraph.getVertexSet())
+        if (v->getNum() == 0)
+            dfs_art(airportsGraph, v, res, i);
+
+    return res;
 }

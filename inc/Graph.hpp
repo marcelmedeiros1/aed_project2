@@ -23,6 +23,8 @@ class Vertex
     bool visited;
     bool processing;
     int indegree;
+    int num;
+    int low;
 
 public:
     Vertex(T in);
@@ -39,12 +41,18 @@ public:
     void setInDegree(int i);
     int getInDegree();
 
+    int getNum() const;
+    void setNum(int num);
+
+    int getLow() const;
+    void setLow(int low);
+
     void addEdge(Vertex<T> *dest, std::string in, double w);
     bool removeEdgeTo(Vertex<T> *d);
 
     const std::vector<Edge<T>> &getAdj() const;
     void setAdj(const std::vector<Edge<T>> &adj_vec);
-    bool operator <(Vertex<T> *other) {return this->adj.size() > other->getAdj().size();}
+    bool operator<(Vertex<T> *other) { return this->adj.size() > other->getAdj().size(); }
     friend class Graph<T>;
 };
 
@@ -66,7 +74,7 @@ public:
 
     double getWeight() const;
     void setWeight(double weight);
-    
+
     friend class Graph<T>;
     friend class Vertex<T>;
 };
@@ -97,10 +105,9 @@ public:
     std::vector<Edge<T>> EdgesAtDistanceDFS(const T &source, int k);
 
     std::vector<T> bfs(const T &source) const;
-    std::vector<std::pair<int,T>> bfsDistance(Vertex<T>* source); 
-    std::vector<std::pair<int,T>> dijkstra(const T& source);
-    void inDegree(Vertex<T>* source);
-
+    std::vector<std::pair<int, T>> bfsDistance(Vertex<T> *source);
+    std::vector<std::pair<int, T>> dijkstra(const T &source);
+    void inDegree(Vertex<T> *source);
 };
 
 /*
@@ -145,16 +152,43 @@ void Vertex<T>::setProcessing(bool p)
 {
     processing = p;
 }
+
 template <class T>
 void Vertex<T>::setInDegree(int i)
 {
-    indegree=i;
+    indegree = i;
 }
+
 template <class T>
 int Vertex<T>::getInDegree()
 {
     return indegree;
 }
+
+template <class T>
+int Vertex<T>::getNum() const
+{
+    return num;
+}
+
+template <class T>
+void Vertex<T>::setNum(int num)
+{
+    Vertex::num = num;
+}
+
+template <class T>
+int Vertex<T>::getLow() const
+{
+    return low;
+}
+
+template <class T>
+void Vertex<T>::setLow(int low)
+{
+    Vertex::low = low;
+}
+
 template <class T>
 void Vertex<T>::addEdge(Vertex<T> *d, std::string in, double w)
 {
@@ -473,8 +507,9 @@ std::vector<T> Graph<T>::bfs(const T &source) const
 }
 
 template <class T>
-std::vector<std::pair<int,T>> Graph<T>::bfsDistance(Vertex<T>* source){
-    std::vector<std::pair<int,T>> res;
+std::vector<std::pair<int, T>> Graph<T>::bfsDistance(Vertex<T> *source)
+{
+    std::vector<std::pair<int, T>> res;
     std::queue<Vertex<T> *> aux;
 
     for (Vertex<T> *v : vertexSet)
@@ -488,8 +523,8 @@ std::vector<std::pair<int,T>> Graph<T>::bfsDistance(Vertex<T>* source){
     {
         Vertex<T> *curr = aux.front();
         aux.pop();
-        res.push_back({distance,curr->getInfo()});
-    
+        res.push_back({distance, curr->getInfo()});
+
         for (const Edge<T> &e : curr->getAdj())
         {
             Vertex<T> *neighbor = e.getDest();
@@ -498,7 +533,6 @@ std::vector<std::pair<int,T>> Graph<T>::bfsDistance(Vertex<T>* source){
                 neighbor->setVisited(true);
                 aux.push(neighbor);
             }
-
         }
         distance++;
     }
@@ -506,22 +540,24 @@ std::vector<std::pair<int,T>> Graph<T>::bfsDistance(Vertex<T>* source){
     return res;
 }
 template <class T>
-void Graph<T>::inDegree(Vertex<T> * source){
-    int res=0;
-    if(source == NULL) return;
-    
-    for(auto it = vertexSet.begin(); it!= vertexSet.end(); ++it){
-        Vertex<T> * aux = *it;
+void Graph<T>::inDegree(Vertex<T> *source)
+{
+    int res = 0;
+    if (source == NULL)
+        return;
+
+    for (auto it = vertexSet.begin(); it != vertexSet.end(); ++it)
+    {
+        Vertex<T> *aux = *it;
         std::vector<Edge<T>> adj = aux->getAdj();
-        for(auto ed : adj){
-            if(ed.getDest() == source) res++;
+        for (auto ed : adj)
+        {
+            if (ed.getDest() == source)
+                res++;
         }
     }
     source->setInDegree(res);
-
 }
-
-
 
 /*Using Dijkstra algorithm to find shortest paths in the graph
 template <class T>
