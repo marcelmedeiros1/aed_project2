@@ -313,7 +313,7 @@ set<string> FlightNetwork::getEssentialAirports()
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
         v->setNum(0);
 
-    i++;
+    //i++;
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
         if (v->getNum() == 0)
             dfs_art(airportsGraph, v, res, i);

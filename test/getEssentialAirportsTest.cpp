@@ -35,8 +35,8 @@ int main()
 {
     try
     {
-        testEssentialAirports();
-        //realEssentialAirports();
+        //testEssentialAirports();
+        realEssentialAirports();
         return 0;
     }
     catch (const std::exception &e)
