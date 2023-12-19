@@ -354,3 +354,14 @@ Airport FlightNetwork::nameCriteria(string name){
     }
     throw std::runtime_error("No airport with this name");
 }
+
+vector<Airport> FlightNetwork::cityCriteria(string city){
+    vector<Airport> res;
+    for(Vertex<Airport>* a : airportsGraph.getVertexSet()){
+        if(a->getInfo().getCity() == city){
+            Airport airport = a->getInfo();
+            res.push_back(airport);
+        }
+    }
+    return res;
+}

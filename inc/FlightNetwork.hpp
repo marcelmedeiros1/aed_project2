@@ -38,6 +38,7 @@ public:
 
     Airport codeCriteria(std::string code);                                                  // 4) i.
     Airport nameCriteria(std::string name);
+    std::vector<Airport> cityCriteria(std::string city);
 };
 
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
