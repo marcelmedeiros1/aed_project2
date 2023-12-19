@@ -50,8 +50,7 @@ FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airp
 
         Vertex<Airport> *source_vertex = airportsGraph.findVertex(source_airport);
         Vertex<Airport> *target_vertex = airportsGraph.findVertex(target_airport);
-        double distance = sqrt(pow(source_vertex->getInfo().getPosition().first - target_vertex->getInfo().getPosition().first, 2) + pow(source_vertex->getInfo().getPosition().second - target_vertex->getInfo().getPosition().second, 2));
-
+        double distance = haversineDistance(source_vertex->getInfo().getPosition().first, source_vertex->getInfo().getPosition().second, target_vertex->getInfo().getPosition().first, target_vertex->getInfo().getPosition().second);
         source_vertex->addEdge(target_vertex, airline, distance);
     }
 }
@@ -313,10 +312,25 @@ set<string> FlightNetwork::getEssentialAirports()
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
         v->setNum(0);
 
-    //i++;
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
         if (v->getNum() == 0)
             dfs_art(airportsGraph, v, res, i);
 
     return res;
+}
+
+double haversineDistance(double lat1, double lon1, double lat2, double lon2)
+{
+    const double earthRadius = 6371.0;
+
+    double diffLat = (lat2 - lat1) * M_PI / 180.0;
+    double diffLon = (lon2 - lon1) * M_PI / 180.0;
+
+    lat1 = (lat1)*M_PI / 180.0;
+    lat2 = (lat2)*M_PI / 180.0;
+
+    double a = pow(sin(diffLat / 2), 2) + pow(sin(diffLon / 2), 2) * cos(lat1) * cos(lat2);
+    double c = 2 * asin(sqrt(a));
+
+    return earthRadius * c;
 }

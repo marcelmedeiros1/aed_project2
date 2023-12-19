@@ -34,7 +34,10 @@ public:
     std::set<std::string> getReachableCountries(const Airport &airport, const int &distance); // 3) vi.
     int maximumTrip(std::vector<std::pair<std::string, std::string>> &airports);              // 3) vii.
     std::set<std::string> getGreatestTraffic(const int &k);                                   // 3) viii.
-    std::set<std::string> getEssentialAirports();                                       // 3) ix.
+    std::set<std::string> getEssentialAirports();                                             // 3) ix.
 };
+
+void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
+double haversineDistance(double lat1, double lon1, double lat2, double lon2);
 
 #endif
