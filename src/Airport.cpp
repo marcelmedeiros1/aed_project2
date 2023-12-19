@@ -61,7 +61,8 @@ bool Airport::operator==(const Airport &other)
 {
     return code == other.code;
 }
+
 bool Airport::operator<(const Airport &other)
 {
-    return code == other.code;
+    return code < other.code;
 }

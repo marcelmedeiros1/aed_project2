@@ -394,3 +394,43 @@ vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float 
 
     return res;
 }
+
+vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const Airport &destination) const
+{
+    vector<vector<Airport>> result;
+    queue<vector<Airport>> q;
+    set<string> visited;
+
+    q.push({source});
+    visited.insert(source.getCode());
+
+    while (!q.empty())
+    {
+        vector<Airport> currentPath = q.front();
+        q.pop();
+
+        Airport currentAirport = currentPath.back();
+
+        if (currentAirport == destination)
+        {
+            result.push_back(currentPath);
+            continue;
+        }
+
+        for (const Edge<Airport> &edge : airportsGraph.findVertex(currentAirport)->getAdj())
+        {
+            Airport neighborAirport = edge.getDest()->getInfo();
+
+            if (visited.find(neighborAirport.getCode()) == visited.end())
+            {
+                vector<Airport> newPath = currentPath;
+                newPath.push_back(neighborAirport);
+
+                q.push(newPath);
+                visited.insert(neighborAirport.getCode());
+            }
+        }
+    }
+
+    return result;
+}
