@@ -35,6 +35,9 @@ public:
     int maximumTrip(std::vector<std::pair<std::string, std::string>> &airports);              // 3) vii.
     std::set<std::string> getGreatestTraffic(const int &k);                                   // 3) viii.
     std::set<std::string> getEssentialAirports();                                             // 3) ix.
+
+    Airport codeCriteria(std::string code);                                                  // 4) i.
+    Airport nameCriteria(std::string name);
 };
 
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);

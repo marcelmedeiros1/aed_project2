@@ -334,3 +334,23 @@ double haversineDistance(double lat1, double lon1, double lat2, double lon2)
 
     return earthRadius * c;
 }
+
+Airport FlightNetwork::codeCriteria(string code){
+    for(Vertex<Airport>* a : airportsGraph.getVertexSet()){
+        if(a->getInfo().getCode() == code){
+            Airport res = a->getInfo();
+            return res;
+        }
+    }
+    throw std::runtime_error("No airport with this code");
+}
+
+Airport FlightNetwork::nameCriteria(string name){
+    for(Vertex<Airport>* a : airportsGraph.getVertexSet()){
+        if(a->getInfo().getName() == name){
+            Airport res = a->getInfo();
+            return res;
+        }
+    }
+    throw std::runtime_error("No airport with this name");
+}
