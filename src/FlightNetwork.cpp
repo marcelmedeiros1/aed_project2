@@ -1,7 +1,21 @@
 #include "../inc/FlightNetwork.hpp"
-#include "iostream"
-#include <functional>
 using namespace std;
+
+double haversineDistance(double lat1, double lon1, double lat2, double lon2)
+{
+    const double earthRadius = 6371.0;
+
+    double diffLat = (lat2 - lat1) * M_PI / 180.0;
+    double diffLon = (lon2 - lon1) * M_PI / 180.0;
+
+    lat1 = (lat1)*M_PI / 180.0;
+    lat2 = (lat2)*M_PI / 180.0;
+
+    double a = pow(sin(diffLat / 2), 2) + pow(sin(diffLon / 2), 2) * cos(lat1) * cos(lat2);
+    double c = 2 * asin(sqrt(a));
+
+    return earthRadius * c;
+}
 
 FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airports_filename, const string &flights_filename)
 {
@@ -319,49 +333,64 @@ set<string> FlightNetwork::getEssentialAirports()
     return res;
 }
 
-double haversineDistance(double lat1, double lon1, double lat2, double lon2)
+Airport FlightNetwork::codeCriteria(const string &code) const
 {
-    const double earthRadius = 6371.0;
-
-    double diffLat = (lat2 - lat1) * M_PI / 180.0;
-    double diffLon = (lon2 - lon1) * M_PI / 180.0;
-
-    lat1 = (lat1)*M_PI / 180.0;
-    lat2 = (lat2)*M_PI / 180.0;
-
-    double a = pow(sin(diffLat / 2), 2) + pow(sin(diffLon / 2), 2) * cos(lat1) * cos(lat2);
-    double c = 2 * asin(sqrt(a));
-
-    return earthRadius * c;
-}
-
-Airport FlightNetwork::codeCriteria(string code){
-    for(Vertex<Airport>* a : airportsGraph.getVertexSet()){
-        if(a->getInfo().getCode() == code){
+    for (Vertex<Airport> *a : airportsGraph.getVertexSet())
+    {
+        if (a->getInfo().getCode() == code)
+        {
             Airport res = a->getInfo();
             return res;
         }
     }
-    throw std::runtime_error("No airport with this code");
+
+    throw runtime_error("No airport with this code.");
 }
 
-Airport FlightNetwork::nameCriteria(string name){
-    for(Vertex<Airport>* a : airportsGraph.getVertexSet()){
-        if(a->getInfo().getName() == name){
+Airport FlightNetwork::nameCriteria(const string &name) const
+{
+    for (Vertex<Airport> *a : airportsGraph.getVertexSet())
+    {
+        if (a->getInfo().getName() == name)
+        {
             Airport res = a->getInfo();
             return res;
         }
     }
-    throw std::runtime_error("No airport with this name");
+
+    throw runtime_error("No airport with this name.");
 }
 
-vector<Airport> FlightNetwork::cityCriteria(string city){
+vector<Airport> FlightNetwork::cityCriteria(const string &city) const
+{
     vector<Airport> res;
-    for(Vertex<Airport>* a : airportsGraph.getVertexSet()){
-        if(a->getInfo().getCity() == city){
+    for (Vertex<Airport> *a : airportsGraph.getVertexSet())
+    {
+        if (a->getInfo().getCity() == city)
+        {
             Airport airport = a->getInfo();
             res.push_back(airport);
         }
     }
+
+    if (res.empty())
+        throw runtime_error("No city with this name.");
+
+    return res;
+}
+
+vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float &lon, const double &radius) const
+{
+    vector<Airport> res;
+    for (Vertex<Airport> *a : airportsGraph.getVertexSet())
+    {
+        double distance = haversineDistance(lat, lon, a->getInfo().getPosition().first, a->getInfo().getPosition().second);
+        if (distance <= radius)
+            res.push_back(a->getInfo());
+    }
+
+    if (res.empty())
+        throw runtime_error("There are no airports in this area.");
+
     return res;
 }

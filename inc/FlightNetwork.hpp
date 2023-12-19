@@ -10,6 +10,7 @@
 #include <stack>
 #include <cmath>
 #include <tuple>
+#include <functional>
 
 class FlightNetwork
 {
@@ -36,9 +37,10 @@ public:
     std::set<std::string> getGreatestTraffic(const int &k);                                   // 3) viii.
     std::set<std::string> getEssentialAirports();                                             // 3) ix.
 
-    Airport codeCriteria(std::string code);                                                  // 4) i.
-    Airport nameCriteria(std::string name);
-    std::vector<Airport> cityCriteria(std::string city);
+    Airport codeCriteria(const std::string &code) const;                                                     // 4) i.
+    Airport nameCriteria(const std::string &name) const;                                                     // 4) i.
+    std::vector<Airport> cityCriteria(const std::string &city) const;                                        // 4) ii.
+    std::vector<Airport> coordinateCriteria(const float &lat, const float &lon, const double &radius) const; // 4) iii.
 };
 
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
