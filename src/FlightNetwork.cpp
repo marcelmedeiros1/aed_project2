@@ -381,12 +381,18 @@ vector<Airport> FlightNetwork::cityCriteria(const string &city) const
 
 vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float &lon, const double &radius) const
 {
+    double max = 100000000000000000.0;
     vector<Airport> res;
     for (Vertex<Airport> *a : airportsGraph.getVertexSet())
     {
         double distance = haversineDistance(lat, lon, a->getInfo().getPosition().first, a->getInfo().getPosition().second);
-        if (distance <= radius)
+        if (distance < max){
+            res.clear();
             res.push_back(a->getInfo());
+            max = distance;
+        } else if(distance == max){
+            res.push_back(a->getInfo());
+        }
     }
 
     if (res.empty())

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <stdexcept>
 
-//
+//g++ -o coordinateCriteria coordinateCriteria.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
 
 void testCoordinateCriteria(FlightNetwork &flightnetwork)
 {
