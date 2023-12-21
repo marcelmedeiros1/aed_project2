@@ -386,11 +386,14 @@ vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float 
     for (Vertex<Airport> *a : airportsGraph.getVertexSet())
     {
         double distance = haversineDistance(lat, lon, a->getInfo().getPosition().first, a->getInfo().getPosition().second);
-        if (distance < max){
+        if (distance < max)
+        {
             res.clear();
             res.push_back(a->getInfo());
             max = distance;
-        } else if(distance == max){
+        }
+        else if (distance == max)
+        {
             res.push_back(a->getInfo());
         }
     }
@@ -439,4 +442,101 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
     }
 
     return result;
+}
+
+/*
+    0 -> Airport code
+    1 -> Airport name
+    2 -> City
+    3 -> Coordinate
+*/
+vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const int &flag2) const
+{
+    vector<Airport> sources;
+    vector<Airport> destinations;
+    vector<vector<Airport>> res;
+
+    switch (flag1)
+    {
+    case 0:
+    {
+        string code;
+        cout << "Source Airport code = ", cin >> code;
+        sources.push_back(codeCriteria(code));
+        break;
+    }
+    case 1:
+    {
+        string name;
+        cout << "Source Airport name = ", cin >> name;
+        sources.push_back(nameCriteria(name));
+        break;
+    }
+    case 2:
+    {
+        string city;
+        cout << "Source City name = ", cin >> city;
+        sources = cityCriteria(city);
+        break;
+    }
+    case 3:
+    {
+        float lat, lon;
+        double rad;
+        cout << "Source Latitude = ", cin >> lat, cout << "Source Longitude = ", cin >> lon, cout << "Source Radius = ", cin >> rad;
+        sources = coordinateCriteria(lat, lon, rad);
+        break;
+    }
+
+    default:
+        break;
+    }
+
+    switch (flag2)
+    {
+    case 0:
+    {
+        string code;
+        cout << "Destination Airport code = ", cin >> code;
+        destinations.push_back(codeCriteria(code));
+        break;
+    }
+    case 1:
+    {
+        string name;
+        cout << "Destination Airport name = ", cin >> name;
+        destinations.push_back(nameCriteria(name));
+        break;
+    }
+    case 2:
+    {
+        string city;
+        cout << "Destination City name = ", cin >> city;
+        destinations = cityCriteria(city);
+        break;
+    }
+    case 3:
+    {
+        float lat, lon;
+        double rad;
+        cout << "Destination Latitude = ", cin >> lat, cout << "Destination Longitude = ", cin >> lon, cout << "Destination Radius = ", cin >> rad;
+        destinations = coordinateCriteria(lat, lon, rad);
+        break;
+    }
+
+    default:
+        break;
+    }
+
+    for (const Airport &s : sources)
+    {
+        for (const Airport &d : destinations)
+        {
+            vector<vector<Airport>> curr = bestFlight(s, d);
+            for (vector<Airport> option : curr)
+                res.push_back(option);
+        }
+    }
+
+    return res;
 }

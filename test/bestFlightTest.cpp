@@ -32,13 +32,27 @@ void testBestFlight(FlightNetwork &flightnetwork)
     }
 }
 
+void testListBestOption(FlightNetwork &flightnetwork)
+{
+    vector<vector<Airport>> res = flightnetwork.listBestFlights(0, 2);
+
+    for (const vector<Airport> v : res)
+    {
+        cout << "OPTION:\n";
+        for (const Airport &a : v)
+            cout << a.getCode() << " -> ";
+        cout << "\n\n";
+    }
+}
+
 int main()
 {
     FlightNetwork flightnetwork("../data/airlines.csv", "../data/airports.csv", "../data/flights.csv");
 
     try
     {
-        testBestFlight(flightnetwork);
+        //testBestFlight(flightnetwork);
+        testListBestOption(flightnetwork);
 
         std::cout << "All tests passed successfully!" << std::endl;
         return 0;
