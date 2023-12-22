@@ -444,12 +444,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
     return result;
 }
 
-/*
-    0 -> Airport code
-    1 -> Airport name
-    2 -> City
-    3 -> Coordinate
-*/
+// 0 -> Airport code ; 1 -> Airport name ; 2 -> City ; 3 -> Coordinate
 vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const int &flag2) const
 {
     vector<Airport> sources;
@@ -468,14 +463,16 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 1:
     {
         string name;
-        cout << "Source Airport name = ", cin >> name;
+        cout << "Source Airport name = ";
+        getline(cin, name);
         sources.push_back(nameCriteria(name));
         break;
     }
     case 2:
     {
         string city;
-        cout << "Source City name = ", cin >> city;
+        cout << "Source City name = ";
+        getline(cin, city);
         sources = cityCriteria(city);
         break;
     }
@@ -504,14 +501,16 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 1:
     {
         string name;
-        cout << "Destination Airport name = ", cin >> name;
+        cout << "Destination Airport name = ";
+        getline(cin, name);
         destinations.push_back(nameCriteria(name));
         break;
     }
     case 2:
     {
         string city;
-        cout << "Destination City name = ", cin >> city;
+        cout << "Destination City name = ";
+        getline(cin, city);
         destinations = cityCriteria(city);
         break;
     }
