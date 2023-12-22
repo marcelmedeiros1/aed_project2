@@ -456,7 +456,8 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 0:
     {
         string code;
-        cout << "Source Airport code = ", cin >> code;
+        cout << "Source Airport code = ";
+        getline(cin, code);
         sources.push_back(codeCriteria(code));
         break;
     }
@@ -494,7 +495,8 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 0:
     {
         string code;
-        cout << "Destination Airport code = ", cin >> code;
+        cout << "Destination Airport code = ";
+        getline(cin, code);
         destinations.push_back(codeCriteria(code));
         break;
     }
