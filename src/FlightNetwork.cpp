@@ -404,7 +404,7 @@ vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float 
     return res;
 }
 
-vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const Airport &destination) const
+vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source,const Airport &destination,const set<string> &allowedAirlines,bool minimizeAirlines) const
 {
     vector<vector<Airport>> result;
     queue<vector<Airport>> q;
@@ -429,6 +429,10 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
         for (const Edge<Airport> &edge : airportsGraph.findVertex(currentAirport)->getAdj())
         {
             Airport neighborAirport = edge.getDest()->getInfo();
+            string currentAirline = edge.getInfo();
+            
+            if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
+                continue;
 
             if (visited.find(neighborAirport.getCode()) == visited.end())
             {
@@ -443,7 +447,6 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
 
     return result;
 }
-
 // 0 -> Airport code ; 1 -> Airport name ; 2 -> City ; 3 -> Coordinate
 vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const int &flag2) const
 {

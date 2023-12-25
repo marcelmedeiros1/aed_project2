@@ -5,13 +5,14 @@
 
 using namespace std;
 
-// g++ -o bestFlightTest bestFlightTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
+// g++ -o bestFlightFiltTest bestFlightFiltTest.cpp ../src/FlightNetwork.cpp ../src/Airline.cpp ../src/Airport.cpp
 
-void testBestFlight(FlightNetwork &flightnetwork)
+void testBestFlightFiltered(FlightNetwork &flightnetwork)
 {
     Airport rec = flightnetwork.codeCriteria("REC");
     Airport opo = flightnetwork.codeCriteria("OPO");
-    vector<vector<Airport>> bestOption = flightnetwork.bestFlight(rec, opo);
+    set<string> airlines = { "TAP"};
+    vector<vector<Airport>> bestOption = flightnetwork.bestFlight(rec, opo, airlines, false);
 
     if (!bestOption.empty())
     {
@@ -51,7 +52,7 @@ int main()
 
     try
     {
-        testBestFlight(flightnetwork);
+        testBestFlightFiltered(flightnetwork);
         //testListBestOption(flightnetwork);
 
         std::cout << "All tests passed successfully!" << std::endl;

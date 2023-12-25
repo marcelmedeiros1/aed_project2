@@ -42,8 +42,10 @@ public:
     Airport nameCriteria(const std::string &name) const;                                                     // 4) i.
     std::vector<Airport> cityCriteria(const std::string &city) const;                                        // 4) ii.
     std::vector<Airport> coordinateCriteria(const float &lat, const float &lon, const double &radius) const; // 4) iii.
-    std::vector<std::vector<Airport>> bestFlight(const Airport &source, const Airport &destination) const;   // 4)
+    std::vector<vector<Airport>> bestFlight(const Airport &source, const Airport &destination, const set<string> &allowedAirlines={}, bool minimizeAirlines=false) const; // 4)
     std::vector<std::vector<Airport>> listBestFlights(const int &flag1, const int &flag2) const;
+    bool isPathValid(const vector<Airport> &path, const set<string> &allowedAirlines, bool minimizeAirlines) const;
+    std::vector<vector<Airport>> bestFlightFiltered(const Airport &source, const Airport &destination, const set<string> &allowedAirlines, bool minimizeAirlines) const;
 };
 
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
