@@ -6,6 +6,7 @@
 #include <queue>
 #include <unordered_map>
 using namespace std;
+
 template <class T>
 class Edge;
 

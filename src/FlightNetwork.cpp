@@ -17,6 +17,10 @@ double haversineDistance(double lat1, double lon1, double lat2, double lon2)
     return earthRadius * c;
 }
 
+FlightNetwork::FlightNetwork()
+{
+}
+
 FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airports_filename, const string &flights_filename)
 {
     string line;
@@ -404,7 +408,7 @@ vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float 
     return res;
 }
 
-vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source,const Airport &destination,const set<string> &allowedAirlines,bool minimizeAirlines) const
+vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const Airport &destination, const set<string> &allowedAirlines, bool minimizeAirlines) const
 {
     vector<vector<Airport>> result;
     queue<vector<Airport>> q;
@@ -430,7 +434,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source,const Ai
         {
             Airport neighborAirport = edge.getDest()->getInfo();
             string currentAirline = edge.getInfo();
-            
+
             if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
                 continue;
 

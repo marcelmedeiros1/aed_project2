@@ -1,9 +1,9 @@
 #ifndef FLIGHT_NETWORK_H
 #define FLIGHT_NETWORK_H
 
-#include "Graph.hpp"
-#include "Airport.hpp"
 #include "Airline.hpp"
+#include "Airport.hpp"
+#include "Graph.hpp"
 #include <iostream>
 #include <fstream>
 #include <sstream>
@@ -13,11 +13,13 @@
 #include <tuple>
 #include <functional>
 
+
 class FlightNetwork
 {
     Graph<Airport> airportsGraph;
 
 public:
+    FlightNetwork();
     FlightNetwork(const std::string &airlines_filename, const std::string &airports_filename, const std::string &flights_filename);
     Graph<Airport> getAiportsGraph();
 
