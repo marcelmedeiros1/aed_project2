@@ -17,7 +17,8 @@ public:
     void statisticsMenu();
     void goBackStatisticsMenu();
     void globalStatistics();
-    void showNumFlights(const Airport &airport);
+    void showNumFlights();
+    void numberOfDestinations(Airport &airport);
 };
 
 #endif

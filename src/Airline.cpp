@@ -4,6 +4,8 @@ using namespace std;
 Airline::Airline(const string code, const string name, const string callsign, const string country)
     : code(code), name(name), callsign(callsign), country(country){};
 
+Airline::Airline(const string &code) : code(code) {}
+
 string Airline::getCode() const
 {
     return code;

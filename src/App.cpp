@@ -1,6 +1,8 @@
 #include "../inc/App.hpp"
 using namespace std;
 
+// g++ -o App App.cpp FlightNetwork.cpp Airline.cpp Airport.cpp
+
 void clearScreen()
 {
 #ifdef _WIN32
@@ -78,7 +80,10 @@ void App::statisticsMenu()
          << endl
          << "Enter your option:" << endl
          << "[1] See the global number of airports and number of available flights." << endl
-         << "[2] See the number of flights out of an airport (and from how many different airlines)." << endl
+         << "[2] See the number of flights out of an airport (and from how many different airlines), city or airline." << endl
+         << "[3] See the number of countries that a given airport flies to." << endl
+         << "[4] See the number of countries that a given city flies to." << endl
+         << "[5] See number of destinations (airports, cities or countries) available for a given airport;"
          << endl
          << "[0] Go back to the main menu." << endl
          << "=================================================================================================" << endl
@@ -95,14 +100,72 @@ void App::statisticsMenu()
     }
     case 2:
     {
+        clearScreen();
+        showNumFlights();
+    }
+    case 3:
+    {
+        clearScreen();
         string code;
         cout << endl
              << "Enter the airport code:" << endl
              << "-> ";
         cin >> code;
         Airport airport(code);
+
+        set<string> res = flightnetwork.getDiffCountriesAirport(airport);
+
+        cout << "=================================================================================================" << endl
+         << "Countries: " << endl;
+
+        int count = 1;
+        for(string country : res){
+            cout << "[" << count << "]" << " " << country << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+
+    }
+    case 4: 
+    {
         clearScreen();
-        showNumFlights(airport);
+        string city;
+        cout << endl
+             << "Enter the city name:" << endl
+             << "-> ";
+        cin >> city;
+        set<string> res = flightnetwork.getDiffCountriesCity(city);
+        cout << "=================================================================================================" << endl
+         << "Countries: " << endl;
+
+        int count = 1;
+        for(string country : res){
+            cout << "[" << count << "]" << " " << country << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 5:
+    {
+        clearScreen();
+        string code;
+        cout << endl
+             << "Enter the airport code:" << endl
+             << "-> ";
+        cin >> code;
+        Airport airport(code);
+
+        numberOfDestinations(airport);
     }
     case 0:
     {
@@ -153,17 +216,179 @@ void App::globalStatistics()
     goBackStatisticsMenu();
 }
 
-void App::showNumFlights(const Airport &airport)
+void App::showNumFlights()
 {
     int option;
-    pair<int, int> res = flightnetwork.numFlightsAirport(airport);
 
     cout << "=================================================================================================" << endl
+         << "Number of flights out of: "
+         << "Enter your option:" << endl
+         << "[1] Airport" << endl
+         << "[2] City" << endl
+         << "[3] Airline" << endl
+         << "=================================================================================================" << endl
+         << "[0] Go back to the main menu" << endl
+         << endl;
+
+
+    cin >> option;
+
+    switch (option)
+    {
+    case 1:
+    {
+        clearScreen();
+        string code;
+        cout << endl
+             << "Enter the airport code:" << endl
+             << "-> ";
+        cin >> code;
+        Airport airport(code);
+
+        pair<int, int> res = flightnetwork.numFlightsAirport(airport);
+        cout << "=================================================================================================" << endl
          << "Number of flights out of " << airport.getCode() << ": " << res.first << endl
          << "Number of different airlines: " << res.second << endl
          << "=================================================================================================" << endl
          << "[0] Go back to the statistics menu" << endl
          << endl;
+         goBackStatisticsMenu();
+    }
+    case 2:
+    {
+        clearScreen();
+        string city;
+        cout << endl
+             << "Enter the city name:" << endl
+             << "-> ";
+        cin >> city;
+        int res = flightnetwork.numFlightsCity(city);
+        cout << "=================================================================================================" << endl
+         << "Number of flights out of " << city
+         << " is " << res << endl
+         << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu" << endl
+         << endl;
+         goBackStatisticsMenu();
+    }
+    case 3:
+    {
+        clearScreen();
+        string code;
+        cout << endl
+             << "Enter the airline code:" << endl
+             << "-> ";
+        cin >> code;
+        Airline airline(code);
+        int res = flightnetwork.numFlightsAirline(airline);
+        cout << "=================================================================================================" << endl
+         << "Number of flights out of " << code
+         << " is " << res << endl
+         << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu" << endl
+         << endl;
+         goBackStatisticsMenu();
+    }
+    case 0:
+    {
+        clearScreen();
+        mainMenu();
+    }
+    default:
+    {
+        clearScreen();
+        cout << "Invalid option! please try again:" << endl
+             << endl;
+        statisticsMenu();
+    }
+    }
+}
 
-    goBackStatisticsMenu();
+void App::numberOfDestinations(Airport &airport){
+     int option;
+
+    cout << "=================================================================================================" << endl
+         << "Enter your option:" << endl
+         << "[1] Airport" << endl
+         << "[2] City" << endl
+         << "[3] Country" << endl
+         << "=================================================================================================" << endl
+         << "[0] Go back to the main menu" << endl
+         << "-> " << endl;
+
+
+    cin >> option;
+
+    switch (option)
+    {
+    case 1:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getAirportsDestinations(airport);
+        cout << "=================================================================================================" << endl
+         << "Destinations: " << endl;
+
+        int count = 1;
+        for(string dest : res){
+            cout << "[" << count << "]" << " " << dest << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 2:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getCitiesDestinations(airport);
+        cout << "=================================================================================================" << endl
+         << "Destinations: " << endl;
+
+        int count = 1;
+        for(string dest : res){
+            cout << "[" << count << "]" << " " << dest << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 3:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getCountriesDestinations(airport);
+        cout << "=================================================================================================" << endl
+         << "Destinations: " << endl;
+
+        int count = 1;
+        for(string dest : res){
+            cout << "[" << count << "]" << " " << dest << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 0:
+    {
+        clearScreen();
+        mainMenu();
+    }
+    default:
+    {
+        clearScreen();
+        cout << "Invalid option! please try again:" << endl
+             << endl;
+        statisticsMenu();
+    }
+    }
 }
