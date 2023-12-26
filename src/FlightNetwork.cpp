@@ -240,6 +240,7 @@ set<string> FlightNetwork::getReachableCountries(const Airport &airport, const i
 int FlightNetwork::maximumTrip(vector<pair<string, string>> &airports)
 {
     int maxStops = -1;
+    
 
     for (Vertex<Airport> *sourceVertex : airportsGraph.getVertexSet())
     {

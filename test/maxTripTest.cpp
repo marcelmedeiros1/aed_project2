@@ -17,7 +17,7 @@ void testMaxTrip()
         cout << "from " << p.first << " to " << p.second << endl;
     }
 
-    cout << "and has distance of " << res;
+    cout << "and has distance of " << res << endl;
 }
 
 int main()

@@ -26,6 +26,7 @@ class Vertex
     int indegree;
     int num;
     int low;
+    int distance;
 
 public:
     Vertex(T in);
@@ -47,6 +48,9 @@ public:
 
     int getLow() const;
     void setLow(int low);
+
+    int getDistance() const;
+    void setDistance(int distance);
 
     void addEdge(Vertex<T> *dest, std::string in, double w);
     bool removeEdgeTo(Vertex<T> *d);
@@ -182,6 +186,18 @@ template <class T>
 int Vertex<T>::getLow() const
 {
     return low;
+}
+
+template <class T>
+void Vertex<T>::setDistance(int distance)
+{
+    Vertex::distance = distance;
+}
+
+template <class T>
+int Vertex<T>::getDistance() const
+{
+    return distance;
 }
 
 template <class T>
@@ -513,29 +529,32 @@ std::vector<std::pair<int, T>> Graph<T>::bfsDistance(Vertex<T> *source)
     std::vector<std::pair<int, T>> res;
     std::queue<Vertex<T> *> aux;
 
-    for (Vertex<T> *v : vertexSet)
+    for (Vertex<T> *v : vertexSet){
         v->setVisited(false);
+        v->setDistance(10000);
+    }   
 
     source->setVisited(true);
+    source->setDistance(0);
     aux.push(source);
-    int distance = 0;
+    
 
     while (!aux.empty())
     {
         Vertex<T> *curr = aux.front();
         aux.pop();
-        res.push_back({distance, curr->getInfo()});
-
+        res.push_back({curr->getDistance(), curr->getInfo()});
+        
         for (const Edge<T> &e : curr->getAdj())
         {
             Vertex<T> *neighbor = e.getDest();
             if (!neighbor->isVisited())
             {
                 neighbor->setVisited(true);
+                neighbor->setDistance(curr->getDistance() + 1);
                 aux.push(neighbor);
             }
         }
-        distance++;
     }
 
     return res;
