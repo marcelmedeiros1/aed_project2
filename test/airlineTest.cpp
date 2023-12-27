@@ -1,7 +1,8 @@
 #include <iostream>
 #include "../inc/Airline.hpp"
+#include "../inc/FlightNetwork.hpp"
 
-// g++ -o airlineTest airlineTest.cpp ../src/Airline.cpp
+// g++ -o airlineTest airlineTest.cpp ../src/Airline.cpp ../src/FlightNetwork.cpp
 
 // Function to run tests for the Airline class
 void testAirline()
@@ -59,12 +60,19 @@ void testAirline()
     }
 }
 
+void testAirlineCodeToName()
+{
+    std::string res = airlineCodeToName("IBE");
+    std::cout << "\nNAME -> " << res << '\n';
+}
+
 int main()
 {
     try
     {
         // Run the tests for the Airline class
         testAirline();
+        testAirlineCodeToName();
 
         std::cout << "All tests passed successfully!" << std::endl;
         return 0;

@@ -73,6 +73,31 @@ FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airp
     }
 }
 
+string airlineCodeToName(const string &code)
+{
+    string line;
+    ifstream airlines_file("../data/airlines.csv");
+
+    if (!airlines_file.is_open())
+    {
+        throw runtime_error("Airports file does not exist.");
+    }
+
+    getline(airlines_file, line);
+    while (getline(airlines_file, line))
+    {
+        istringstream iss(line);
+        string code_file, name, callsign, country;
+
+        getline(getline(getline(getline(iss, code_file, ','), name, ','), callsign, ','), country, '\r');
+
+        if (code_file == code)
+            return name;
+    }
+
+    throw runtime_error("Airline not found.");
+}
+
 Graph<Airport> FlightNetwork::getAiportsGraph()
 {
     return airportsGraph;
@@ -240,7 +265,7 @@ set<string> FlightNetwork::getReachableCountries(const Airport &airport, const i
 int FlightNetwork::maximumTrip(vector<pair<string, string>> &airports)
 {
     int maxStops = -1;
-    
+
 
     for (Vertex<Airport> *sourceVertex : airportsGraph.getVertexSet())
     {
@@ -421,7 +446,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
 
     while (!q.empty())
     {
-        
+
         vector<Airport> currentPath = q.front();
         q.pop();
 
@@ -429,7 +454,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
 
         for (const Edge<Airport> &edge : airportsGraph.findVertex(currentAirport)->getAdj())
         {
-           
+
             Airport neighborAirport = edge.getDest()->getInfo();
             string currentAirline = edge.getInfo();
             if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
@@ -445,7 +470,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
                 nesc=newPath.size();
                 result.push_back(newPath);
                 }
-            } 
+            }
             else if (visited.find(neighborAirport.getCode()) == visited.end())
             {
                 vector<Airport> newPath = currentPath;
@@ -465,7 +490,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
             int cur = 0;
             for (int i=0; i< p.size(); i++){
                 if(i%2 != 0){
-                    if(airlinesVisited.find(p[i].getCode()) == airlinesVisited.end()){ 
+                    if(airlinesVisited.find(p[i].getCode()) == airlinesVisited.end()){
                         cur++;
                         airlinesVisited.insert(p[i].getCode());
                     }
@@ -486,7 +511,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
             result.push_back(p);
         }
     }
-    
+
     return result;
 }
 // 0 -> Airport code ; 1 -> Airport name ; 2 -> City ; 3 -> Coordinate

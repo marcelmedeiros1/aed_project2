@@ -52,5 +52,6 @@ public:
 
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
 double haversineDistance(double lat1, double lon1, double lat2, double lon2);
+std::string airlineCodeToName(const std::string &code);
 
 #endif
