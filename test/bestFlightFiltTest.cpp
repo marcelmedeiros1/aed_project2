@@ -11,20 +11,22 @@ void testBestFlightFiltered(FlightNetwork &flightnetwork)
 {
     Airport rec = flightnetwork.codeCriteria("REC");
     Airport opo = flightnetwork.codeCriteria("OPO");
-    set<string> airlines = { "TAP"};
-    vector<vector<Airport>> bestOption = flightnetwork.bestFlight(rec, opo, airlines, false);
+    set<string> airlines = {"TAP", "RYR"};
+    vector<vector<Airport>> bestOption = flightnetwork.bestFlight(rec, opo, airlines, true);
 
     if (!bestOption.empty())
     {
-        int stops = bestOption.front().size() - 1;
+        int stops = bestOption.front().size()/2;
         cout << "Best route with fewer mount of stops: " << stops << '\n';
 
         for (const vector<Airport> v : bestOption)
         {
             cout << "OPTION:'\n";
-            for (const Airport &a : v)
-                cout << a.getCode() << " -> ";
-            cout << "\n\n";
+            for (int i=0; i<v.size(); i++){
+                if(i%2==0) cout << v[i].getCode() << " -> ";
+                else cout << '(' << v[i].getCode() << ')' << " -> ";
+            }
+            cout << '\n';
         }
     }
     else

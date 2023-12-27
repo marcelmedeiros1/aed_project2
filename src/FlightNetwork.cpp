@@ -427,15 +427,18 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
 
         Airport currentAirport = currentPath.back();
 
-
         for (const Edge<Airport> &edge : airportsGraph.findVertex(currentAirport)->getAdj())
         {
            
             Airport neighborAirport = edge.getDest()->getInfo();
             string currentAirline = edge.getInfo();
+            if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
+                continue;
+
             if(neighborAirport == destination){
                 vector<Airport> newPath = currentPath;
-                newPath.push_back(neighborAirport); 
+                newPath.push_back(currentAirline);
+                newPath.push_back(neighborAirport);
                 if(result.empty()) nesc = newPath.size();
 
                 if(newPath.size() <= nesc){
@@ -443,12 +446,10 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
                 result.push_back(newPath);
                 }
             } 
-            if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
-                continue;
-
-            if (visited.find(neighborAirport.getCode()) == visited.end())
+            else if (visited.find(neighborAirport.getCode()) == visited.end())
             {
                 vector<Airport> newPath = currentPath;
+                newPath.push_back(currentAirline);
                 newPath.push_back(neighborAirport);
 
                 q.push(newPath);
@@ -456,7 +457,36 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
             }
         }
     }
-
+    if(minimizeAirlines){
+        vector<vector<Airport>> resFiltered;
+        set<string> airlinesVisited;
+        int max = 3019;
+        for(auto p : result){
+            int cur = 0;
+            for (int i=0; i< p.size(); i++){
+                if(i%2 != 0){
+                    if(airlinesVisited.find(p[i].getCode()) == airlinesVisited.end()){ 
+                        cur++;
+                        airlinesVisited.insert(p[i].getCode());
+                    }
+                }
+            }
+            if(cur < max){
+                resFiltered.clear();
+                max=cur;
+                resFiltered.push_back(p);
+            }
+            else if(cur == max){
+                resFiltered.push_back(p);
+            }
+            airlinesVisited.clear();
+        }
+        result.clear();
+        for(auto p : resFiltered){
+            result.push_back(p);
+        }
+    }
+    
     return result;
 }
 // 0 -> Airport code ; 1 -> Airport name ; 2 -> City ; 3 -> Coordinate
