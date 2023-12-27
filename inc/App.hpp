@@ -19,6 +19,8 @@ public:
     void globalStatistics();
     void showNumFlights();
     void numberOfDestinations(Airport &airport);
+    void reachableDest(Airport &airport, int stops);
+
 };
 
 #endif

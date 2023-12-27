@@ -83,7 +83,12 @@ void App::statisticsMenu()
          << "[2] See the number of flights out of an airport (and from how many different airlines), city or airline." << endl
          << "[3] See the number of countries that a given airport flies to." << endl
          << "[4] See the number of countries that a given city flies to." << endl
-         << "[5] See number of destinations (airports, cities or countries) available for a given airport;"
+         << "[5] See number of destinations (airports, cities or countries) available for a given airport." << endl
+         << "[6] See Number of reachable destinations (airports, cities or countries) from a given airport in a maximum number of X stops (lay-overs)." << endl 
+         << "[7] See the maximum trip available (the trip with the most stops)." << endl 
+         << "[8] See the top K airports with the greatest air traffic capacity." << endl
+         << "[9] See the airports that are essential to the network's circulation capacability." << endl
+         << endl
          << endl
          << "[0] Go back to the main menu." << endl
          << "=================================================================================================" << endl
@@ -166,6 +171,88 @@ void App::statisticsMenu()
         Airport airport(code);
 
         numberOfDestinations(airport);
+    }
+    case 6:
+    {
+        clearScreen();
+        string code;
+        cout << endl
+             << "Enter the airport code:" << endl
+             << "-> ";
+        cin >> code;
+        Airport airport(code);
+
+        int stops;
+        cout << endl
+             << "Enter the maximum number of stops allowed:" << endl
+             << "-> ";
+        cin >> stops;
+
+        reachableDest(airport, stops);
+    }
+    case 7: 
+    {
+        clearScreen();
+        vector<pair<string, string>> airports;
+        int res = flightnetwork.maximumTrip(airports);
+        cout << "=================================================================================================" << endl
+         << "The maximum trip has: " << res  << " stops" << endl
+         << "The flights are: " << endl;
+
+        int count = 1;
+        for(pair<string,string> sourcdest : airports){
+            cout << "[" << count << "]" << " from " << sourcdest.first << " to " << sourcdest.second << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 8:
+    {
+        clearScreen();
+        int k;
+        cout << endl
+             << "Enter the number of top airports you want to find:" << endl
+             << "-> ";
+        cin >> k;
+        set<string> res = flightnetwork.getGreatestTraffic(k);
+        cout << "=================================================================================================" << endl
+         << "Top " << k << " airports with the greatest air traffic capacity: " << endl;
+
+        int count = 1;
+        for(string country : res){
+            cout << "[" << count << "]" << " " << country << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 9:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getEssentialAirports();
+        cout << "=================================================================================================" << endl
+         << "The airports that are essential to the network are: " << endl;
+
+        int count = 1;
+        for(string airport : res){
+            cout << "[" << count << "]" << airport << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
     }
     case 0:
     {
@@ -308,6 +395,7 @@ void App::numberOfDestinations(Airport &airport){
      int option;
 
     cout << "=================================================================================================" << endl
+         << "Select the type of destination!"
          << "Enter your option:" << endl
          << "[1] Airport" << endl
          << "[2] City" << endl
@@ -363,6 +451,96 @@ void App::numberOfDestinations(Airport &airport){
     {
         clearScreen();
         set<string> res = flightnetwork.getCountriesDestinations(airport);
+        cout << "=================================================================================================" << endl
+         << "Destinations: " << endl;
+
+        int count = 1;
+        for(string dest : res){
+            cout << "[" << count << "]" << " " << dest << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 0:
+    {
+        clearScreen();
+        mainMenu();
+    }
+    default:
+    {
+        clearScreen();
+        cout << "Invalid option! please try again:" << endl
+             << endl;
+        statisticsMenu();
+    }
+    }
+}
+
+void App::reachableDest(Airport &airport, int stops){
+     int option;
+
+    cout << "=================================================================================================" << endl
+         << "Select the type of destination!"
+         << "Enter your option:" << endl
+         << "[1] Airport" << endl
+         << "[2] City" << endl
+         << "[3] Country" << endl
+         << "=================================================================================================" << endl
+         << "[0] Go back to the main menu" << endl
+         << "-> " << endl;
+
+
+    cin >> option;
+
+    switch (option)
+    {
+    case 1:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getReachableAirports(airport,stops);
+        cout << "=================================================================================================" << endl
+         << "Destinations: " << endl;
+
+        int count = 1;
+        for(string dest : res){
+            cout << "[" << count << "]" << " " << dest << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 2:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getReachableCities(airport,stops);
+        cout << "=================================================================================================" << endl
+         << "Destinations: " << endl;
+
+        int count = 1;
+        for(string dest : res){
+            cout << "[" << count << "]" << " " << dest << endl;
+            count++;
+        }
+        cout << "=================================================================================================" << endl
+         << "[0] Go back to the statistics menu." << endl
+         << endl
+         << endl;
+        
+        goBackStatisticsMenu();
+    }
+    case 3:
+    {
+        clearScreen();
+        set<string> res = flightnetwork.getReachableCountries(airport,stops);
         cout << "=================================================================================================" << endl
          << "Destinations: " << endl;
 
