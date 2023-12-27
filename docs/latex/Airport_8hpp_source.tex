@@ -1,0 +1,56 @@
+\doxysection{Airport.\+hpp}
+\hypertarget{Airport_8hpp_source}{}\label{Airport_8hpp_source}\index{inc/Airport.hpp@{inc/Airport.hpp}}
+\mbox{\hyperlink{Airport_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ AIRPORT\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ AIRPORT\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <utility>}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classAirport}{Airport}}}
+\DoxyCodeLine{00011\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_a9d5275582b3d183d5fd756da38afee77}{code}};}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00016\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_a7f3bf800ff1d56c6cf5ac2011fd50a5d}{name}};}
+\DoxyCodeLine{00017\ }
+\DoxyCodeLine{00019\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_a97ee68b449c91d3ef1105486176b80d1}{city}};}
+\DoxyCodeLine{00020\ }
+\DoxyCodeLine{00022\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_a7f26cdde932db3f9a34bcfd99ff17062}{country}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ std::pair<float,\ float>\ \mbox{\hyperlink{classAirport_a27e22462b07c17616a1e850003b51f34}{position}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00036\ \ \ \ \ \mbox{\hyperlink{classAirport_af09b48b6fb8119a4f06b53fd735c6b48}{Airport}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classAirport_a9d5275582b3d183d5fd756da38afee77}{code}},\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classAirport_a7f3bf800ff1d56c6cf5ac2011fd50a5d}{name}},\ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classAirport_a97ee68b449c91d3ef1105486176b80d1}{city}},}
+\DoxyCodeLine{00037\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classAirport_a7f26cdde932db3f9a34bcfd99ff17062}{country}},\ \textcolor{keyword}{const}\ std::pair<float,\ float>\ \&\mbox{\hyperlink{classAirport_a27e22462b07c17616a1e850003b51f34}{position}});}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classAirport_a4e2d73dffb46543efb72158fd9d9eeaa}{Airport}}(\textcolor{keyword}{const}\ std::string\ \&\mbox{\hyperlink{classAirport_a9d5275582b3d183d5fd756da38afee77}{code}});}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00049\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_ad1369e1d47c87e205f1718b853a66d54}{getCode}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00050\ }
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAirport_ad1a82c7c4f88a9db536cdb14164b6594}{setCode}}(\textcolor{keyword}{const}\ std::string\ \&c);}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00061\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_a93efcd09328d24469d97a81e8048b776}{getName}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAirport_abb4cc00a4123180bdb95c4f297fe731d}{setName}}(\textcolor{keyword}{const}\ std::string\ \&n);}
+\DoxyCodeLine{00068\ }
+\DoxyCodeLine{00073\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_adff088d0536ead7d1c060c385da03f32}{getCity}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAirport_a1923eccf90a606fadfc0962d66a60c2b}{setCity}}(\textcolor{keyword}{const}\ std::string\ \&c);}
+\DoxyCodeLine{00080\ }
+\DoxyCodeLine{00085\ \ \ \ \ std::string\ \mbox{\hyperlink{classAirport_ac0ce4ad3ce71653f13b96e5d40648588}{getCountry}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00091\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAirport_a0da2b4fec167804d00fef2e90bb6a017}{setCountry}}(\textcolor{keyword}{const}\ std::string\ \&c);}
+\DoxyCodeLine{00092\ }
+\DoxyCodeLine{00097\ \ \ \ \ std::pair<float,\ float>\ \mbox{\hyperlink{classAirport_a08831dfc1a3b68d13b2e518e4de50e62}{getPosition}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00098\ }
+\DoxyCodeLine{00103\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{classAirport_ae429b079e2787e6aec0fc40fc67260b6}{setPosition}}(\textcolor{keyword}{const}\ std::pair<float,\ float>\ \&pos);}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00110\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAirport_a3d1a4700be0044a39824a183a95ee839}{operator==}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&other);}
+\DoxyCodeLine{00111\ }
+\DoxyCodeLine{00117\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classAirport_abc78cfd275efe2944c021f5f3cf56130}{operator<}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&other);}
+\DoxyCodeLine{00118\ \};}
+\DoxyCodeLine{00119\ }
+\DoxyCodeLine{00120\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

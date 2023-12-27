@@ -1,0 +1,317 @@
+\doxysection{Airport Class Reference}
+\hypertarget{classAirport}{}\label{classAirport}\index{Airport@{Airport}}
+
+
+Represents an airport with attributes such as code, name, city, country, and position.  
+
+
+
+
+{\ttfamily \#include $<$Airport.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classAirport_af09b48b6fb8119a4f06b53fd735c6b48}{Airport}} (const std\+::string \&\mbox{\hyperlink{classAirport_a9d5275582b3d183d5fd756da38afee77}{code}}, const std\+::string \&\mbox{\hyperlink{classAirport_a7f3bf800ff1d56c6cf5ac2011fd50a5d}{name}}, const std\+::string \&\mbox{\hyperlink{classAirport_a97ee68b449c91d3ef1105486176b80d1}{city}}, const std\+::string \&\mbox{\hyperlink{classAirport_a7f26cdde932db3f9a34bcfd99ff17062}{country}}, const std\+::pair$<$ float, float $>$ \&\mbox{\hyperlink{classAirport_a27e22462b07c17616a1e850003b51f34}{position}})
+\begin{DoxyCompactList}\small\item\em Constructor for creating an \doxylink{classAirport}{Airport} object with specified attributes. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classAirport_a4e2d73dffb46543efb72158fd9d9eeaa}{Airport}} (const std\+::string \&\mbox{\hyperlink{classAirport_a9d5275582b3d183d5fd756da38afee77}{code}})
+\begin{DoxyCompactList}\small\item\em Constructor for creating an \doxylink{classAirport}{Airport} object with only the code specified. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAirport_ad1369e1d47c87e205f1718b853a66d54}{get\+Code}} () const
+\begin{DoxyCompactList}\small\item\em Gets the airport code. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAirport_ad1a82c7c4f88a9db536cdb14164b6594}{set\+Code}} (const std\+::string \&c)
+\begin{DoxyCompactList}\small\item\em Sets the airport code. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAirport_a93efcd09328d24469d97a81e8048b776}{get\+Name}} () const
+\begin{DoxyCompactList}\small\item\em Gets the name of the airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAirport_abb4cc00a4123180bdb95c4f297fe731d}{set\+Name}} (const std\+::string \&n)
+\begin{DoxyCompactList}\small\item\em Sets the name of the airport. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAirport_adff088d0536ead7d1c060c385da03f32}{get\+City}} () const
+\begin{DoxyCompactList}\small\item\em Gets the city where the airport is located. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAirport_a1923eccf90a606fadfc0962d66a60c2b}{set\+City}} (const std\+::string \&c)
+\begin{DoxyCompactList}\small\item\em Sets the city where the airport is located. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classAirport_ac0ce4ad3ce71653f13b96e5d40648588}{get\+Country}} () const
+\begin{DoxyCompactList}\small\item\em Gets the country where the airport is located. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAirport_a0da2b4fec167804d00fef2e90bb6a017}{set\+Country}} (const std\+::string \&c)
+\begin{DoxyCompactList}\small\item\em Sets the country where the airport is located. \end{DoxyCompactList}\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classAirport_a08831dfc1a3b68d13b2e518e4de50e62}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Gets the geographical position of the airport. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classAirport_ae429b079e2787e6aec0fc40fc67260b6}{set\+Position}} (const std\+::pair$<$ float, float $>$ \&pos)
+\begin{DoxyCompactList}\small\item\em Sets the geographical position of the airport. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAirport_a3d1a4700be0044a39824a183a95ee839}{operator==}} (const \mbox{\hyperlink{classAirport}{Airport}} \&other)
+\begin{DoxyCompactList}\small\item\em Overloaded equality operator to compare airports based on their codes. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classAirport_abc78cfd275efe2944c021f5f3cf56130}{operator$<$}} (const \mbox{\hyperlink{classAirport}{Airport}} \&other)
+\begin{DoxyCompactList}\small\item\em Overloaded less-\/than operator to compare airports based on their codes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::string \mbox{\hyperlink{classAirport_a9d5275582b3d183d5fd756da38afee77}{code}}
+\item 
+std\+::string \mbox{\hyperlink{classAirport_a7f3bf800ff1d56c6cf5ac2011fd50a5d}{name}}
+\item 
+std\+::string \mbox{\hyperlink{classAirport_a97ee68b449c91d3ef1105486176b80d1}{city}}
+\item 
+std\+::string \mbox{\hyperlink{classAirport_a7f26cdde932db3f9a34bcfd99ff17062}{country}}
+\item 
+std\+::pair$<$ float, float $>$ \mbox{\hyperlink{classAirport_a27e22462b07c17616a1e850003b51f34}{position}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an airport with attributes such as code, name, city, country, and position. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classAirport_af09b48b6fb8119a4f06b53fd735c6b48}\label{classAirport_af09b48b6fb8119a4f06b53fd735c6b48} 
+\index{Airport@{Airport}!Airport@{Airport}}
+\index{Airport@{Airport}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{Airport()}{Airport()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Airport\+::\+Airport (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code,  }\item[{const std\+::string \&}]{name,  }\item[{const std\+::string \&}]{city,  }\item[{const std\+::string \&}]{country,  }\item[{const std\+::pair$<$ float, float $>$ \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Constructor for creating an \doxylink{classAirport}{Airport} object with specified attributes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The airport code. \\
+\hline
+{\em name} & The name of the airport. \\
+\hline
+{\em city} & The city where the airport is located. \\
+\hline
+{\em country} & The country where the airport is located. \\
+\hline
+{\em position} & The geographical position of the airport (latitude, longitude). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAirport_a4e2d73dffb46543efb72158fd9d9eeaa}\label{classAirport_a4e2d73dffb46543efb72158fd9d9eeaa} 
+\index{Airport@{Airport}!Airport@{Airport}}
+\index{Airport@{Airport}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{Airport()}{Airport()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Airport\+::\+Airport (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption})}
+
+
+
+Constructor for creating an \doxylink{classAirport}{Airport} object with only the code specified. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The airport code. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classAirport_adff088d0536ead7d1c060c385da03f32}\label{classAirport_adff088d0536ead7d1c060c385da03f32} 
+\index{Airport@{Airport}!getCity@{getCity}}
+\index{getCity@{getCity}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getCity()}{getCity()}}
+{\footnotesize\ttfamily string Airport\+::get\+City (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the city where the airport is located. 
+
+\begin{DoxyReturn}{Returns}
+The city where the airport is located. 
+\end{DoxyReturn}
+\Hypertarget{classAirport_ad1369e1d47c87e205f1718b853a66d54}\label{classAirport_ad1369e1d47c87e205f1718b853a66d54} 
+\index{Airport@{Airport}!getCode@{getCode}}
+\index{getCode@{getCode}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getCode()}{getCode()}}
+{\footnotesize\ttfamily string Airport\+::get\+Code (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the airport code. 
+
+\begin{DoxyReturn}{Returns}
+The airport code. 
+\end{DoxyReturn}
+\Hypertarget{classAirport_ac0ce4ad3ce71653f13b96e5d40648588}\label{classAirport_ac0ce4ad3ce71653f13b96e5d40648588} 
+\index{Airport@{Airport}!getCountry@{getCountry}}
+\index{getCountry@{getCountry}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getCountry()}{getCountry()}}
+{\footnotesize\ttfamily string Airport\+::get\+Country (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the country where the airport is located. 
+
+\begin{DoxyReturn}{Returns}
+The country where the airport is located. 
+\end{DoxyReturn}
+\Hypertarget{classAirport_a93efcd09328d24469d97a81e8048b776}\label{classAirport_a93efcd09328d24469d97a81e8048b776} 
+\index{Airport@{Airport}!getName@{getName}}
+\index{getName@{getName}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily string Airport\+::get\+Name (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the name of the airport. 
+
+\begin{DoxyReturn}{Returns}
+The name of the airport. 
+\end{DoxyReturn}
+\Hypertarget{classAirport_a08831dfc1a3b68d13b2e518e4de50e62}\label{classAirport_a08831dfc1a3b68d13b2e518e4de50e62} 
+\index{Airport@{Airport}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily pair$<$ float, float $>$ Airport\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Gets the geographical position of the airport. 
+
+\begin{DoxyReturn}{Returns}
+The geographical position of the airport (latitude, longitude). 
+\end{DoxyReturn}
+\Hypertarget{classAirport_abc78cfd275efe2944c021f5f3cf56130}\label{classAirport_abc78cfd275efe2944c021f5f3cf56130} 
+\index{Airport@{Airport}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Airport\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Overloaded less-\/than operator to compare airports based on their codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other airport to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the code of this airport is less than the code of the other airport. 
+\end{DoxyReturn}
+\Hypertarget{classAirport_a3d1a4700be0044a39824a183a95ee839}\label{classAirport_a3d1a4700be0044a39824a183a95ee839} 
+\index{Airport@{Airport}!operator==@{operator==}}
+\index{operator==@{operator==}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Airport\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{other }\end{DoxyParamCaption})}
+
+
+
+Overloaded equality operator to compare airports based on their codes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em other} & The other airport to compare. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True if the airports have the same code, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classAirport_a1923eccf90a606fadfc0962d66a60c2b}\label{classAirport_a1923eccf90a606fadfc0962d66a60c2b} 
+\index{Airport@{Airport}!setCity@{setCity}}
+\index{setCity@{setCity}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{setCity()}{setCity()}}
+{\footnotesize\ttfamily void Airport\+::set\+City (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Sets the city where the airport is located. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The new city where the airport is located. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAirport_ad1a82c7c4f88a9db536cdb14164b6594}\label{classAirport_ad1a82c7c4f88a9db536cdb14164b6594} 
+\index{Airport@{Airport}!setCode@{setCode}}
+\index{setCode@{setCode}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{setCode()}{setCode()}}
+{\footnotesize\ttfamily void Airport\+::set\+Code (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Sets the airport code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The new airport code. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAirport_a0da2b4fec167804d00fef2e90bb6a017}\label{classAirport_a0da2b4fec167804d00fef2e90bb6a017} 
+\index{Airport@{Airport}!setCountry@{setCountry}}
+\index{setCountry@{setCountry}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{setCountry()}{setCountry()}}
+{\footnotesize\ttfamily void Airport\+::set\+Country (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{c }\end{DoxyParamCaption})}
+
+
+
+Sets the country where the airport is located. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The new country where the airport is located. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAirport_abb4cc00a4123180bdb95c4f297fe731d}\label{classAirport_abb4cc00a4123180bdb95c4f297fe731d} 
+\index{Airport@{Airport}!setName@{setName}}
+\index{setName@{setName}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily void Airport\+::set\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{n }\end{DoxyParamCaption})}
+
+
+
+Sets the name of the airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & The new name of the airport. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classAirport_ae429b079e2787e6aec0fc40fc67260b6}\label{classAirport_ae429b079e2787e6aec0fc40fc67260b6} 
+\index{Airport@{Airport}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void Airport\+::set\+Position (\begin{DoxyParamCaption}\item[{const std\+::pair$<$ float, float $>$ \&}]{pos }\end{DoxyParamCaption})}
+
+
+
+Sets the geographical position of the airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em pos} & The new geographical position of the airport (latitude, longitude). \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classAirport_a97ee68b449c91d3ef1105486176b80d1}\label{classAirport_a97ee68b449c91d3ef1105486176b80d1} 
+\index{Airport@{Airport}!city@{city}}
+\index{city@{city}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{city}{city}}
+{\footnotesize\ttfamily std\+::string Airport\+::city\hspace{0.3cm}{\ttfamily [private]}}
+
+The city where the airport is located. \Hypertarget{classAirport_a9d5275582b3d183d5fd756da38afee77}\label{classAirport_a9d5275582b3d183d5fd756da38afee77} 
+\index{Airport@{Airport}!code@{code}}
+\index{code@{code}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{code}{code}}
+{\footnotesize\ttfamily std\+::string Airport\+::code\hspace{0.3cm}{\ttfamily [private]}}
+
+The airport code. \Hypertarget{classAirport_a7f26cdde932db3f9a34bcfd99ff17062}\label{classAirport_a7f26cdde932db3f9a34bcfd99ff17062} 
+\index{Airport@{Airport}!country@{country}}
+\index{country@{country}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{country}{country}}
+{\footnotesize\ttfamily std\+::string Airport\+::country\hspace{0.3cm}{\ttfamily [private]}}
+
+The country where the airport is located. \Hypertarget{classAirport_a7f3bf800ff1d56c6cf5ac2011fd50a5d}\label{classAirport_a7f3bf800ff1d56c6cf5ac2011fd50a5d} 
+\index{Airport@{Airport}!name@{name}}
+\index{name@{name}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{name}{name}}
+{\footnotesize\ttfamily std\+::string Airport\+::name\hspace{0.3cm}{\ttfamily [private]}}
+
+The name of the airport. \Hypertarget{classAirport_a27e22462b07c17616a1e850003b51f34}\label{classAirport_a27e22462b07c17616a1e850003b51f34} 
+\index{Airport@{Airport}!position@{position}}
+\index{position@{position}!Airport@{Airport}}
+\doxysubsubsection{\texorpdfstring{position}{position}}
+{\footnotesize\ttfamily std\+::pair$<$float, float$>$ Airport\+::position\hspace{0.3cm}{\ttfamily [private]}}
+
+The geographical position of the airport (latitude, longitude). 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{Airport_8hpp}{Airport.\+hpp}}\item 
+src/\mbox{\hyperlink{Airport_8cpp}{Airport.\+cpp}}\end{DoxyCompactItemize}

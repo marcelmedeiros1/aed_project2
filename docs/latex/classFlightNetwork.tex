@@ -1,0 +1,251 @@
+\doxysection{Flight\+Network Class Reference}
+\hypertarget{classFlightNetwork}{}\label{classFlightNetwork}\index{FlightNetwork@{FlightNetwork}}
+
+
+{\ttfamily \#include $<$Flight\+Network.\+hpp$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}{Flight\+Network}} ()
+\item 
+\mbox{\hyperlink{classFlightNetwork_a678157c593366c44080e41b0d836ff86}{Flight\+Network}} (const std\+::string \&airlines\+\_\+filename, const std\+::string \&airports\+\_\+filename, const std\+::string \&flights\+\_\+filename)
+\item 
+\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}{get\+Aiports\+Graph}} ()
+\item 
+int \mbox{\hyperlink{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}{get\+Global\+Num\+Of\+Airports}} () const
+\item 
+int \mbox{\hyperlink{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}{get\+Global\+Num\+Of\+Flights}} () const
+\item 
+std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}{num\+Flights\+Airport}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport)
+\item 
+int \mbox{\hyperlink{classFlightNetwork_ae57015e499d5befbc9d712050111237a}{num\+Flights\+City}} (const std\+::string \&city) const
+\item 
+int \mbox{\hyperlink{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}{num\+Flights\+Airline}} (\mbox{\hyperlink{classAirline}{Airline}} \&airline) const
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}{get\+Diff\+Countries\+Airport}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}{get\+Diff\+Countries\+City}} (const std\+::string \&city) const
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}{get\+Airports\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb}{get\+Cities\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}{get\+Countries\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}{get\+Reachable\+Airports}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a12c8f707304be0127849127da305d649}{get\+Reachable\+Cities}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}{get\+Reachable\+Countries}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
+\item 
+int \mbox{\hyperlink{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}{maximum\+Trip}} (std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&airports)
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}{get\+Greatest\+Traffic}} (const int \&k)
+\item 
+std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}{get\+Essential\+Airports}} ()
+\item 
+\mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}{code\+Criteria}} (const std\+::string \&code) const
+\item 
+\mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}{name\+Criteria}} (const std\+::string \&name) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}{city\+Criteria}} (const std\+::string \&city) const
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56}{coordinate\+Criteria}} (const float \&lat, const float \&lon, const double \&radius) const
+\item 
+std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}{best\+Flight}} (const \mbox{\hyperlink{classAirport}{Airport}} \&source, const \mbox{\hyperlink{classAirport}{Airport}} \&destination, const set$<$ string $>$ \&allowed\+Airlines=\{\}, bool minimize\+Airlines=false) const
+\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4}{list\+Best\+Flights}} (const int \&flag1, const int \&flag2) const
+\item 
+bool \mbox{\hyperlink{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19}{is\+Path\+Valid}} (const vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&path, const set$<$ string $>$ \&allowed\+Airlines, bool minimize\+Airlines) const
+\item 
+std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50}{best\+Flight\+Filtered}} (const \mbox{\hyperlink{classAirport}{Airport}} \&source, const \mbox{\hyperlink{classAirport}{Airport}} \&destination, const set$<$ string $>$ \&allowed\+Airlines, bool minimize\+Airlines) const
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86}{airports\+Graph}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}\label{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042} 
+\index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
+\index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{FlightNetwork()}{FlightNetwork()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Flight\+Network\+::\+Flight\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a678157c593366c44080e41b0d836ff86}\label{classFlightNetwork_a678157c593366c44080e41b0d836ff86} 
+\index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
+\index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{FlightNetwork()}{FlightNetwork()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Flight\+Network\+::\+Flight\+Network (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{airlines\+\_\+filename,  }\item[{const std\+::string \&}]{airports\+\_\+filename,  }\item[{const std\+::string \&}]{flights\+\_\+filename }\end{DoxyParamCaption})}
+
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}\label{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512} 
+\index{FlightNetwork@{FlightNetwork}!bestFlight@{bestFlight}}
+\index{bestFlight@{bestFlight}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{bestFlight()}{bestFlight()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::best\+Flight (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{source,  }\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{destination,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines = {\ttfamily \{\}},  }\item[{bool}]{minimize\+Airlines = {\ttfamily false} }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50}\label{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50} 
+\index{FlightNetwork@{FlightNetwork}!bestFlightFiltered@{bestFlightFiltered}}
+\index{bestFlightFiltered@{bestFlightFiltered}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{bestFlightFiltered()}{bestFlightFiltered()}}
+{\footnotesize\ttfamily std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::best\+Flight\+Filtered (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{source,  }\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{destination,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines,  }\item[{bool}]{minimize\+Airlines }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}\label{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48} 
+\index{FlightNetwork@{FlightNetwork}!cityCriteria@{cityCriteria}}
+\index{cityCriteria@{cityCriteria}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{cityCriteria()}{cityCriteria()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::city\+Criteria (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{city }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}\label{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e} 
+\index{FlightNetwork@{FlightNetwork}!codeCriteria@{codeCriteria}}
+\index{codeCriteria@{codeCriteria}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{codeCriteria()}{codeCriteria()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAirport}{Airport}} Flight\+Network\+::code\+Criteria (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56}\label{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56} 
+\index{FlightNetwork@{FlightNetwork}!coordinateCriteria@{coordinateCriteria}}
+\index{coordinateCriteria@{coordinateCriteria}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{coordinateCriteria()}{coordinateCriteria()}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::coordinate\+Criteria (\begin{DoxyParamCaption}\item[{const float \&}]{lat,  }\item[{const float \&}]{lon,  }\item[{const double \&}]{radius }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}\label{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d} 
+\index{FlightNetwork@{FlightNetwork}!getAiportsGraph@{getAiportsGraph}}
+\index{getAiportsGraph@{getAiportsGraph}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getAiportsGraph()}{getAiportsGraph()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::get\+Aiports\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}\label{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d} 
+\index{FlightNetwork@{FlightNetwork}!getAirportsDestinations@{getAirportsDestinations}}
+\index{getAirportsDestinations@{getAirportsDestinations}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getAirportsDestinations()}{getAirportsDestinations()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Airports\+Destinations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb}\label{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb} 
+\index{FlightNetwork@{FlightNetwork}!getCitiesDestinations@{getCitiesDestinations}}
+\index{getCitiesDestinations@{getCitiesDestinations}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getCitiesDestinations()}{getCitiesDestinations()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Cities\+Destinations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}\label{classFlightNetwork_a950669ecc0c36241638bb6d634daa322} 
+\index{FlightNetwork@{FlightNetwork}!getCountriesDestinations@{getCountriesDestinations}}
+\index{getCountriesDestinations@{getCountriesDestinations}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getCountriesDestinations()}{getCountriesDestinations()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Countries\+Destinations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}\label{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970} 
+\index{FlightNetwork@{FlightNetwork}!getDiffCountriesAirport@{getDiffCountriesAirport}}
+\index{getDiffCountriesAirport@{getDiffCountriesAirport}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getDiffCountriesAirport()}{getDiffCountriesAirport()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Diff\+Countries\+Airport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}\label{classFlightNetwork_a4e74766e1af03668d285c5f028886cde} 
+\index{FlightNetwork@{FlightNetwork}!getDiffCountriesCity@{getDiffCountriesCity}}
+\index{getDiffCountriesCity@{getDiffCountriesCity}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getDiffCountriesCity()}{getDiffCountriesCity()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Diff\+Countries\+City (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{city }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}\label{classFlightNetwork_accd26591affed45d5e976809bf80b5e4} 
+\index{FlightNetwork@{FlightNetwork}!getEssentialAirports@{getEssentialAirports}}
+\index{getEssentialAirports@{getEssentialAirports}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getEssentialAirports()}{getEssentialAirports()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Essential\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}\label{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a} 
+\index{FlightNetwork@{FlightNetwork}!getGlobalNumOfAirports@{getGlobalNumOfAirports}}
+\index{getGlobalNumOfAirports@{getGlobalNumOfAirports}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getGlobalNumOfAirports()}{getGlobalNumOfAirports()}}
+{\footnotesize\ttfamily int Flight\+Network\+::get\+Global\+Num\+Of\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}\label{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e} 
+\index{FlightNetwork@{FlightNetwork}!getGlobalNumOfFlights@{getGlobalNumOfFlights}}
+\index{getGlobalNumOfFlights@{getGlobalNumOfFlights}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getGlobalNumOfFlights()}{getGlobalNumOfFlights()}}
+{\footnotesize\ttfamily int Flight\+Network\+::get\+Global\+Num\+Of\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}\label{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273} 
+\index{FlightNetwork@{FlightNetwork}!getGreatestTraffic@{getGreatestTraffic}}
+\index{getGreatestTraffic@{getGreatestTraffic}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getGreatestTraffic()}{getGreatestTraffic()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Greatest\+Traffic (\begin{DoxyParamCaption}\item[{const int \&}]{k }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}\label{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16} 
+\index{FlightNetwork@{FlightNetwork}!getReachableAirports@{getReachableAirports}}
+\index{getReachableAirports@{getReachableAirports}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getReachableAirports()}{getReachableAirports()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Reachable\+Airports (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport,  }\item[{const int \&}]{distance }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a12c8f707304be0127849127da305d649}\label{classFlightNetwork_a12c8f707304be0127849127da305d649} 
+\index{FlightNetwork@{FlightNetwork}!getReachableCities@{getReachableCities}}
+\index{getReachableCities@{getReachableCities}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getReachableCities()}{getReachableCities()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Reachable\+Cities (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport,  }\item[{const int \&}]{distance }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}\label{classFlightNetwork_a983ab64ea8332373b1792e4be587d357} 
+\index{FlightNetwork@{FlightNetwork}!getReachableCountries@{getReachableCountries}}
+\index{getReachableCountries@{getReachableCountries}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{getReachableCountries()}{getReachableCountries()}}
+{\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Reachable\+Countries (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport,  }\item[{const int \&}]{distance }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19}\label{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19} 
+\index{FlightNetwork@{FlightNetwork}!isPathValid@{isPathValid}}
+\index{isPathValid@{isPathValid}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{isPathValid()}{isPathValid()}}
+{\footnotesize\ttfamily bool Flight\+Network\+::is\+Path\+Valid (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&}]{path,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines,  }\item[{bool}]{minimize\+Airlines }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4}\label{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4} 
+\index{FlightNetwork@{FlightNetwork}!listBestFlights@{listBestFlights}}
+\index{listBestFlights@{listBestFlights}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{listBestFlights()}{listBestFlights()}}
+{\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::list\+Best\+Flights (\begin{DoxyParamCaption}\item[{const int \&}]{flag1,  }\item[{const int \&}]{flag2 }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}\label{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a} 
+\index{FlightNetwork@{FlightNetwork}!maximumTrip@{maximumTrip}}
+\index{maximumTrip@{maximumTrip}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{maximumTrip()}{maximumTrip()}}
+{\footnotesize\ttfamily int Flight\+Network\+::maximum\+Trip (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&}]{airports }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}\label{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915} 
+\index{FlightNetwork@{FlightNetwork}!nameCriteria@{nameCriteria}}
+\index{nameCriteria@{nameCriteria}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{nameCriteria()}{nameCriteria()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classAirport}{Airport}} Flight\+Network\+::name\+Criteria (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}\label{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1} 
+\index{FlightNetwork@{FlightNetwork}!numFlightsAirline@{numFlightsAirline}}
+\index{numFlightsAirline@{numFlightsAirline}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{numFlightsAirline()}{numFlightsAirline()}}
+{\footnotesize\ttfamily int Flight\+Network\+::num\+Flights\+Airline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirline}{Airline}} \&}]{airline }\end{DoxyParamCaption}) const}
+
+\Hypertarget{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}\label{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50} 
+\index{FlightNetwork@{FlightNetwork}!numFlightsAirport@{numFlightsAirport}}
+\index{numFlightsAirport@{numFlightsAirport}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{numFlightsAirport()}{numFlightsAirport()}}
+{\footnotesize\ttfamily pair$<$ int, int $>$ Flight\+Network\+::num\+Flights\+Airport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption})}
+
+\Hypertarget{classFlightNetwork_ae57015e499d5befbc9d712050111237a}\label{classFlightNetwork_ae57015e499d5befbc9d712050111237a} 
+\index{FlightNetwork@{FlightNetwork}!numFlightsCity@{numFlightsCity}}
+\index{numFlightsCity@{numFlightsCity}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{numFlightsCity()}{numFlightsCity()}}
+{\footnotesize\ttfamily int Flight\+Network\+::num\+Flights\+City (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{city }\end{DoxyParamCaption}) const}
+
+
+
+\doxysubsection{Member Data Documentation}
+\Hypertarget{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86}\label{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86} 
+\index{FlightNetwork@{FlightNetwork}!airportsGraph@{airportsGraph}}
+\index{airportsGraph@{airportsGraph}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{airportsGraph}{airportsGraph}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classGraph}{Graph}}$<$\mbox{\hyperlink{classAirport}{Airport}}$>$ Flight\+Network\+::airports\+Graph\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+inc/\mbox{\hyperlink{FlightNetwork_8hpp}{Flight\+Network.\+hpp}}\item 
+src/\mbox{\hyperlink{FlightNetwork_8cpp}{Flight\+Network.\+cpp}}\end{DoxyCompactItemize}

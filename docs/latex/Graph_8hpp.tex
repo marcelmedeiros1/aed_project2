@@ -1,0 +1,39 @@
+\doxysection{inc/\+Graph.hpp File Reference}
+\hypertarget{Graph_8hpp}{}\label{Graph_8hpp}\index{inc/Graph.hpp@{inc/Graph.hpp}}
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$queue$>$}\newline
+{\ttfamily \#include $<$unordered\+\_\+map$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classVertex}{Vertex$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Represents a vertex in a graph with generic information of type T. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classEdge}{Edge$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Represents an edge between two vertices in a graph with generic information of type T. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classGraph}{Graph$<$ T $>$}}
+\begin{DoxyCompactList}\small\item\em Represents a generic graph with vertices of type T. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{Graph_8hpp_a872296abdf834fa08566553de7c9ab24}{nodes\+At\+Distance\+DFSVisit}} (\mbox{\hyperlink{classVertex}{Vertex}}$<$ T $>$ \texorpdfstring{$\ast$}{*}v, int k, std\+::vector$<$ T $>$ \&res)
+\item 
+{\footnotesize template$<$class T $>$ }\\void \mbox{\hyperlink{Graph_8hpp_a326d56f40db25ee656aa7466f5d04b88}{nodes\+At\+Distance\+DFSVisit}} (\mbox{\hyperlink{classVertex}{Vertex}}$<$ T $>$ \texorpdfstring{$\ast$}{*}v, int k, std\+::vector$<$ \mbox{\hyperlink{classEdge}{Edge}}$<$ T $>$ $>$ \&res)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{Graph_8hpp_a326d56f40db25ee656aa7466f5d04b88}\label{Graph_8hpp_a326d56f40db25ee656aa7466f5d04b88} 
+\index{Graph.hpp@{Graph.hpp}!nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}}
+\index{nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}!Graph.hpp@{Graph.hpp}}
+\doxysubsubsection{\texorpdfstring{nodesAtDistanceDFSVisit()}{nodesAtDistanceDFSVisit()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void nodes\+At\+Distance\+DFSVisit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{v,  }\item[{int}]{k,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classEdge}{Edge}}$<$ T $>$ $>$ \&}]{res }\end{DoxyParamCaption})}
+
+\Hypertarget{Graph_8hpp_a872296abdf834fa08566553de7c9ab24}\label{Graph_8hpp_a872296abdf834fa08566553de7c9ab24} 
+\index{Graph.hpp@{Graph.hpp}!nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}}
+\index{nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}!Graph.hpp@{Graph.hpp}}
+\doxysubsubsection{\texorpdfstring{nodesAtDistanceDFSVisit()}{nodesAtDistanceDFSVisit()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$class T $>$ \\
+void nodes\+At\+Distance\+DFSVisit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ T $>$ \texorpdfstring{$\ast$}{*}}]{v,  }\item[{int}]{k,  }\item[{std\+::vector$<$ T $>$ \&}]{res }\end{DoxyParamCaption})}
+

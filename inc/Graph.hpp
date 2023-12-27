@@ -16,102 +16,341 @@ class Graph;
 template <class T>
 class Vertex;
 
+/**
+ * @brief Represents a vertex in a graph with generic information of type T.
+ * @tparam T The type of information stored in the vertex.
+ */
 template <class T>
 class Vertex
 {
+    /** The information stored in the vertex. */
     T info;
+
+    /** The vector of edges adjacent to this vertex. */
     std::vector<Edge<T>> adj;
+
+    /** Flag indicating if the vertex has been visited during graph traversal. */
     bool visited;
+
+    /** Flag indicating if the vertex is currently being processed during traversal. */
     bool processing;
+
+    /** The indegree of the vertex in a directed graph. */
     int indegree;
+
+    /** Numeric identifier for the vertex. */
     int num;
+
+    /** Low value used in Tarjan's algorithm for finding strongly connected components. */
     int low;
+
+    /** Distance of the vertex in certain graph traversal algorithms. */
     int distance;
 
 public:
+    /**
+     * @brief Constructor for creating a vertex with the given information.
+     * @param in The information to be stored in the vertex.
+     */
     Vertex(T in);
 
+    /**
+     * @brief Gets the information stored in the vertex.
+     * @return The information stored in the vertex.
+     */
     T getInfo() const;
+
+    /**
+     * @brief Sets the information stored in the vertex.
+     * @param in The new information to be stored in the vertex.
+     */
     void setInfo(T in);
 
+    /**
+     * @brief Checks if the vertex has been visited during graph traversal.
+     * @return True if the vertex has been visited, false otherwise.
+     */
     bool isVisited() const;
+
+    /**
+     * @brief Sets the visited status of the vertex.
+     * @param v The new visited status.
+     */
     void setVisited(bool v);
 
+    /**
+     * @brief Checks if the vertex is currently being processed during traversal.
+     * @return True if the vertex is being processed, false otherwise.
+     */
     bool isProcessing() const;
+
+    /**
+     * @brief Sets the processing status of the vertex.
+     * @param p The new processing status.
+     */
     void setProcessing(bool p);
 
+    /**
+     * @brief Sets the indegree of the vertex.
+     * @param i The new indegree of the vertex.
+     */
     void setInDegree(int i);
+
+    /**
+     * @brief Gets the indegree of the vertex.
+     * @return The indegree of the vertex.
+     */
     int getInDegree();
 
+    /**
+     * @brief Gets the numeric identifier of the vertex.
+     * @return The numeric identifier of the vertex.
+     */
     int getNum() const;
+
+    /**
+     * @brief Sets the numeric identifier of the vertex.
+     * @param num The new numeric identifier.
+     */
     void setNum(int num);
 
+    /**
+     * @brief Gets the low value of the vertex.
+     * @return The low value of the vertex.
+     */
     int getLow() const;
+
+    /**
+     * @brief Sets the low value of the vertex.
+     * @param low The new low value.
+     */
     void setLow(int low);
 
+    /**
+     * @brief Gets the distance of the vertex.
+     * @return The distance of the vertex.
+     */
     int getDistance() const;
+
+    /**
+     * @brief Sets the distance of the vertex.
+     * @param distance The new distance of the vertex.
+     */
     void setDistance(int distance);
 
-    void addEdge(Vertex<T> *dest, std::string in, double w);
+    /**
+     * @brief Adds an edge from this vertex to the specified destination vertex with a given weight.
+     * @param d The destination vertex.
+     * @param in The information associated with the edge.
+     * @param w The weight of the edge.
+     */
+    void addEdge(Vertex<T> *d, std::string in, double w);
+
+    /**
+     * @brief Removes the edge from this vertex to the specified destination vertex.
+     * @param d The destination vertex.
+     * @return True if the edge was successfully removed, false otherwise.
+     */
     bool removeEdgeTo(Vertex<T> *d);
 
+    /**
+     * @brief Gets the vector of edges adjacent to this vertex.
+     * @return The vector of edges adjacent to this vertex.
+     */
     const std::vector<Edge<T>> &getAdj() const;
+
+    /**
+     * @brief Sets the vector of edges adjacent to this vertex.
+     * @param adj_vec The new vector of edges adjacent to this vertex.
+     */
     void setAdj(const std::vector<Edge<T>> &adj_vec);
-    bool operator<(Vertex<T> *other) { return this->adj.size() > other->getAdj().size(); }
-    friend class Graph<T>;
+
+    friend class Graph<T>; // Allow Graph class to access private members of Vertex.
 };
 
+/**
+ * @brief Represents an edge between two vertices in a graph with generic information of type T.
+ * @tparam T The type of information stored in the edge.
+ */
 template <class T>
 class Edge
 {
+    /** The destination vertex of the edge. */
     Vertex<T> *dest;
+
+    /** Information associated with the edge. */
     std::string info;
+
+    /** The weight of the edge. */
     double weight;
 
 public:
+    /**
+     * @brief Constructor for creating an edge with a specified destination vertex, information, and weight.
+     * @param d The destination vertex of the edge.
+     * @param in The information associated with the edge.
+     * @param w The weight of the edge.
+     */
     Edge(Vertex<T> *d, std::string in, double w);
 
+    /**
+     * @brief Gets the destination vertex of the edge.
+     * @return The destination vertex of the edge.
+     */
     Vertex<T> *getDest() const;
-    void setDest(Vertex<T> *dest);
 
+    /**
+     * @brief Sets the destination vertex of the edge.
+     * @param d The new destination vertex of the edge.
+     */
+    void setDest(Vertex<T> *d);
+
+    /**
+     * @brief Gets the information associated with the edge.
+     * @return The information associated with the edge.
+     */
     std::string getInfo() const;
+
+    /**
+     * @brief Sets the information associated with the edge.
+     * @param in The new information associated with the edge.
+     */
     void setInfo(std::string in);
 
+    /**
+     * @brief Gets the weight of the edge.
+     * @return The weight of the edge.
+     */
     double getWeight() const;
+
+    /**
+     * @brief Sets the weight of the edge.
+     * @param weight The new weight of the edge.
+     */
     void setWeight(double weight);
 
-    friend class Graph<T>;
-    friend class Vertex<T>;
+    friend class Graph<T>;  /**< Allow Graph class to access private members of Edge. */
+    friend class Vertex<T>; /**< Allow Vertex class to access private members of Edge. */
 };
 
+/**
+ * @brief Represents a generic graph with vertices of type T.
+ * @tparam T The type of information stored in the vertices of the graph.
+ */
 template <class T>
 class Graph
 {
+    /** The vector of vertices in the graph. */
     std::vector<Vertex<T> *> vertexSet;
 
 public:
+    /**
+     * @brief Finds a vertex with a given information in the graph.
+     * @param in The information to search for in the vertices.
+     * @return Pointer to the vertex with the given information, or nullptr if not found.
+     */
     Vertex<T> *findVertex(const T &in) const;
+
+    /**
+     * @brief Gets the number of vertices in the graph.
+     * @return The number of vertices in the graph.
+     */
 
     int getNumVertex() const;
 
+    /**
+     * @brief Adds a vertex with the given information to the graph.
+     * @param in The information to be stored in the new vertex.
+     * @return True if the vertex is added successfully, false if the vertex already exists.
+     */
     bool addVertex(const T &in);
+
+    /**
+     * @brief Removes the vertex with the given information from the graph.
+     * @param in The information of the vertex to be removed.
+     * @return True if the vertex is removed successfully, false if the vertex is not found.
+     */
     bool removeVertex(const T &in);
 
+    /**
+     * @brief Adds an edge between vertices with source and destination information.
+     * @param sourc The information of the source vertex.
+     * @param dest The information of the destination vertex.
+     * @param in The information associated with the edge.
+     * @param w The weight of the edge.
+     * @return True if the edge is added successfully, false if the source or destination vertex is not found.
+     */
     bool addEdge(const T &sourc, const T &dest, const std::string &in, double w);
+
+    /**
+     * @brief Removes the edge between vertices with source and destination information.
+     * @param sourc The information of the source vertex.
+     * @param dest The information of the destination vertex.
+     * @return True if the edge is removed successfully, false if the source or destination vertex is not found.
+     */
     bool removeEdge(const T &sourc, const T &dest);
 
+    /**
+     * @brief Gets the vector of vertices in the graph.
+     * @return The vector of vertices in the graph.
+     */
     std::vector<Vertex<T> *> getVertexSet() const;
 
+    /**
+     * @brief Helper function for depth-first search traversal of the graph.
+     * @param v The pointer to the current vertex being visited.
+     * @param res The vector to store the information of vertices in the order they are visited.
+     */
     void dfsVisit(Vertex<T> *v, std::vector<T> &res) const;
+
+    /**
+     * @brief Performs depth-first search traversal of the graph.
+     * @return A vector containing the information of vertices in the order they are visited.
+     */
     std::vector<T> dfs() const;
+
+    /**
+     * @brief Performs depth-first search traversal of the graph starting from a specific vertex.
+     * @param source The information of the starting vertex.
+     * @return A vector containing the information of vertices in the order they are visited.
+     */
     std::vector<T> dfs(const T &source) const;
 
+    /**
+     * @brief Finds nodes at a specific distance from a source vertex using depth-first search.
+     * @param source The information of the source vertex.
+     * @param k The distance from the source vertex.
+     * @return A vector containing the information of vertices at the specified distance.
+     */
     std::vector<T> nodesAtDistanceDFS(const T &source, int k);
+
+    /**
+     * @brief Finds edges at a specific distance from a source vertex using depth-first search.
+     * @param source The information of the source vertex.
+     * @param k The distance from the source vertex.
+     * @return A vector containing the edges at the specified distance.
+     */
     std::vector<Edge<T>> EdgesAtDistanceDFS(const T &source, int k);
 
+    /**
+     * @brief Performs breadth-first search traversal of the graph starting from a specific vertex.
+     * @param source The information of the starting vertex.
+     * @return A vector containing the information of vertices in the order they are visited.
+     */
     std::vector<T> bfs(const T &source) const;
+
+    /**
+     * @brief Performs breadth-first search traversal of the graph starting from a specific vertex
+     * and returns a vector of pairs containing the distance and information of each vertex.
+     * @param source The pointer to the starting vertex.
+     * @return A vector of pairs containing the distance and information of each vertex.
+     */
     std::vector<std::pair<int, T>> bfsDistance(Vertex<T> *source);
-    std::vector<std::pair<int, T>> dijkstra(const T &source);
+
+    /**
+     * @brief Determines the in-degree of a specific vertex in the graph.
+     * @param source The pointer to the vertex for which the in-degree is calculated.
+     */
     void inDegree(Vertex<T> *source);
 };
 
@@ -529,22 +768,22 @@ std::vector<std::pair<int, T>> Graph<T>::bfsDistance(Vertex<T> *source)
     std::vector<std::pair<int, T>> res;
     std::queue<Vertex<T> *> aux;
 
-    for (Vertex<T> *v : vertexSet){
+    for (Vertex<T> *v : vertexSet)
+    {
         v->setVisited(false);
         v->setDistance(10000);
-    }   
+    }
 
     source->setVisited(true);
     source->setDistance(0);
     aux.push(source);
-    
 
     while (!aux.empty())
     {
         Vertex<T> *curr = aux.front();
         aux.pop();
         res.push_back({curr->getDistance(), curr->getInfo()});
-        
+
         for (const Edge<T> &e : curr->getAdj())
         {
             Vertex<T> *neighbor = e.getDest();
@@ -578,70 +817,5 @@ void Graph<T>::inDegree(Vertex<T> *source)
     }
     source->setInDegree(res);
 }
-
-/*Using Dijkstra algorithm to find shortest paths in the graph
-template <class T>
-struct DijkstraInfo {
-    Vertex<T>* vertex;
-    double distance;
-
-    DijkstraInfo(Vertex<T>* v, double d) : vertex(v), distance(d) {}
-
-    bool operator>(const DijkstraInfo& other) const {
-        return distance > other.distance;
-    }
-
-
-};
-
-template <class T>
-std::vector<std::pair<int, T>> Graph<T>::dijkstra(const T& source) {
-    std::vector<std::pair<int, T>> shortestPaths;
-
-    // Priority queue to select the vertex with the minimum distance
-    std::priority_queue<DijkstraInfo<T>, std::vector<DijkstraInfo<T>>, std::greater<>> pq;
-
-    // Initialize distances to all vertices as infinity
-    std::unordered_map<Vertex<T>*, double> distances;
-    for (Vertex<T>* vertex : vertexSet) {
-        distances[vertex] = 1000000000000000000000.0;
-    }
-
-    // Set the distance of the source vertex to 0
-    Vertex<T>* sourceVertex = this->findVertex(source);
-    distances[sourceVertex] = 0;
-    pq.push(DijkstraInfo<T>(sourceVertex, 0));
-
-    while (!pq.empty()) {
-        DijkstraInfo<T> currentInfo = pq.top();
-        pq.pop();
-
-        Vertex<T>* currentVertex = currentInfo.vertex;
-        double currentDistance = currentInfo.distance;
-
-        // Update the distances of neighboring vertices
-        for (const Edge<T>& edge : currentVertex->getAdj()) {
-            Vertex<T>* neighborVertex = edge.getDest();
-            double edgeWeight = edge.getWeight();
-
-            double newDistance = currentDistance + edgeWeight;
-
-            if (newDistance < distances[neighborVertex]) {
-                distances[neighborVertex] = newDistance;
-                pq.push(DijkstraInfo<T>(neighborVertex, newDistance));
-            }
-        }
-    }
-
-    // Convert the distances to the desired format (pair of stops and airport)
-    for (const auto& entry : distances) {
-        Vertex<T>* vertex = entry.first;
-        double distance = entry.second;
-        shortestPaths.emplace_back(static_cast<int>(distance), vertex->getInfo());
-    }
-
-    return shortestPaths;
-}
-*/
 
 #endif

@@ -1,0 +1,40 @@
+\doxysection{inc/\+Flight\+Network.hpp File Reference}
+\hypertarget{FlightNetwork_8hpp}{}\label{FlightNetwork_8hpp}\index{inc/FlightNetwork.hpp@{inc/FlightNetwork.hpp}}
+{\ttfamily \#include "{}Airline.\+hpp"{}}\newline
+{\ttfamily \#include "{}Airport.\+hpp"{}}\newline
+{\ttfamily \#include "{}Graph.\+hpp"{}}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$set$>$}\newline
+{\ttfamily \#include $<$stack$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include $<$functional$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classFlightNetwork}{Flight\+Network}}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{FlightNetwork_8hpp_a59084262fd494b809693ffbb010d68fc}{dfs\+\_\+art}} (\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&g, \mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \texorpdfstring{$\ast$}{*}v, set$<$ string $>$ \&l, int \&i)
+\item 
+double \mbox{\hyperlink{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}{haversine\+Distance}} (double lat1, double lon1, double lat2, double lon2)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{FlightNetwork_8hpp_a59084262fd494b809693ffbb010d68fc}\label{FlightNetwork_8hpp_a59084262fd494b809693ffbb010d68fc} 
+\index{FlightNetwork.hpp@{FlightNetwork.hpp}!dfs\_art@{dfs\_art}}
+\index{dfs\_art@{dfs\_art}!FlightNetwork.hpp@{FlightNetwork.hpp}}
+\doxysubsubsection{\texorpdfstring{dfs\_art()}{dfs\_art()}}
+{\footnotesize\ttfamily void dfs\+\_\+art (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&}]{g,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \texorpdfstring{$\ast$}{*}}]{v,  }\item[{set$<$ string $>$ \&}]{l,  }\item[{int \&}]{i }\end{DoxyParamCaption})}
+
+\Hypertarget{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}\label{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2} 
+\index{FlightNetwork.hpp@{FlightNetwork.hpp}!haversineDistance@{haversineDistance}}
+\index{haversineDistance@{haversineDistance}!FlightNetwork.hpp@{FlightNetwork.hpp}}
+\doxysubsubsection{\texorpdfstring{haversineDistance()}{haversineDistance()}}
+{\footnotesize\ttfamily double haversine\+Distance (\begin{DoxyParamCaption}\item[{double}]{lat1,  }\item[{double}]{lon1,  }\item[{double}]{lat2,  }\item[{double}]{lon2 }\end{DoxyParamCaption})}
+
