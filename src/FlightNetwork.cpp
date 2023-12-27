@@ -414,28 +414,35 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
     vector<vector<Airport>> result;
     queue<vector<Airport>> q;
     set<string> visited;
+    int nesc=3019;
 
     q.push({source});
     visited.insert(source.getCode());
 
     while (!q.empty())
     {
+        
         vector<Airport> currentPath = q.front();
         q.pop();
 
         Airport currentAirport = currentPath.back();
 
-        if (currentAirport == destination)
-        {
-            result.push_back(currentPath);
-            continue;
-        }
 
         for (const Edge<Airport> &edge : airportsGraph.findVertex(currentAirport)->getAdj())
         {
+           
             Airport neighborAirport = edge.getDest()->getInfo();
             string currentAirline = edge.getInfo();
+            if(neighborAirport == destination){
+                vector<Airport> newPath = currentPath;
+                newPath.push_back(neighborAirport); 
+                if(result.empty()) nesc = newPath.size();
 
+                if(newPath.size() <= nesc){
+                nesc=newPath.size();
+                result.push_back(newPath);
+                }
+            } 
             if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
                 continue;
 
