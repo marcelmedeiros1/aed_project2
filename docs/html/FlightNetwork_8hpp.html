@@ -93,19 +93,23 @@ $(function() {
 <code>#include &lt;cmath&gt;</code><br />
 <code>#include &lt;tuple&gt;</code><br />
 <code>#include &lt;functional&gt;</code><br />
+<code>#include &lt;limits&gt;</code><br />
 </div>
 <p><a href="FlightNetwork_8hpp_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
 Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFlightNetwork.html">FlightNetwork</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Represents a flight network consisting of airports and flights.  <a href="classFlightNetwork.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a59084262fd494b809693ffbb010d68fc" id="r_a59084262fd494b809693ffbb010d68fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59084262fd494b809693ffbb010d68fc">dfs_art</a> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classAirport.html">Airport</a> &gt; &amp;g, <a class="el" href="classVertex.html">Vertex</a>&lt; <a class="el" href="classAirport.html">Airport</a> &gt; *v, set&lt; string &gt; &amp;l, int &amp;i)</td></tr>
+<tr class="memdesc:a59084262fd494b809693ffbb010d68fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth-first search for identifying articulation points in the airport graph.  <br /></td></tr>
 <tr class="separator:a59084262fd494b809693ffbb010d68fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8b1f9c1793fb1626fb141b9fdf126e2" id="r_ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8b1f9c1793fb1626fb141b9fdf126e2">haversineDistance</a> (double lat1, double lon1, double lat2, double lon2)</td></tr>
+<tr class="memdesc:ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Haversine distance between two geographical points.  <br /></td></tr>
 <tr class="separator:ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -138,6 +142,17 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Depth-first search for identifying articulation points in the airport graph. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">g</td><td>The airport graph. </td></tr>
+    <tr><td class="paramname">v</td><td>The current vertex in the DFS traversal. </td></tr>
+    <tr><td class="paramname">l</td><td>Set to store the identified articulation points. </td></tr>
+    <tr><td class="paramname">i</td><td>Reference to the current DFS iteration number. </td></tr>
+  </table>
+  </dd>
+</dl>
+
 </div>
 </div>
 <a id="ae8b1f9c1793fb1626fb141b9fdf126e2" name="ae8b1f9c1793fb1626fb141b9fdf126e2"></a>
@@ -168,6 +183,18 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Calculates the Haversine distance between two geographical points. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">lat1</td><td>Latitude of the first point. </td></tr>
+    <tr><td class="paramname">lon1</td><td>Longitude of the first point. </td></tr>
+    <tr><td class="paramname">lat2</td><td>Latitude of the second point. </td></tr>
+    <tr><td class="paramname">lon2</td><td>Longitude of the second point. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Haversine distance between the two points. </dd></dl>
 
 </div>
 </div>

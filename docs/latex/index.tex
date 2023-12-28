@@ -1,4 +1,55 @@
-\chapter{aed\+\_\+project2}
-\hypertarget{index}{}\label{index}\index{aed\_project2@{aed\_project2}}
+\chapter{Air Travel Flight Management System}
+\hypertarget{index}{}\label{index}\index{Air Travel Flight Management System@{Air Travel Flight Management System}}
 \label{index_md_README}%
 \Hypertarget{index_md_README}%
+ \hypertarget{index_autotoc_md1}{}\doxysection{\texorpdfstring{Overview}{Overview}}\label{index_autotoc_md1}
+Welcome to the Air Travel Flight Management System! This system is designed to help users explore and plan their air travel efficiently. It leverages real-\/world data about airports, airlines, and flights to provide a comprehensive tool for making informed decisions.\hypertarget{index_autotoc_md2}{}\doxysection{\texorpdfstring{Dataset}{Dataset}}\label{index_autotoc_md2}
+The system utilizes a dataset containing information about 3019 airports, 444 airlines, and 63832 flights. This dataset includes details such as airport codes, names, cities, countries, latitude, and longitude, among other information.\hypertarget{index_autotoc_md3}{}\doxysection{\texorpdfstring{Features}{Features}}\label{index_autotoc_md3}
+\hypertarget{index_autotoc_md4}{}\doxysubsection{\texorpdfstring{Data Handling}{Data Handling}}\label{index_autotoc_md4}
+
+\begin{DoxyItemize}
+\item Read and parse provided data, loading it into an appropriate graph data structure.
+\end{DoxyItemize}\hypertarget{index_autotoc_md5}{}\doxysubsection{\texorpdfstring{Flight Management System}{Flight Management System}}\label{index_autotoc_md5}
+
+\begin{DoxyItemize}
+\item Develop a user-\/friendly system with functionalities for exploring and planning air travel.
+\end{DoxyItemize}\hypertarget{index_autotoc_md6}{}\doxysubsection{\texorpdfstring{Network Statistics}{Network Statistics}}\label{index_autotoc_md6}
+
+\begin{DoxyItemize}
+\item Calculate and list statistics such as the global number of airports and flights.
+\item Provide statistics on flights per airport, per city, per airline, and more.
+\end{DoxyItemize}\hypertarget{index_autotoc_md7}{}\doxysubsection{\texorpdfstring{Maximum Trip and Essential Airports}{Maximum Trip and Essential Airports}}\label{index_autotoc_md7}
+
+\begin{DoxyItemize}
+\item Identify the maximum number of stops for a round-\/trip.
+\item Identify essential airports for the network\textquotesingle{}s circulation capability.
+\end{DoxyItemize}\hypertarget{index_autotoc_md8}{}\doxysubsection{\texorpdfstring{Best Flight Options}{Best Flight Options}}\label{index_autotoc_md8}
+
+\begin{DoxyItemize}
+\item Present the best flight options based on user-\/specified criteria, such as airport code, name, city, or coordinates.
+\end{DoxyItemize}\hypertarget{index_autotoc_md9}{}\doxysubsection{\texorpdfstring{Flight Filtering}{Flight Filtering}}\label{index_autotoc_md9}
+
+\begin{DoxyItemize}
+\item Allow users to filter flight options based on preferences, such as specific airlines or minimizing the number of different airlines.
+\end{DoxyItemize}\hypertarget{index_autotoc_md10}{}\doxysubsection{\texorpdfstring{Documentation}{Documentation}}\label{index_autotoc_md10}
+
+\begin{DoxyItemize}
+\item Include Doxygen documentation for relevant functions, indicating their time complexity.
+\end{DoxyItemize}\hypertarget{index_autotoc_md11}{}\doxysection{\texorpdfstring{Implementation Details}{Implementation Details}}\label{index_autotoc_md11}
+This system is implemented in C++ using the provided {\ttfamily \doxylink{classGraph}{Graph}} class for managing the network of airports and flights. The data is loaded from CSV files, and various functionalities are provided to assist users in navigating the flight network.\hypertarget{index_autotoc_md12}{}\doxysection{\texorpdfstring{How to Use}{How to Use}}\label{index_autotoc_md12}
+To get started, instantiate the {\ttfamily \doxylink{classFlightNetwork}{Flight\+Network}} class with filenames for airlines, airports, and flights data. Then, use the provided functions to explore the features mentioned above.
+
+To run the code, run the following commands\+:
+
+\DoxyHorRuler{0}
+ mkdir build~\newline
+cd build~\newline
+cmake ..~\newline
+make~\newline
+./aed\+\_\+project2~\newline
+ \DoxyHorRuler{0}
+\hypertarget{index_autotoc_md15}{}\doxysection{\texorpdfstring{Authors}{Authors}}\label{index_autotoc_md15}
+Leonardo Garcia~\newline
+Marcel Madeiros~\newline
+Pedro Castro~\newline
+ \hypertarget{index_autotoc_md16}{}\doxysubsection{\texorpdfstring{Happy flying!}{Happy flying!}}\label{index_autotoc_md16}

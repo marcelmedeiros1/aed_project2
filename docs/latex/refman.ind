@@ -1,58 +1,63 @@
 \begin{theindex}
 
   \item {addEdge}
-    \subitem {Graph$<$ T $>$}, \hyperpage{27}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{34}
+    \subitem {Graph$<$ T $>$}, \hyperpage{29}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
   \item {addVertex}
-    \subitem {Graph$<$ T $>$}, \hyperpage{27}
+    \subitem {Graph$<$ T $>$}, \hyperpage{29}
   \item {adj}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{39}
-  \item {aed\_project2}, \hyperpage{1}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{38}
+  \item {Air Travel Flight Management System}, \hyperpage{1}
   \item {Airline}, \hyperpage{7}
     \subitem {Airline}, \hyperpage{8}
-    \subitem {callsign}, \hyperpage{10}
-    \subitem {code}, \hyperpage{10}
+    \subitem {callsign}, \hyperpage{9}
+    \subitem {code}, \hyperpage{9}
     \subitem {country}, \hyperpage{10}
     \subitem {getCallsign}, \hyperpage{8}
     \subitem {getCode}, \hyperpage{8}
-    \subitem {getCountry}, \hyperpage{9}
-    \subitem {getName}, \hyperpage{9}
+    \subitem {getCountry}, \hyperpage{8}
+    \subitem {getName}, \hyperpage{8}
     \subitem {name}, \hyperpage{10}
     \subitem {setCallsign}, \hyperpage{9}
     \subitem {setCode}, \hyperpage{9}
-    \subitem {setCountry}, \hyperpage{10}
-    \subitem {setName}, \hyperpage{10}
-  \item {Airport}, \hyperpage{11}
-    \subitem {Airport}, \hyperpage{12}
-    \subitem {city}, \hyperpage{15}
-    \subitem {code}, \hyperpage{15}
-    \subitem {country}, \hyperpage{15}
-    \subitem {getCity}, \hyperpage{13}
-    \subitem {getCode}, \hyperpage{13}
-    \subitem {getCountry}, \hyperpage{13}
-    \subitem {getName}, \hyperpage{13}
-    \subitem {getPosition}, \hyperpage{13}
-    \subitem {name}, \hyperpage{16}
-    \subitem {operator$<$}, \hyperpage{13}
-    \subitem {operator==}, \hyperpage{14}
-    \subitem {position}, \hyperpage{16}
-    \subitem {setCity}, \hyperpage{14}
-    \subitem {setCode}, \hyperpage{14}
-    \subitem {setCountry}, \hyperpage{14}
-    \subitem {setName}, \hyperpage{15}
-    \subitem {setPosition}, \hyperpage{15}
+    \subitem {setCountry}, \hyperpage{9}
+    \subitem {setName}, \hyperpage{9}
+  \item {airlineCodeToName}
+    \subitem {FlightNetwork}, \hyperpage{20}
+  \item {Airport}, \hyperpage{10}
+    \subitem {Airport}, \hyperpage{11}
+    \subitem {city}, \hyperpage{14}
+    \subitem {code}, \hyperpage{14}
+    \subitem {country}, \hyperpage{14}
+    \subitem {getCity}, \hyperpage{11}
+    \subitem {getCode}, \hyperpage{11}
+    \subitem {getCountry}, \hyperpage{12}
+    \subitem {getName}, \hyperpage{12}
+    \subitem {getPosition}, \hyperpage{12}
+    \subitem {name}, \hyperpage{14}
+    \subitem {operator$<$}, \hyperpage{12}
+    \subitem {operator==}, \hyperpage{12}
+    \subitem {position}, \hyperpage{14}
+    \subitem {setCity}, \hyperpage{13}
+    \subitem {setCode}, \hyperpage{13}
+    \subitem {setCountry}, \hyperpage{13}
+    \subitem {setName}, \hyperpage{13}
+    \subitem {setPosition}, \hyperpage{13}
+  \item {airportCodeToName}
+    \subitem {FlightNetwork}, \hyperpage{20}
   \item {airportsGraph}
-    \subitem {FlightNetwork}, \hyperpage{26}
-  \item {App}, \hyperpage{16}
-    \subitem {App}, \hyperpage{16}
-    \subitem {flightnetwork}, \hyperpage{17}
-    \subitem {globalStatistics}, \hyperpage{17}
-    \subitem {goBackStatisticsMenu}, \hyperpage{17}
-    \subitem {mainMenu}, \hyperpage{17}
-    \subitem {numberOfDestinations}, \hyperpage{17}
-    \subitem {reachableDest}, \hyperpage{17}
-    \subitem {showNumFlights}, \hyperpage{17}
-    \subitem {statisticsMenu}, \hyperpage{17}
+    \subitem {FlightNetwork}, \hyperpage{28}
+  \item {App}, \hyperpage{14}
+    \subitem {App}, \hyperpage{14}
+    \subitem {bestFlightMenu}, \hyperpage{15}
+    \subitem {flightnetwork}, \hyperpage{15}
+    \subitem {globalStatistics}, \hyperpage{15}
+    \subitem {goBackStatisticsMenu}, \hyperpage{15}
+    \subitem {mainMenu}, \hyperpage{15}
+    \subitem {numberOfDestinations}, \hyperpage{15}
+    \subitem {reachableDest}, \hyperpage{15}
+    \subitem {showNumFlights}, \hyperpage{15}
+    \subitem {statisticsMenu}, \hyperpage{15}
   \item {App.cpp}
     \subitem {clearScreen}, \hyperpage{54}
   \item {App.hpp}
@@ -61,104 +66,104 @@
   \indexspace
 
   \item {bestFlight}
-    \subitem {FlightNetwork}, \hyperpage{23}
-  \item {bestFlightFiltered}
-    \subitem {FlightNetwork}, \hyperpage{23}
+    \subitem {FlightNetwork}, \hyperpage{21}
+  \item {bestFlightMenu}
+    \subitem {App}, \hyperpage{15}
   \item {bfs}
-    \subitem {Graph$<$ T $>$}, \hyperpage{28}
+    \subitem {Graph$<$ T $>$}, \hyperpage{30}
   \item {bfsDistance}
-    \subitem {Graph$<$ T $>$}, \hyperpage{28}
+    \subitem {Graph$<$ T $>$}, \hyperpage{30}
 
   \indexspace
 
   \item {callsign}
-    \subitem {Airline}, \hyperpage{10}
+    \subitem {Airline}, \hyperpage{9}
   \item {city}
-    \subitem {Airport}, \hyperpage{15}
+    \subitem {Airport}, \hyperpage{14}
   \item {cityCriteria}
-    \subitem {FlightNetwork}, \hyperpage{23}
+    \subitem {FlightNetwork}, \hyperpage{21}
   \item {clearScreen}
     \subitem {App.cpp}, \hyperpage{54}
     \subitem {App.hpp}, \hyperpage{43}
   \item {code}
-    \subitem {Airline}, \hyperpage{10}
-    \subitem {Airport}, \hyperpage{15}
+    \subitem {Airline}, \hyperpage{9}
+    \subitem {Airport}, \hyperpage{14}
   \item {codeCriteria}
-    \subitem {FlightNetwork}, \hyperpage{23}
+    \subitem {FlightNetwork}, \hyperpage{21}
   \item {coordinateCriteria}
-    \subitem {FlightNetwork}, \hyperpage{23}
+    \subitem {FlightNetwork}, \hyperpage{22}
   \item {country}
     \subitem {Airline}, \hyperpage{10}
-    \subitem {Airport}, \hyperpage{15}
+    \subitem {Airport}, \hyperpage{14}
 
   \indexspace
 
   \item {dest}
-    \subitem {Edge$<$ T $>$}, \hyperpage{21}
+    \subitem {Edge$<$ T $>$}, \hyperpage{18}
   \item {dfs}
-    \subitem {Graph$<$ T $>$}, \hyperpage{28, 29}
+    \subitem {Graph$<$ T $>$}, \hyperpage{30}
   \item {dfs\_art}
     \subitem {FlightNetwork.cpp}, \hyperpage{54}
     \subitem {FlightNetwork.hpp}, \hyperpage{44}
   \item {dfsVisit}
-    \subitem {Graph$<$ T $>$}, \hyperpage{29}
+    \subitem {Graph$<$ T $>$}, \hyperpage{31}
   \item {distance}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{39}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{38}
 
   \indexspace
 
   \item {Edge}
-    \subitem {Edge$<$ T $>$}, \hyperpage{19}
-  \item {Edge$<$ T $>$}, \hyperpage{18}
-    \subitem {dest}, \hyperpage{21}
-    \subitem {Edge}, \hyperpage{19}
-    \subitem {getDest}, \hyperpage{19}
-    \subitem {getInfo}, \hyperpage{19}
-    \subitem {getWeight}, \hyperpage{19}
-    \subitem {Graph$<$ T $>$}, \hyperpage{20}
-    \subitem {info}, \hyperpage{21}
-    \subitem {setDest}, \hyperpage{19}
-    \subitem {setInfo}, \hyperpage{20}
-    \subitem {setWeight}, \hyperpage{20}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{20}
-    \subitem {weight}, \hyperpage{21}
+    \subitem {Edge$<$ T $>$}, \hyperpage{16}
+  \item {Edge$<$ T $>$}, \hyperpage{15}
+    \subitem {dest}, \hyperpage{18}
+    \subitem {Edge}, \hyperpage{16}
+    \subitem {getDest}, \hyperpage{16}
+    \subitem {getInfo}, \hyperpage{17}
+    \subitem {getWeight}, \hyperpage{17}
+    \subitem {Graph$<$ T $>$}, \hyperpage{18}
+    \subitem {info}, \hyperpage{18}
+    \subitem {setDest}, \hyperpage{17}
+    \subitem {setInfo}, \hyperpage{17}
+    \subitem {setWeight}, \hyperpage{17}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{18}
+    \subitem {weight}, \hyperpage{18}
   \item {EdgesAtDistanceDFS}
-    \subitem {Graph$<$ T $>$}, \hyperpage{29}
+    \subitem {Graph$<$ T $>$}, \hyperpage{31}
 
   \indexspace
 
   \item {findVertex}
-    \subitem {Graph$<$ T $>$}, \hyperpage{30}
-  \item {FlightNetwork}, \hyperpage{21}
-    \subitem {airportsGraph}, \hyperpage{26}
-    \subitem {bestFlight}, \hyperpage{23}
-    \subitem {bestFlightFiltered}, \hyperpage{23}
-    \subitem {cityCriteria}, \hyperpage{23}
-    \subitem {codeCriteria}, \hyperpage{23}
-    \subitem {coordinateCriteria}, \hyperpage{23}
-    \subitem {FlightNetwork}, \hyperpage{22}
-    \subitem {getAiportsGraph}, \hyperpage{23}
-    \subitem {getAirportsDestinations}, \hyperpage{23}
+    \subitem {Graph$<$ T $>$}, \hyperpage{31}
+  \item {FlightNetwork}, \hyperpage{18}
+    \subitem {airlineCodeToName}, \hyperpage{20}
+    \subitem {airportCodeToName}, \hyperpage{20}
+    \subitem {airportsGraph}, \hyperpage{28}
+    \subitem {bestFlight}, \hyperpage{21}
+    \subitem {cityCriteria}, \hyperpage{21}
+    \subitem {codeCriteria}, \hyperpage{21}
+    \subitem {coordinateCriteria}, \hyperpage{22}
+    \subitem {FlightNetwork}, \hyperpage{20}
+    \subitem {getAiportsGraph}, \hyperpage{22}
+    \subitem {getAirportsDestinations}, \hyperpage{22}
     \subitem {getCitiesDestinations}, \hyperpage{23}
-    \subitem {getCountriesDestinations}, \hyperpage{24}
-    \subitem {getDiffCountriesAirport}, \hyperpage{24}
-    \subitem {getDiffCountriesCity}, \hyperpage{24}
+    \subitem {getCountriesDestinations}, \hyperpage{23}
+    \subitem {getDiffCountriesAirport}, \hyperpage{23}
+    \subitem {getDiffCountriesCity}, \hyperpage{23}
     \subitem {getEssentialAirports}, \hyperpage{24}
     \subitem {getGlobalNumOfAirports}, \hyperpage{24}
     \subitem {getGlobalNumOfFlights}, \hyperpage{24}
     \subitem {getGreatestTraffic}, \hyperpage{24}
     \subitem {getReachableAirports}, \hyperpage{24}
-    \subitem {getReachableCities}, \hyperpage{24}
+    \subitem {getReachableCities}, \hyperpage{25}
     \subitem {getReachableCountries}, \hyperpage{25}
-    \subitem {isPathValid}, \hyperpage{25}
     \subitem {listBestFlights}, \hyperpage{25}
-    \subitem {maximumTrip}, \hyperpage{25}
-    \subitem {nameCriteria}, \hyperpage{25}
-    \subitem {numFlightsAirline}, \hyperpage{25}
-    \subitem {numFlightsAirport}, \hyperpage{25}
-    \subitem {numFlightsCity}, \hyperpage{25}
+    \subitem {maximumTrip}, \hyperpage{26}
+    \subitem {nameCriteria}, \hyperpage{26}
+    \subitem {numFlightsAirline}, \hyperpage{26}
+    \subitem {numFlightsAirport}, \hyperpage{26}
+    \subitem {numFlightsCity}, \hyperpage{28}
   \item {flightnetwork}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
   \item {FlightNetwork.cpp}
     \subitem {dfs\_art}, \hyperpage{54}
     \subitem {haversineDistance}, \hyperpage{54}
@@ -169,33 +174,33 @@
   \indexspace
 
   \item {getAdj}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{34}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
   \item {getAiportsGraph}
-    \subitem {FlightNetwork}, \hyperpage{23}
+    \subitem {FlightNetwork}, \hyperpage{22}
   \item {getAirportsDestinations}
-    \subitem {FlightNetwork}, \hyperpage{23}
+    \subitem {FlightNetwork}, \hyperpage{22}
   \item {getCallsign}
     \subitem {Airline}, \hyperpage{8}
   \item {getCitiesDestinations}
     \subitem {FlightNetwork}, \hyperpage{23}
   \item {getCity}
-    \subitem {Airport}, \hyperpage{13}
+    \subitem {Airport}, \hyperpage{11}
   \item {getCode}
     \subitem {Airline}, \hyperpage{8}
-    \subitem {Airport}, \hyperpage{13}
+    \subitem {Airport}, \hyperpage{11}
   \item {getCountriesDestinations}
-    \subitem {FlightNetwork}, \hyperpage{24}
+    \subitem {FlightNetwork}, \hyperpage{23}
   \item {getCountry}
-    \subitem {Airline}, \hyperpage{9}
-    \subitem {Airport}, \hyperpage{13}
+    \subitem {Airline}, \hyperpage{8}
+    \subitem {Airport}, \hyperpage{12}
   \item {getDest}
-    \subitem {Edge$<$ T $>$}, \hyperpage{19}
+    \subitem {Edge$<$ T $>$}, \hyperpage{16}
   \item {getDiffCountriesAirport}
-    \subitem {FlightNetwork}, \hyperpage{24}
+    \subitem {FlightNetwork}, \hyperpage{23}
   \item {getDiffCountriesCity}
-    \subitem {FlightNetwork}, \hyperpage{24}
+    \subitem {FlightNetwork}, \hyperpage{23}
   \item {getDistance}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{34}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
   \item {getEssentialAirports}
     \subitem {FlightNetwork}, \hyperpage{24}
   \item {getGlobalNumOfAirports}
@@ -207,51 +212,51 @@
   \item {getInDegree}
     \subitem {Vertex$<$ T $>$}, \hyperpage{35}
   \item {getInfo}
-    \subitem {Edge$<$ T $>$}, \hyperpage{19}
+    \subitem {Edge$<$ T $>$}, \hyperpage{17}
     \subitem {Vertex$<$ T $>$}, \hyperpage{35}
   \item {getLow}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{36}
   \item {getName}
-    \subitem {Airline}, \hyperpage{9}
-    \subitem {Airport}, \hyperpage{13}
+    \subitem {Airline}, \hyperpage{8}
+    \subitem {Airport}, \hyperpage{12}
   \item {getNum}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{36}
   \item {getNumVertex}
-    \subitem {Graph$<$ T $>$}, \hyperpage{30}
+    \subitem {Graph$<$ T $>$}, \hyperpage{32}
   \item {getPosition}
-    \subitem {Airport}, \hyperpage{13}
+    \subitem {Airport}, \hyperpage{12}
   \item {getReachableAirports}
     \subitem {FlightNetwork}, \hyperpage{24}
   \item {getReachableCities}
-    \subitem {FlightNetwork}, \hyperpage{24}
+    \subitem {FlightNetwork}, \hyperpage{25}
   \item {getReachableCountries}
     \subitem {FlightNetwork}, \hyperpage{25}
   \item {getVertexSet}
-    \subitem {Graph$<$ T $>$}, \hyperpage{30}
+    \subitem {Graph$<$ T $>$}, \hyperpage{32}
   \item {getWeight}
-    \subitem {Edge$<$ T $>$}, \hyperpage{19}
+    \subitem {Edge$<$ T $>$}, \hyperpage{17}
   \item {globalStatistics}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
   \item {goBackStatisticsMenu}
-    \subitem {App}, \hyperpage{17}
-  \item {Graph$<$ T $>$}, \hyperpage{26}
-    \subitem {addEdge}, \hyperpage{27}
-    \subitem {addVertex}, \hyperpage{27}
-    \subitem {bfs}, \hyperpage{28}
-    \subitem {bfsDistance}, \hyperpage{28}
-    \subitem {dfs}, \hyperpage{28, 29}
-    \subitem {dfsVisit}, \hyperpage{29}
-    \subitem {Edge$<$ T $>$}, \hyperpage{20}
-    \subitem {EdgesAtDistanceDFS}, \hyperpage{29}
-    \subitem {findVertex}, \hyperpage{30}
-    \subitem {getNumVertex}, \hyperpage{30}
-    \subitem {getVertexSet}, \hyperpage{30}
-    \subitem {inDegree}, \hyperpage{30}
-    \subitem {nodesAtDistanceDFS}, \hyperpage{31}
-    \subitem {removeEdge}, \hyperpage{31}
-    \subitem {removeVertex}, \hyperpage{31}
+    \subitem {App}, \hyperpage{15}
+  \item {Graph$<$ T $>$}, \hyperpage{28}
+    \subitem {addEdge}, \hyperpage{29}
+    \subitem {addVertex}, \hyperpage{29}
+    \subitem {bfs}, \hyperpage{30}
+    \subitem {bfsDistance}, \hyperpage{30}
+    \subitem {dfs}, \hyperpage{30}
+    \subitem {dfsVisit}, \hyperpage{31}
+    \subitem {Edge$<$ T $>$}, \hyperpage{18}
+    \subitem {EdgesAtDistanceDFS}, \hyperpage{31}
+    \subitem {findVertex}, \hyperpage{31}
+    \subitem {getNumVertex}, \hyperpage{32}
+    \subitem {getVertexSet}, \hyperpage{32}
+    \subitem {inDegree}, \hyperpage{32}
+    \subitem {nodesAtDistanceDFS}, \hyperpage{32}
+    \subitem {removeEdge}, \hyperpage{32}
+    \subitem {removeVertex}, \hyperpage{33}
     \subitem {Vertex$<$ T $>$}, \hyperpage{38}
-    \subitem {vertexSet}, \hyperpage{32}
+    \subitem {vertexSet}, \hyperpage{33}
   \item {Graph.hpp}
     \subitem {nodesAtDistanceDFSVisit}, \hyperpage{46}
 
@@ -269,16 +274,14 @@
   \item {inc/FlightNetwork.hpp}, \hyperpage{43, 44}
   \item {inc/Graph.hpp}, \hyperpage{45, 46}
   \item {inDegree}
-    \subitem {Graph$<$ T $>$}, \hyperpage{30}
+    \subitem {Graph$<$ T $>$}, \hyperpage{32}
   \item {indegree}
     \subitem {Vertex$<$ T $>$}, \hyperpage{39}
   \item {info}
-    \subitem {Edge$<$ T $>$}, \hyperpage{21}
+    \subitem {Edge$<$ T $>$}, \hyperpage{18}
     \subitem {Vertex$<$ T $>$}, \hyperpage{39}
-  \item {isPathValid}
-    \subitem {FlightNetwork}, \hyperpage{25}
   \item {isProcessing}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{36}
   \item {isVisited}
     \subitem {Vertex$<$ T $>$}, \hyperpage{36}
 
@@ -292,135 +295,135 @@
   \indexspace
 
   \item {main}
-    \subitem {main.cpp}, \hyperpage{54}
+    \subitem {main.cpp}, \hyperpage{55}
   \item {main.cpp}
-    \subitem {main}, \hyperpage{54}
+    \subitem {main}, \hyperpage{55}
   \item {mainMenu}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
   \item {maximumTrip}
-    \subitem {FlightNetwork}, \hyperpage{25}
+    \subitem {FlightNetwork}, \hyperpage{26}
 
   \indexspace
 
   \item {name}
     \subitem {Airline}, \hyperpage{10}
-    \subitem {Airport}, \hyperpage{16}
+    \subitem {Airport}, \hyperpage{14}
   \item {nameCriteria}
-    \subitem {FlightNetwork}, \hyperpage{25}
+    \subitem {FlightNetwork}, \hyperpage{26}
   \item {nodesAtDistanceDFS}
-    \subitem {Graph$<$ T $>$}, \hyperpage{31}
+    \subitem {Graph$<$ T $>$}, \hyperpage{32}
   \item {nodesAtDistanceDFSVisit}
     \subitem {Graph.hpp}, \hyperpage{46}
   \item {num}
     \subitem {Vertex$<$ T $>$}, \hyperpage{39}
   \item {numberOfDestinations}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
   \item {numFlightsAirline}
-    \subitem {FlightNetwork}, \hyperpage{25}
+    \subitem {FlightNetwork}, \hyperpage{26}
   \item {numFlightsAirport}
-    \subitem {FlightNetwork}, \hyperpage{25}
+    \subitem {FlightNetwork}, \hyperpage{26}
   \item {numFlightsCity}
-    \subitem {FlightNetwork}, \hyperpage{25}
+    \subitem {FlightNetwork}, \hyperpage{28}
 
   \indexspace
 
   \item {operator$<$}
-    \subitem {Airport}, \hyperpage{13}
+    \subitem {Airport}, \hyperpage{12}
   \item {operator==}
-    \subitem {Airport}, \hyperpage{14}
+    \subitem {Airport}, \hyperpage{12}
 
   \indexspace
 
   \item {position}
-    \subitem {Airport}, \hyperpage{16}
+    \subitem {Airport}, \hyperpage{14}
   \item {processing}
     \subitem {Vertex$<$ T $>$}, \hyperpage{39}
 
   \indexspace
 
   \item {reachableDest}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
   \item {README.md}, \hyperpage{53}
   \item {removeEdge}
-    \subitem {Graph$<$ T $>$}, \hyperpage{31}
+    \subitem {Graph$<$ T $>$}, \hyperpage{32}
   \item {removeEdgeTo}
     \subitem {Vertex$<$ T $>$}, \hyperpage{36}
   \item {removeVertex}
-    \subitem {Graph$<$ T $>$}, \hyperpage{31}
+    \subitem {Graph$<$ T $>$}, \hyperpage{33}
 
   \indexspace
 
   \item {setAdj}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{36}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{37}
   \item {setCallsign}
     \subitem {Airline}, \hyperpage{9}
   \item {setCity}
-    \subitem {Airport}, \hyperpage{14}
+    \subitem {Airport}, \hyperpage{13}
   \item {setCode}
     \subitem {Airline}, \hyperpage{9}
-    \subitem {Airport}, \hyperpage{14}
+    \subitem {Airport}, \hyperpage{13}
   \item {setCountry}
-    \subitem {Airline}, \hyperpage{10}
-    \subitem {Airport}, \hyperpage{14}
+    \subitem {Airline}, \hyperpage{9}
+    \subitem {Airport}, \hyperpage{13}
   \item {setDest}
-    \subitem {Edge$<$ T $>$}, \hyperpage{19}
+    \subitem {Edge$<$ T $>$}, \hyperpage{17}
   \item {setDistance}
     \subitem {Vertex$<$ T $>$}, \hyperpage{37}
   \item {setInDegree}
     \subitem {Vertex$<$ T $>$}, \hyperpage{37}
   \item {setInfo}
-    \subitem {Edge$<$ T $>$}, \hyperpage{20}
+    \subitem {Edge$<$ T $>$}, \hyperpage{17}
     \subitem {Vertex$<$ T $>$}, \hyperpage{37}
   \item {setLow}
     \subitem {Vertex$<$ T $>$}, \hyperpage{37}
   \item {setName}
-    \subitem {Airline}, \hyperpage{10}
-    \subitem {Airport}, \hyperpage{15}
+    \subitem {Airline}, \hyperpage{9}
+    \subitem {Airport}, \hyperpage{13}
   \item {setNum}
     \subitem {Vertex$<$ T $>$}, \hyperpage{38}
   \item {setPosition}
-    \subitem {Airport}, \hyperpage{15}
+    \subitem {Airport}, \hyperpage{13}
   \item {setProcessing}
     \subitem {Vertex$<$ T $>$}, \hyperpage{38}
   \item {setVisited}
     \subitem {Vertex$<$ T $>$}, \hyperpage{38}
   \item {setWeight}
-    \subitem {Edge$<$ T $>$}, \hyperpage{20}
+    \subitem {Edge$<$ T $>$}, \hyperpage{17}
   \item {showNumFlights}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
   \item {src/Airline.cpp}, \hyperpage{53}
   \item {src/Airport.cpp}, \hyperpage{53}
   \item {src/App.cpp}, \hyperpage{53}
   \item {src/FlightNetwork.cpp}, \hyperpage{54}
-  \item {src/main.cpp}, \hyperpage{54}
+  \item {src/main.cpp}, \hyperpage{55}
   \item {statisticsMenu}
-    \subitem {App}, \hyperpage{17}
+    \subitem {App}, \hyperpage{15}
 
   \indexspace
 
   \item {Vertex}
-    \subitem {Vertex$<$ T $>$}, \hyperpage{34}
-  \item {Vertex$<$ T $>$}, \hyperpage{32}
-    \subitem {addEdge}, \hyperpage{34}
-    \subitem {adj}, \hyperpage{39}
-    \subitem {distance}, \hyperpage{39}
-    \subitem {Edge$<$ T $>$}, \hyperpage{20}
-    \subitem {getAdj}, \hyperpage{34}
-    \subitem {getDistance}, \hyperpage{34}
+    \subitem {Vertex$<$ T $>$}, \hyperpage{35}
+  \item {Vertex$<$ T $>$}, \hyperpage{33}
+    \subitem {addEdge}, \hyperpage{35}
+    \subitem {adj}, \hyperpage{38}
+    \subitem {distance}, \hyperpage{38}
+    \subitem {Edge$<$ T $>$}, \hyperpage{18}
+    \subitem {getAdj}, \hyperpage{35}
+    \subitem {getDistance}, \hyperpage{35}
     \subitem {getInDegree}, \hyperpage{35}
     \subitem {getInfo}, \hyperpage{35}
-    \subitem {getLow}, \hyperpage{35}
-    \subitem {getNum}, \hyperpage{35}
+    \subitem {getLow}, \hyperpage{36}
+    \subitem {getNum}, \hyperpage{36}
     \subitem {Graph$<$ T $>$}, \hyperpage{38}
     \subitem {indegree}, \hyperpage{39}
     \subitem {info}, \hyperpage{39}
-    \subitem {isProcessing}, \hyperpage{35}
+    \subitem {isProcessing}, \hyperpage{36}
     \subitem {isVisited}, \hyperpage{36}
     \subitem {low}, \hyperpage{39}
     \subitem {num}, \hyperpage{39}
     \subitem {processing}, \hyperpage{39}
     \subitem {removeEdgeTo}, \hyperpage{36}
-    \subitem {setAdj}, \hyperpage{36}
+    \subitem {setAdj}, \hyperpage{37}
     \subitem {setDistance}, \hyperpage{37}
     \subitem {setInDegree}, \hyperpage{37}
     \subitem {setInfo}, \hyperpage{37}
@@ -428,16 +431,16 @@
     \subitem {setNum}, \hyperpage{38}
     \subitem {setProcessing}, \hyperpage{38}
     \subitem {setVisited}, \hyperpage{38}
-    \subitem {Vertex}, \hyperpage{34}
+    \subitem {Vertex}, \hyperpage{35}
     \subitem {visited}, \hyperpage{39}
   \item {vertexSet}
-    \subitem {Graph$<$ T $>$}, \hyperpage{32}
+    \subitem {Graph$<$ T $>$}, \hyperpage{33}
   \item {visited}
     \subitem {Vertex$<$ T $>$}, \hyperpage{39}
 
   \indexspace
 
   \item {weight}
-    \subitem {Edge$<$ T $>$}, \hyperpage{21}
+    \subitem {Edge$<$ T $>$}, \hyperpage{18}
 
 \end{theindex}

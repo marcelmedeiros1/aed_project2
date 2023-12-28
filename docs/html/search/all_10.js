@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['vertex_0',['Vertex',['../classVertex.html',1,'Vertex&lt; T &gt;'],['../classVertex.html#afcbdd4d4198b672356559cb8fa088408',1,'Vertex::Vertex()']]],
-  ['vertex_3c_20t_20_3e_1',['Vertex&lt; T &gt;',['../classEdge.html#a2e120a12dec663fa334633b4f26cbed8',1,'Edge']]],
-  ['vertexset_2',['vertexSet',['../classGraph.html#a26b3a6b9c61f02f5b2cd38ad4c6a4953',1,'Graph']]],
-  ['visited_3',['visited',['../classVertex.html#a187a2fe4ff50261cf3c15b8cda7dfc56',1,'Vertex']]]
+  ['to_20use_0',['How to Use',['../index.html#autotoc_md12',1,'']]],
+  ['travel_20flight_20management_20system_1',['Air Travel Flight Management System',['../index.html',1,'']]],
+  ['trip_20and_20essential_20airports_2',['Maximum Trip and Essential Airports',['../index.html#autotoc_md7',1,'']]]
 ];

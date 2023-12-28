@@ -16,47 +16,72 @@
 \DoxyCodeLine{00012\ \textcolor{preprocessor}{\#include\ <cmath>}}
 \DoxyCodeLine{00013\ \textcolor{preprocessor}{\#include\ <tuple>}}
 \DoxyCodeLine{00014\ \textcolor{preprocessor}{\#include\ <functional>}}
-\DoxyCodeLine{00015\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ <limits>}}
 \DoxyCodeLine{00016\ }
-\DoxyCodeLine{00017\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlightNetwork}{FlightNetwork}}}
-\DoxyCodeLine{00018\ \{}
-\DoxyCodeLine{00019\ \ \ \ \ \mbox{\hyperlink{classGraph}{Graph<Airport>}}\ \mbox{\hyperlink{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86}{airportsGraph}};}
-\DoxyCodeLine{00020\ }
-\DoxyCodeLine{00021\ \textcolor{keyword}{public}:}
-\DoxyCodeLine{00022\ \ \ \ \ \mbox{\hyperlink{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}{FlightNetwork}}();}
-\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{classFlightNetwork_a678157c593366c44080e41b0d836ff86}{FlightNetwork}}(\textcolor{keyword}{const}\ std::string\ \&airlines\_filename,\ \textcolor{keyword}{const}\ std::string\ \&airports\_filename,\ \textcolor{keyword}{const}\ std::string\ \&flights\_filename);}
-\DoxyCodeLine{00024\ \ \ \ \ \mbox{\hyperlink{classGraph}{Graph<Airport>}}\ \mbox{\hyperlink{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}{getAiportsGraph}}();}
-\DoxyCodeLine{00025\ }
-\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}{getGlobalNumOfAirports}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ i.}}
-\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}{getGlobalNumOfFlights}}()\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ i.}}
-\DoxyCodeLine{00028\ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}{numFlightsAirport}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ ii.}}
-\DoxyCodeLine{00029\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_ae57015e499d5befbc9d712050111237a}{numFlightsCity}}(\textcolor{keyword}{const}\ std::string\ \&city)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ iii.}}
-\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}{numFlightsAirline}}(\mbox{\hyperlink{classAirline}{Airline}}\ \&airline)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ iii.}}
-\DoxyCodeLine{00031\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}{getDiffCountriesAirport}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ iv.}}
-\DoxyCodeLine{00032\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}{getDiffCountriesCity}}(\textcolor{keyword}{const}\ std::string\ \&city)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ iv.}}
-\DoxyCodeLine{00033\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}{getAirportsDestinations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ v.}}
-\DoxyCodeLine{00034\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb}{getCitiesDestinations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ v.}}
-\DoxyCodeLine{00035\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}{getCountriesDestinations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ v.}}
-\DoxyCodeLine{00036\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}{getReachableAirports}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&distance);\ \ \textcolor{comment}{//\ 3)\ vi.}}
-\DoxyCodeLine{00037\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a12c8f707304be0127849127da305d649}{getReachableCities}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&distance);\ \ \ \ \textcolor{comment}{//\ 3)\ vi.}}
-\DoxyCodeLine{00038\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}{getReachableCountries}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&distance);\ \textcolor{comment}{//\ 3)\ vi.}}
-\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}{maximumTrip}}(std::vector<std::pair<std::string,\ std::string>>\ \&airports);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ vii.}}
-\DoxyCodeLine{00040\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}{getGreatestTraffic}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&k);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ viii.}}
-\DoxyCodeLine{00041\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}{getEssentialAirports}}();\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 3)\ ix.}}
-\DoxyCodeLine{00042\ }
-\DoxyCodeLine{00043\ \ \ \ \ \mbox{\hyperlink{classAirport}{Airport}}\ \mbox{\hyperlink{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}{codeCriteria}}(\textcolor{keyword}{const}\ std::string\ \&code)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 4)\ i.}}
-\DoxyCodeLine{00044\ \ \ \ \ \mbox{\hyperlink{classAirport}{Airport}}\ \mbox{\hyperlink{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}{nameCriteria}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 4)\ i.}}
-\DoxyCodeLine{00045\ \ \ \ \ std::vector<Airport>\ \mbox{\hyperlink{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}{cityCriteria}}(\textcolor{keyword}{const}\ std::string\ \&city)\ \textcolor{keyword}{const};\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ 4)\ ii.}}
-\DoxyCodeLine{00046\ \ \ \ \ std::vector<Airport>\ \mbox{\hyperlink{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56}{coordinateCriteria}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&lat,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&lon,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{double}\ \&radius)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)\ iii.}}
-\DoxyCodeLine{00047\ \ \ \ \ std::vector<vector<Airport>>\ \mbox{\hyperlink{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}{bestFlight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&source,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&destination,\ \textcolor{keyword}{const}\ set<string>\ \&allowedAirlines=\{\},\ \textcolor{keywordtype}{bool}\ minimizeAirlines=\textcolor{keyword}{false})\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)}}
-\DoxyCodeLine{00048\ \ \ \ \ std::vector<std::vector<Airport>>\ \mbox{\hyperlink{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4}{listBestFlights}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&flag1,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&flag2)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00049\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19}{isPathValid}}(\textcolor{keyword}{const}\ vector<Airport>\ \&path,\ \textcolor{keyword}{const}\ set<string>\ \&allowedAirlines,\ \textcolor{keywordtype}{bool}\ minimizeAirlines)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00050\ \ \ \ \ std::vector<vector<Airport>>\ \mbox{\hyperlink{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50}{bestFlightFiltered}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&source,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&destination,\ \textcolor{keyword}{const}\ set<string>\ \&allowedAirlines,\ \textcolor{keywordtype}{bool}\ minimizeAirlines)\ \textcolor{keyword}{const};}
-\DoxyCodeLine{00051\ \};}
-\DoxyCodeLine{00052\ }
-\DoxyCodeLine{00053\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{FlightNetwork_8hpp_a59084262fd494b809693ffbb010d68fc}{dfs\_art}}(\mbox{\hyperlink{classGraph}{Graph<Airport>}}\ \&g,\ \mbox{\hyperlink{classVertex}{Vertex<Airport>}}\ *v,\ set<string>\ \&l,\ \textcolor{keywordtype}{int}\ \&i);}
-\DoxyCodeLine{00054\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}{haversineDistance}}(\textcolor{keywordtype}{double}\ lat1,\ \textcolor{keywordtype}{double}\ lon1,\ \textcolor{keywordtype}{double}\ lat2,\ \textcolor{keywordtype}{double}\ lon2);}
+\DoxyCodeLine{00020\ \textcolor{keyword}{class\ }\mbox{\hyperlink{classFlightNetwork}{FlightNetwork}}}
+\DoxyCodeLine{00021\ \{}
+\DoxyCodeLine{00025\ \ \ \ \ \mbox{\hyperlink{classGraph}{Graph<Airport>}}\ \mbox{\hyperlink{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86}{airportsGraph}};}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00031\ \ \ \ \ \mbox{\hyperlink{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}{FlightNetwork}}();}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00040\ \ \ \ \ \mbox{\hyperlink{classFlightNetwork_a678157c593366c44080e41b0d836ff86}{FlightNetwork}}(\textcolor{keyword}{const}\ std::string\ \&airlines\_filename,\ \textcolor{keyword}{const}\ std::string\ \&airports\_filename,\ \textcolor{keyword}{const}\ std::string\ \&flights\_filename);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00047\ \ \ \ \ \mbox{\hyperlink{classGraph}{Graph<Airport>}}\ \mbox{\hyperlink{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}{getAiportsGraph}}();}
+\DoxyCodeLine{00048\ }
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}{getGlobalNumOfAirports}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ i.}}
 \DoxyCodeLine{00055\ }
-\DoxyCodeLine{00056\ \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00061\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}{getGlobalNumOfFlights}}()\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ i.}}
+\DoxyCodeLine{00062\ }
+\DoxyCodeLine{00069\ \ \ \ \ std::pair<int,\ int>\ \mbox{\hyperlink{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}{numFlightsAirport}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport);\ \textcolor{comment}{//\ 3)\ ii.}}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_ae57015e499d5befbc9d712050111237a}{numFlightsCity}}(\textcolor{keyword}{const}\ std::string\ \&city)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ iii.}}
+\DoxyCodeLine{00078\ }
+\DoxyCodeLine{00085\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}{numFlightsAirline}}(\mbox{\hyperlink{classAirline}{Airline}}\ \&airline)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ iii.}}
+\DoxyCodeLine{00086\ }
+\DoxyCodeLine{00093\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}{getDiffCountriesAirport}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ iv.}}
+\DoxyCodeLine{00094\ }
+\DoxyCodeLine{00101\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}{getDiffCountriesCity}}(\textcolor{keyword}{const}\ std::string\ \&city)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ iv.}}
+\DoxyCodeLine{00102\ }
+\DoxyCodeLine{00109\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}{getAirportsDestinations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ v.}}
+\DoxyCodeLine{00110\ }
+\DoxyCodeLine{00117\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb}{getCitiesDestinations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ v.}}
+\DoxyCodeLine{00118\ }
+\DoxyCodeLine{00125\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}{getCountriesDestinations}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 3)\ v.}}
+\DoxyCodeLine{00126\ }
+\DoxyCodeLine{00134\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}{getReachableAirports}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&distance);\ \textcolor{comment}{//\ 3)\ vi.}}
+\DoxyCodeLine{00135\ }
+\DoxyCodeLine{00143\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a12c8f707304be0127849127da305d649}{getReachableCities}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&distance);\ \textcolor{comment}{//\ 3)\ vi.}}
+\DoxyCodeLine{00144\ }
+\DoxyCodeLine{00152\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}{getReachableCountries}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&airport,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&distance);\ \textcolor{comment}{//\ 3)\ vi.}}
+\DoxyCodeLine{00153\ }
+\DoxyCodeLine{00160\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}{maximumTrip}}(std::vector<std::pair<std::string,\ std::string>>\ \&airports);\ \textcolor{comment}{//\ 3)\ vii.}}
+\DoxyCodeLine{00161\ }
+\DoxyCodeLine{00168\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}{getGreatestTraffic}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&k);\ \textcolor{comment}{//\ 3)\ viii.}}
+\DoxyCodeLine{00169\ }
+\DoxyCodeLine{00175\ \ \ \ \ std::set<std::string>\ \mbox{\hyperlink{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}{getEssentialAirports}}();\ \textcolor{comment}{//\ 3)\ ix.}}
+\DoxyCodeLine{00176\ }
+\DoxyCodeLine{00184\ \ \ \ \ \mbox{\hyperlink{classAirport}{Airport}}\ \mbox{\hyperlink{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}{codeCriteria}}(\textcolor{keyword}{const}\ std::string\ \&code)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)\ i.}}
+\DoxyCodeLine{00185\ }
+\DoxyCodeLine{00193\ \ \ \ \ \mbox{\hyperlink{classAirport}{Airport}}\ \mbox{\hyperlink{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}{nameCriteria}}(\textcolor{keyword}{const}\ std::string\ \&name)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)\ i.}}
+\DoxyCodeLine{00194\ }
+\DoxyCodeLine{00202\ \ \ \ \ std::vector<Airport>\ \mbox{\hyperlink{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}{cityCriteria}}(\textcolor{keyword}{const}\ std::string\ \&city)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)\ ii.}}
+\DoxyCodeLine{00203\ }
+\DoxyCodeLine{00212\ \ \ \ \ std::vector<Airport>\ \mbox{\hyperlink{classFlightNetwork_a70a801b251fcb490e0f7c6c13884adc3}{coordinateCriteria}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&lat,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{float}\ \&lon)\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)\ iii.}}
+\DoxyCodeLine{00213\ }
+\DoxyCodeLine{00223\ \ \ \ \ std::vector<vector<Airport>>\ \mbox{\hyperlink{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}{bestFlight}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&source,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{classAirport}{Airport}}\ \&destination,\ \textcolor{keyword}{const}\ set<string>\ \&allowedAirlines\ =\ \{\},\ \textcolor{keywordtype}{bool}\ minimizeAirlines\ =\ \textcolor{keyword}{false})\ \textcolor{keyword}{const};\ \textcolor{comment}{//\ 4)}}
+\DoxyCodeLine{00224\ }
+\DoxyCodeLine{00234\ \ \ \ \ std::vector<std::vector<Airport>>\ \mbox{\hyperlink{classFlightNetwork_a44f3e5308ad0b9c7a545e5045f616ecd}{listBestFlights}}(\textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&flag1,\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ \&flag2,\ \textcolor{keyword}{const}\ set<string>\ \&allowedAirlines,\ \textcolor{keywordtype}{bool}\ minimizeAirlines)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00235\ }
+\DoxyCodeLine{00245\ \ \ \ \ std::string\ \mbox{\hyperlink{classFlightNetwork_aa99f751fa3cdba998d3f3417c13b55e2}{airportCodeToName}}(\textcolor{keyword}{const}\ std::string\ \&code);}
+\DoxyCodeLine{00246\ }
+\DoxyCodeLine{00256\ \ \ \ \ std::string\ \mbox{\hyperlink{classFlightNetwork_a0b99a447c8652e94e1bff48ffa208d3b}{airlineCodeToName}}(\textcolor{keyword}{const}\ std::string\ \&code);}
+\DoxyCodeLine{00257\ \};}
+\DoxyCodeLine{00258\ }
+\DoxyCodeLine{00267\ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{FlightNetwork_8hpp_a59084262fd494b809693ffbb010d68fc}{dfs\_art}}(\mbox{\hyperlink{classGraph}{Graph<Airport>}}\ \&g,\ \mbox{\hyperlink{classVertex}{Vertex<Airport>}}\ *v,\ set<string>\ \&l,\ \textcolor{keywordtype}{int}\ \&i);}
+\DoxyCodeLine{00268\ }
+\DoxyCodeLine{00278\ \textcolor{keywordtype}{double}\ \mbox{\hyperlink{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}{haversineDistance}}(\textcolor{keywordtype}{double}\ lat1,\ \textcolor{keywordtype}{double}\ lon1,\ \textcolor{keywordtype}{double}\ lat2,\ \textcolor{keywordtype}{double}\ lon2);}
+\DoxyCodeLine{00279\ }
+\DoxyCodeLine{00280\ \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}
