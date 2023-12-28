@@ -19,6 +19,7 @@ App::App(FlightNetwork &flightnetwork)
     mainMenu();
 }
 
+
 void App::mainMenu()
 {
     int option;
@@ -88,6 +89,7 @@ void App::bestFlightMenu(){
          << "-> ";
     cin >> optionSource;
 
+    clearScreen();
     int optionDestination;
     cout << "=================================================================================================" << endl
          << "How do you wish to select the destination of your trip?: " << endl
@@ -130,6 +132,7 @@ void App::bestFlightMenu(){
             << "-> ";
             cin >> airline;
             allowedAirlines.insert(airline);
+            clearScreen();
         }        
     }
     }
@@ -162,8 +165,8 @@ void App::bestFlightMenu(){
             cout << "[" << count << "] OPTION: ";
             for (int i=0; i<v.size(); i++){
                 if(i==v.size()-1) cout << v[i].getCode() << '\n';
-                else if(i%2==0) cout << v[i].getCode() << " -> ";
-                else cout << '(' << v[i].getCode() << ')' << " -> ";
+                else if(i%2==0) cout << flightnetwork.airportCodeToName(v[i].getCode()) << " -> ";
+                else cout << '(' << flightnetwork.airlineCodeToName(v[i].getCode())  << ')' << " -> ";
             }
             count++;
         }
@@ -319,7 +322,10 @@ void App::statisticsMenu()
     {
         clearScreen();
         vector<pair<string, string>> airports;
+        cout << "=================================================================================================" << endl
+         << "Loading.... " << endl;
         int res = flightnetwork.maximumTrip(airports);
+        clearScreen();
         cout << "=================================================================================================" << endl
          << "The maximum trip has: " << res  << " stops" << endl
          << "The flights are: " << endl;
@@ -344,7 +350,10 @@ void App::statisticsMenu()
              << "Enter the number of top airports you want to find:" << endl
              << "-> ";
         cin >> k;
+        cout << "=================================================================================================" << endl
+         << "Loading.... " << endl;
         set<string> res = flightnetwork.getGreatestTraffic(k);
+        clearScreen();
         cout << "=================================================================================================" << endl
          << "Top " << k << " airports with the greatest air traffic capacity: " << endl;
 

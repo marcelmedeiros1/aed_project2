@@ -48,6 +48,8 @@ public:
     std::vector<std::vector<Airport>> listBestFlights(const int &flag1, const int &flag2,const set<string> &allowedAirlines, bool minimizeAirlines) const;
     bool isPathValid(const vector<Airport> &path, const set<string> &allowedAirlines, bool minimizeAirlines) const;
     std::vector<vector<Airport>> bestFlightFiltered(const Airport &source, const Airport &destination, const set<string> &allowedAirlines, bool minimizeAirlines) const;
+    std::string airportCodeToName(const std::string &code);
+    std::string airlineCodeToName(const std::string &code);
 };
 
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
