@@ -147,6 +147,8 @@ void App::bestFlightMenu(){
     if(filterOption == 1) minimize = true;
 
     clearScreen();
+    
+    cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     vector<vector<Airport>> bestOption = flightnetwork.listBestFlights(optionSource,optionDestination,allowedAirlines,minimize);
 
     if (!bestOption.empty())
@@ -159,10 +161,10 @@ void App::bestFlightMenu(){
         {
             cout << "[" << count << "] OPTION: ";
             for (int i=0; i<v.size(); i++){
-                if(i%2==0) cout << v[i].getCode() << " -> ";
+                if(i==v.size()-1) cout << v[i].getCode() << '\n';
+                else if(i%2==0) cout << v[i].getCode() << " -> ";
                 else cout << '(' << v[i].getCode() << ')' << " -> ";
             }
-            cout << '\n';
             count++;
         }
     }
@@ -265,7 +267,8 @@ void App::statisticsMenu()
         cout << endl
              << "Enter the city name:" << endl
              << "-> ";
-        cin >> city;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::getline(std::cin, city);
         set<string> res = flightnetwork.getDiffCountriesCity(city);
         cout << "=================================================================================================" << endl
          << "Countries: " << endl;
@@ -470,7 +473,8 @@ void App::showNumFlights()
         cout << endl
              << "Enter the city name:" << endl
              << "-> ";
-        cin >> city;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        std::getline(std::cin, city);
         int res = flightnetwork.numFlightsCity(city);
         cout << "=================================================================================================" << endl
          << "Number of flights out of " << city

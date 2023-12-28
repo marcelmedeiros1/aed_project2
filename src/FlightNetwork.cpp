@@ -1,4 +1,5 @@
 #include "../inc/FlightNetwork.hpp"
+#include <limits.h>
 using namespace std;
 
 double haversineDistance(double lat1, double lon1, double lat2, double lon2)
@@ -527,7 +528,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         string code;
         cout << "Source Airport code = ";
-        cin >> code;
+        std::getline(std::cin, code);
         sources.push_back(codeCriteria(code));
         break;
     }
@@ -535,7 +536,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         string name;
         cout << "Source Airport name = ";
-        cin >> name;
+        std::getline(std::cin, name);
         sources.push_back(nameCriteria(name));
         break;
     }
@@ -543,7 +544,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         string city;
         cout << "Source City name = ";
-        cin >> city;
+        std::getline(std::cin, city);
         sources = cityCriteria(city);
         break;
     }
@@ -551,6 +552,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         float lat, lon;
         cout << "Source Latitude = ", cin >> lat, cout << "Source Longitude = ", cin >> lon;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         sources = coordinateCriteria(lat, lon);
         break;
     }
@@ -565,7 +567,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         string code;
         cout << "Destination Airport code = ";
-        cin >> code;
+        std::getline(std::cin, code);
         destinations.push_back(codeCriteria(code));
         break;
     }
@@ -573,7 +575,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         string name;
         cout << "Destination Airport name = ";
-        cin >> name;
+        std::getline(std::cin, name);
         destinations.push_back(nameCriteria(name));
         break;
     }
@@ -581,7 +583,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         string city;
         cout << "Destination City name = ";
-        cin >> city;
+        std::getline(std::cin, city);
         destinations = cityCriteria(city);
         break;
     }
@@ -590,6 +592,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
         float lat, lon;
         double rad;
         cout << "Destination Latitude = ", cin >> lat, cout << "Destination Longitude = ", cin >> lon;
+        cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         destinations = coordinateCriteria(lat, lon);
         break;
     }
@@ -602,10 +605,26 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         for (const Airport &d : destinations)
         {
-            vector<vector<Airport>> curr = bestFlight(s, d,allowedAirlines,false);
+            vector<vector<Airport>> curr = bestFlight(s, d,allowedAirlines,minimizeAirlines);
             for (vector<Airport> option : curr)
                 res.push_back(option);
         }
+    }
+    int size = INT_MAX;
+    vector<vector<Airport>> res_aux;
+    for(auto p : res){
+        if(p.size() < size){
+            res_aux.clear();
+            res_aux.push_back(p);
+            size = p.size();
+        }
+        else if(p.size() == size){
+            res_aux.push_back(p);
+        }
+    }
+    res.clear();
+    for(auto p : res_aux){
+        res.push_back(p);
     }
 
     return res;
