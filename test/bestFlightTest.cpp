@@ -36,7 +36,7 @@ void testBestFlight(FlightNetwork &flightnetwork)
 
 void testListBestOption(FlightNetwork &flightnetwork)
 {
-    vector<vector<Airport>> res = flightnetwork.listBestFlights(0, 2);
+    vector<vector<Airport>> res = flightnetwork.listBestFlights(0, 2, {}, false);
 
     for (const vector<Airport> v : res)
     {

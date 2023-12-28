@@ -37,7 +37,7 @@ void testBestFlightFiltered(FlightNetwork &flightnetwork)
 
 void testListBestOption(FlightNetwork &flightnetwork)
 {
-    vector<vector<Airport>> res = flightnetwork.listBestFlights(0, 2);
+    vector<vector<Airport>> res = flightnetwork.listBestFlights(0, 2,{},false);
 
     for (const vector<Airport> v : res)
     {
@@ -55,7 +55,7 @@ int main()
     try
     {
         testBestFlightFiltered(flightnetwork);
-        //testListBestOption(flightnetwork);
+        testListBestOption(flightnetwork);
 
         std::cout << "All tests passed successfully!" << std::endl;
         return 0;

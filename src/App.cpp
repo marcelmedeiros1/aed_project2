@@ -55,7 +55,7 @@ void App::mainMenu()
     case 2:
     {
         clearScreen();
-        // TODO
+        bestFlightMenu();
         break;
     }
     case 0:
@@ -69,6 +69,128 @@ void App::mainMenu()
              << endl;
         mainMenu();
     }
+    }
+}
+
+void App::bestFlightMenu(){
+    int optionSource;
+    cout << "=================================================================================================" << endl
+         << "SELECT THE BEST FLIGHT OPTION!" << endl
+         << "You have to provide the source and destination of your trip!" << endl
+         << "How do you wish to select the source of your trip?: " << endl
+         << endl
+         << "[1] Airport code" << endl
+         << "[2] Airport name" << endl
+         << "[3] City name" << endl
+         << "[4] Geographical coordinates" << endl
+         << "=================================================================================================" << endl
+         << endl
+         << "-> ";
+    cin >> optionSource;
+
+    int optionDestination;
+    cout << "=================================================================================================" << endl
+         << "How do you wish to select the destination of your trip?: " << endl
+         << endl
+         << "[1] Airport code" << endl
+         << "[2] Airport name" << endl
+         << "[3] City name" << endl
+         << "[4] Geographical coordinates" << endl
+         << "=================================================================================================" << endl
+         << endl
+         << "-> ";
+    cin >> optionDestination;
+
+    clearScreen();
+    int filterOption;
+    set<string> allowedAirlines;
+    cout << "=================================================================================================" << endl
+         << "Filter Selection!" << endl
+         << "If you want to, you can select filters on your flight option." << endl
+         << "[1] Select the allowed airlines." << endl
+         << "[0] I dont want this filter." << endl
+         << "=================================================================================================" << endl
+         << endl
+         << "-> ";
+    cin >> filterOption;
+
+
+    switch (filterOption){
+    case 1:
+    {
+        clearScreen();
+        string airline;
+        airline = "";
+        while(airline != "0"){
+            cout << "=================================================================================================" << endl
+            << "Type the airline! Select 0 when you're done." << endl
+            << "[0] Go back." << endl
+            << "=================================================================================================" << endl
+            << endl
+            << "-> ";
+            cin >> airline;
+            allowedAirlines.insert(airline);
+        }        
+    }
+    }
+    clearScreen();
+    cout << "=================================================================================================" << endl
+         << "Filter Selection!" << endl
+         << "If you want to, you can select filters on your flight option." << endl
+         << "[1] Minimize the number of different airlines." << endl
+         << "[0] I dont want this filter." << endl
+         << "=================================================================================================" << endl
+         << endl
+         << "-> ";
+    cin >> filterOption;
+    bool minimize = false;
+    if(filterOption == 1) minimize = true;
+
+    clearScreen();
+    vector<vector<Airport>> bestOption = flightnetwork.listBestFlights(optionSource,optionDestination,allowedAirlines,minimize);
+
+    if (!bestOption.empty())
+    {
+        int stops = bestOption.front().size()/2;
+        cout << "=================================================================================================" << endl
+        << "Best route with fewer mount of stops: " << stops << '\n';
+        int count = 1;
+        for (const vector<Airport> v : bestOption)
+        {
+            cout << "[" << count << "] OPTION: ";
+            for (int i=0; i<v.size(); i++){
+                if(i%2==0) cout << v[i].getCode() << " -> ";
+                else cout << '(' << v[i].getCode() << ')' << " -> ";
+            }
+            cout << '\n';
+            count++;
+        }
+    }
+    else
+    {
+        std::cout << "No valid flight option found.'\n";
+    }
+    cout << "=================================================================================================" << endl;
+
+    int option;
+        cout << "[0] Exit" << endl
+        << "=================================================================================================" << endl
+        << endl
+        << "-> ";
+    cin >> option;
+    switch(option){
+        case 0:
+        {
+            clearScreen();
+            mainMenu();
+        }
+        default:
+        {
+            clearScreen();
+            cout << "Invalid option! please try again:" << endl
+                << endl;
+            mainMenu();
+        }
     }
 }
 

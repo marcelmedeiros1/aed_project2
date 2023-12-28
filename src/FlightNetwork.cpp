@@ -409,7 +409,7 @@ vector<Airport> FlightNetwork::cityCriteria(const string &city) const
     return res;
 }
 
-vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float &lon, const double &radius) const
+vector<Airport> FlightNetwork::coordinateCriteria(const float &lat, const float &lon) const
 {
     double max = 100000000000000000.0;
     vector<Airport> res;
@@ -514,8 +514,8 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
 
     return result;
 }
-// 0 -> Airport code ; 1 -> Airport name ; 2 -> City ; 3 -> Coordinate
-vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const int &flag2) const
+// 1 -> Airport code ; 2 -> Airport name ; 3 -> City ; 4 -> Coordinate
+vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const int &flag2, const set<string> &allowedAirlines, bool minimizeAirlines) const
 {
     vector<Airport> sources;
     vector<Airport> destinations;
@@ -523,36 +523,35 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
 
     switch (flag1)
     {
-    case 0:
+    case 1:
     {
         string code;
         cout << "Source Airport code = ";
-        getline(cin, code);
+        cin >> code;
         sources.push_back(codeCriteria(code));
-        break;
-    }
-    case 1:
-    {
-        string name;
-        cout << "Source Airport name = ";
-        getline(cin, name);
-        sources.push_back(nameCriteria(name));
         break;
     }
     case 2:
     {
-        string city;
-        cout << "Source City name = ";
-        getline(cin, city);
-        sources = cityCriteria(city);
+        string name;
+        cout << "Source Airport name = ";
+        cin >> name;
+        sources.push_back(nameCriteria(name));
         break;
     }
     case 3:
     {
+        string city;
+        cout << "Source City name = ";
+        cin >> city;
+        sources = cityCriteria(city);
+        break;
+    }
+    case 4:
+    {
         float lat, lon;
-        double rad;
-        cout << "Source Latitude = ", cin >> lat, cout << "Source Longitude = ", cin >> lon, cout << "Source Radius = ", cin >> rad;
-        sources = coordinateCriteria(lat, lon, rad);
+        cout << "Source Latitude = ", cin >> lat, cout << "Source Longitude = ", cin >> lon;
+        sources = coordinateCriteria(lat, lon);
         break;
     }
 
@@ -562,36 +561,36 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
 
     switch (flag2)
     {
-    case 0:
+    case 1:
     {
         string code;
         cout << "Destination Airport code = ";
-        getline(cin, code);
+        cin >> code;
         destinations.push_back(codeCriteria(code));
-        break;
-    }
-    case 1:
-    {
-        string name;
-        cout << "Destination Airport name = ";
-        getline(cin, name);
-        destinations.push_back(nameCriteria(name));
         break;
     }
     case 2:
     {
-        string city;
-        cout << "Destination City name = ";
-        getline(cin, city);
-        destinations = cityCriteria(city);
+        string name;
+        cout << "Destination Airport name = ";
+        cin >> name;
+        destinations.push_back(nameCriteria(name));
         break;
     }
     case 3:
     {
+        string city;
+        cout << "Destination City name = ";
+        cin >> city;
+        destinations = cityCriteria(city);
+        break;
+    }
+    case 4:
+    {
         float lat, lon;
         double rad;
-        cout << "Destination Latitude = ", cin >> lat, cout << "Destination Longitude = ", cin >> lon, cout << "Destination Radius = ", cin >> rad;
-        destinations = coordinateCriteria(lat, lon, rad);
+        cout << "Destination Latitude = ", cin >> lat, cout << "Destination Longitude = ", cin >> lon;
+        destinations = coordinateCriteria(lat, lon);
         break;
     }
 
@@ -603,7 +602,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         for (const Airport &d : destinations)
         {
-            vector<vector<Airport>> curr = bestFlight(s, d);
+            vector<vector<Airport>> curr = bestFlight(s, d,allowedAirlines,false);
             for (vector<Airport> option : curr)
                 res.push_back(option);
         }

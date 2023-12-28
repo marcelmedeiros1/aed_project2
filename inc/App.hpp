@@ -15,6 +15,7 @@ public:
     void mainMenu();
 
     void statisticsMenu();
+    void bestFlightMenu();
     void goBackStatisticsMenu();
     void globalStatistics();
     void showNumFlights();
