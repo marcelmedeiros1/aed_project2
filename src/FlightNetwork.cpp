@@ -292,7 +292,6 @@ int FlightNetwork::maximumTrip(vector<pair<string, string>> &airports)
 {
     int maxStops = -1;
 
-
     for (Vertex<Airport> *sourceVertex : airportsGraph.getVertexSet())
     {
         const Airport &sourceAirport = sourceVertex->getInfo();
@@ -380,7 +379,15 @@ set<string> FlightNetwork::getEssentialAirports()
     int i = 0;
 
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
+    {
         v->setNum(0);
+
+        for (const Edge<Airport> &e : v->getAdj())
+        {
+            Vertex<Airport> *w = e.getDest();
+            w->addEdge(v, e.getInfo(), e.getWeight());
+        }
+    }
 
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
         if (v->getNum() == 0)
@@ -465,7 +472,7 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
     vector<vector<Airport>> result;
     queue<vector<Airport>> q;
     set<string> visited;
-    int nesc=3019;
+    int nesc = 3019;
 
     q.push({source});
     visited.insert(source.getCode());
@@ -486,15 +493,18 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
             if (!allowedAirlines.empty() && allowedAirlines.find(currentAirline) == allowedAirlines.end())
                 continue;
 
-            if(neighborAirport == destination){
+            if (neighborAirport == destination)
+            {
                 vector<Airport> newPath = currentPath;
                 newPath.push_back(currentAirline);
                 newPath.push_back(neighborAirport);
-                if(result.empty()) nesc = newPath.size();
+                if (result.empty())
+                    nesc = newPath.size();
 
-                if(newPath.size() <= nesc){
-                nesc=newPath.size();
-                result.push_back(newPath);
+                if (newPath.size() <= nesc)
+                {
+                    nesc = newPath.size();
+                    result.push_back(newPath);
                 }
             }
             else if (visited.find(neighborAirport.getCode()) == visited.end())
@@ -508,32 +518,40 @@ vector<vector<Airport>> FlightNetwork::bestFlight(const Airport &source, const A
             }
         }
     }
-    if(minimizeAirlines){
+    if (minimizeAirlines)
+    {
         vector<vector<Airport>> resFiltered;
         set<string> airlinesVisited;
         int max = 3019;
-        for(auto p : result){
+        for (auto p : result)
+        {
             int cur = 0;
-            for (int i=0; i< p.size(); i++){
-                if(i%2 != 0){
-                    if(airlinesVisited.find(p[i].getCode()) == airlinesVisited.end()){
+            for (int i = 0; i < p.size(); i++)
+            {
+                if (i % 2 != 0)
+                {
+                    if (airlinesVisited.find(p[i].getCode()) == airlinesVisited.end())
+                    {
                         cur++;
                         airlinesVisited.insert(p[i].getCode());
                     }
                 }
             }
-            if(cur < max){
+            if (cur < max)
+            {
                 resFiltered.clear();
-                max=cur;
+                max = cur;
                 resFiltered.push_back(p);
             }
-            else if(cur == max){
+            else if (cur == max)
+            {
                 resFiltered.push_back(p);
             }
             airlinesVisited.clear();
         }
         result.clear();
-        for(auto p : resFiltered){
+        for (auto p : resFiltered)
+        {
             result.push_back(p);
         }
     }
@@ -630,25 +648,29 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     {
         for (const Airport &d : destinations)
         {
-            vector<vector<Airport>> curr = bestFlight(s, d,allowedAirlines,minimizeAirlines);
+            vector<vector<Airport>> curr = bestFlight(s, d, allowedAirlines, minimizeAirlines);
             for (vector<Airport> option : curr)
                 res.push_back(option);
         }
     }
     int size = INT_MAX;
     vector<vector<Airport>> res_aux;
-    for(auto p : res){
-        if(p.size() < size){
+    for (auto p : res)
+    {
+        if (p.size() < size)
+        {
             res_aux.clear();
             res_aux.push_back(p);
             size = p.size();
         }
-        else if(p.size() == size){
+        else if (p.size() == size)
+        {
             res_aux.push_back(p);
         }
     }
     res.clear();
-    for(auto p : res_aux){
+    for (auto p : res_aux)
+    {
         res.push_back(p);
     }
 
