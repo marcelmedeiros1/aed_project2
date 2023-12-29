@@ -161,9 +161,9 @@ void App::bestFlightMenu(){
         {
             cout << "[" << count << "] OPTION: ";
             for (int i=0; i<v.size(); i++){
-                if(i==v.size()-1) cout << v[i].getCode() << '\n';
-                else if(i%2==0) cout << v[i].getCode() << " -> ";
-                else cout << '(' << v[i].getCode() << ')' << " -> ";
+                if(i==v.size()-1) cout << v[i].getName() << '\n';
+                else if(i%2==0) cout << v[i].getName() << " -> ";
+                else cout << "By: " << v[i].getCode() << " -> ";
             }
             count++;
         }
@@ -265,7 +265,7 @@ void App::statisticsMenu()
         clearScreen();
         string city;
         cout << endl
-             << "Enter the city name:" << endl
+             << "Enter the city name (Be careful with uppercase letters and do not use accents, e.g: Sao Paulo):" << endl
              << "-> ";
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, city);
@@ -471,7 +471,7 @@ void App::showNumFlights()
         clearScreen();
         string city;
         cout << endl
-             << "Enter the city name:" << endl
+             << "Enter the city name (Be careful with uppercase letters and do not use accents, e.g: Tripoli Intl):" << endl
              << "-> ";
         cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
         std::getline(std::cin, city);

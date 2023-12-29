@@ -535,7 +535,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 2:
     {
         string name;
-        cout << "Source Airport name = ";
+        cout << "Source Airport name (Be careful with uppercase letters and do not use accents, e.g: Tripoli Intl) = ";
         std::getline(std::cin, name);
         sources.push_back(nameCriteria(name));
         break;
@@ -543,7 +543,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 3:
     {
         string city;
-        cout << "Source City name = ";
+        cout << "Source City name (Be careful with uppercase letters and do not use accents, e.g: Sao Paulo) = ";
         std::getline(std::cin, city);
         sources = cityCriteria(city);
         break;
@@ -574,7 +574,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 2:
     {
         string name;
-        cout << "Destination Airport name = ";
+        cout << "Destination Airport name (Be careful with uppercase letters and do not use accents, e.g: Tripoli Intl) = ";
         std::getline(std::cin, name);
         destinations.push_back(nameCriteria(name));
         break;
@@ -582,7 +582,7 @@ vector<vector<Airport>> FlightNetwork::listBestFlights(const int &flag1, const i
     case 3:
     {
         string city;
-        cout << "Destination City name = ";
+        cout << "Destination City name (Be careful with uppercase letters and do not use accents, e.g: Sao Paulo) = ";
         std::getline(std::cin, city);
         destinations = cityCriteria(city);
         break;
