@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['listbestflights_0',['listBestFlights',['../classFlightNetwork.html#ad1c24095a349de82a2a8b2f2a09baaf4',1,'FlightNetwork']]]
+  ['listbestflights_0',['listBestFlights',['../classFlightNetwork.html#a44f3e5308ad0b9c7a545e5045f616ecd',1,'FlightNetwork']]]
 ];

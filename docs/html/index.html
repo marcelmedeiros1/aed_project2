@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.11.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Flight Network management system: aed_project2</title>
+<title>Flight Network management system: Air Travel Flight Management System</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -72,10 +72,77 @@ $(function() {
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">aed_project2 </div></div>
+  <div class="headertitle"><div class="title">Air Travel Flight Management System </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a class="anchor" id="md_README"></a></p>
+<div class="textblock"><p><a class="anchor" id="md_README"></a> </p>
+<h1><a class="anchor" id="autotoc_md1"></a>
+Overview</h1>
+<p>Welcome to the Air Travel Flight Management System! This system is designed to help users explore and plan their air travel efficiently. It leverages real-world data about airports, airlines, and flights to provide a comprehensive tool for making informed decisions.</p>
+<h1><a class="anchor" id="autotoc_md2"></a>
+Dataset</h1>
+<p>The system utilizes a dataset containing information about 3019 airports, 444 airlines, and 63832 flights. This dataset includes details such as airport codes, names, cities, countries, latitude, and longitude, among other information.</p>
+<h1><a class="anchor" id="autotoc_md3"></a>
+Features</h1>
+<h2><a class="anchor" id="autotoc_md4"></a>
+Data Handling</h2>
+<ul>
+<li>Read and parse provided data, loading it into an appropriate graph data structure.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md5"></a>
+Flight Management System</h2>
+<ul>
+<li>Develop a user-friendly system with functionalities for exploring and planning air travel.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md6"></a>
+Network Statistics</h2>
+<ul>
+<li>Calculate and list statistics such as the global number of airports and flights.</li>
+<li>Provide statistics on flights per airport, per city, per airline, and more.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md7"></a>
+Maximum Trip and Essential Airports</h2>
+<ul>
+<li>Identify the maximum number of stops for a round-trip.</li>
+<li>Identify essential airports for the network's circulation capability.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md8"></a>
+Best Flight Options</h2>
+<ul>
+<li>Present the best flight options based on user-specified criteria, such as airport code, name, city, or coordinates.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md9"></a>
+Flight Filtering</h2>
+<ul>
+<li>Allow users to filter flight options based on preferences, such as specific airlines or minimizing the number of different airlines.</li>
+</ul>
+<h2><a class="anchor" id="autotoc_md10"></a>
+Documentation</h2>
+<ul>
+<li>Include Doxygen documentation for relevant functions, indicating their time complexity.</li>
+</ul>
+<h1><a class="anchor" id="autotoc_md11"></a>
+Implementation Details</h1>
+<p>This system is implemented in C++ using the provided <code><a class="el" href="classGraph.html" title="Represents a generic graph with vertices of type T.">Graph</a></code> class for managing the network of airports and flights. The data is loaded from CSV files, and various functionalities are provided to assist users in navigating the flight network.</p>
+<h1><a class="anchor" id="autotoc_md12"></a>
+How to Use</h1>
+<p>To get started, instantiate the <code><a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a></code> class with filenames for airlines, airports, and flights data. Then, use the provided functions to explore the features mentioned above.</p>
+<p>To run the code, run the following commands:</p>
+<hr  />
+<p> mkdir build<br  />
+cd build<br  />
+cmake ..<br  />
+make<br  />
+./aed_project2<br  />
+ </p><hr  />
+<h1><a class="anchor" id="autotoc_md15"></a>
+Authors</h1>
+<p>Leonardo Garcia<br  />
+Marcel Madeiros<br  />
+Pedro Castro<br  />
+ </p>
+<h2><a class="anchor" id="autotoc_md16"></a>
+Happy flying!</h2>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"/>
 </div><!-- contents -->

@@ -74,7 +74,7 @@ FlightNetwork::FlightNetwork(const string &airlines_filename, const string &airp
     }
 }
 
-string airlineCodeToName(const string &code)
+string FlightNetwork::airlineCodeToName(const string &code)
 {
     string line;
     ifstream airlines_file("../data/airlines.csv");
@@ -86,6 +86,31 @@ string airlineCodeToName(const string &code)
 
     getline(airlines_file, line);
     while (getline(airlines_file, line))
+    {
+        istringstream iss(line);
+        string code_file, name, callsign, country;
+
+        getline(getline(getline(getline(iss, code_file, ','), name, ','), callsign, ','), country, '\r');
+
+        if (code_file == code)
+            return name;
+    }
+
+    throw runtime_error("Airline not found.");
+}
+
+string FlightNetwork::airportCodeToName(const string &code)
+{
+    string line;
+    ifstream airports_file("../data/airports.csv");
+
+    if (!airports_file.is_open())
+    {
+        throw runtime_error("Airports file does not exist.");
+    }
+
+    getline(airports_file, line);
+    while (getline(airports_file, line))
     {
         istringstream iss(line);
         string code_file, name, callsign, country;

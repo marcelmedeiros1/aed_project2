@@ -11,18 +11,19 @@
 {\ttfamily \#include $<$cmath$>$}\newline
 {\ttfamily \#include $<$tuple$>$}\newline
 {\ttfamily \#include $<$functional$>$}\newline
+{\ttfamily \#include $<$limits$>$}\newline
 \doxysubsubsection*{Classes}
 \begin{DoxyCompactItemize}
 \item 
 class \mbox{\hyperlink{classFlightNetwork}{Flight\+Network}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Represents a flight network consisting of airports and flights. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
 void \mbox{\hyperlink{FlightNetwork_8hpp_a59084262fd494b809693ffbb010d68fc}{dfs\+\_\+art}} (\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&g, \mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \texorpdfstring{$\ast$}{*}v, set$<$ string $>$ \&l, int \&i)
-\item 
+\begin{DoxyCompactList}\small\item\em Depth-\/first search for identifying articulation points in the airport graph. \end{DoxyCompactList}\item 
 double \mbox{\hyperlink{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}{haversine\+Distance}} (double lat1, double lon1, double lat2, double lon2)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Calculates the Haversine distance between two geographical points. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -32,9 +33,42 @@ double \mbox{\hyperlink{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}{ha
 \doxysubsubsection{\texorpdfstring{dfs\_art()}{dfs\_art()}}
 {\footnotesize\ttfamily void dfs\+\_\+art (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&}]{g,  }\item[{\mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \texorpdfstring{$\ast$}{*}}]{v,  }\item[{set$<$ string $>$ \&}]{l,  }\item[{int \&}]{i }\end{DoxyParamCaption})}
 
+
+
+Depth-\/first search for identifying articulation points in the airport graph. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em g} & The airport graph. \\
+\hline
+{\em v} & The current vertex in the DFS traversal. \\
+\hline
+{\em l} & Set to store the identified articulation points. \\
+\hline
+{\em i} & Reference to the current DFS iteration number. \\
+\hline
+\end{DoxyParams}
 \Hypertarget{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2}\label{FlightNetwork_8hpp_ae8b1f9c1793fb1626fb141b9fdf126e2} 
 \index{FlightNetwork.hpp@{FlightNetwork.hpp}!haversineDistance@{haversineDistance}}
 \index{haversineDistance@{haversineDistance}!FlightNetwork.hpp@{FlightNetwork.hpp}}
 \doxysubsubsection{\texorpdfstring{haversineDistance()}{haversineDistance()}}
 {\footnotesize\ttfamily double haversine\+Distance (\begin{DoxyParamCaption}\item[{double}]{lat1,  }\item[{double}]{lon1,  }\item[{double}]{lat2,  }\item[{double}]{lon2 }\end{DoxyParamCaption})}
 
+
+
+Calculates the Haversine distance between two geographical points. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat1} & Latitude of the first point. \\
+\hline
+{\em lon1} & Longitude of the first point. \\
+\hline
+{\em lat2} & Latitude of the second point. \\
+\hline
+{\em lon2} & Longitude of the second point. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Haversine distance between the two points. 
+\end{DoxyReturn}

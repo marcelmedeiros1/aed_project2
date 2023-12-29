@@ -2,71 +2,79 @@
 \hypertarget{classFlightNetwork}{}\label{classFlightNetwork}\index{FlightNetwork@{FlightNetwork}}
 
 
+Represents a flight network consisting of airports and flights.  
+
+
+
+
 {\ttfamily \#include $<$Flight\+Network.\+hpp$>$}
 
 \doxysubsubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}{Flight\+Network}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlightNetwork_a678157c593366c44080e41b0d836ff86}{Flight\+Network}} (const std\+::string \&airlines\+\_\+filename, const std\+::string \&airports\+\_\+filename, const std\+::string \&flights\+\_\+filename)
-\item 
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}{get\+Aiports\+Graph}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the airports graph. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}{get\+Global\+Num\+Of\+Airports}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of airports in the network. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}{get\+Global\+Num\+Of\+Flights}} () const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of flights in the network. \end{DoxyCompactList}\item 
 std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}{num\+Flights\+Airport}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the number of flights departing or arriving at a specific airport. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_ae57015e499d5befbc9d712050111237a}{num\+Flights\+City}} (const std\+::string \&city) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of flights departing or arriving in a specific city. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}{num\+Flights\+Airline}} (\mbox{\hyperlink{classAirline}{Airline}} \&airline) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of flights operated by a specific airline. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}{get\+Diff\+Countries\+Airport}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of different countries connected to a specific airport. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}{get\+Diff\+Countries\+City}} (const std\+::string \&city) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of different countries connected to airports in a specific city. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}{get\+Airports\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of airport names connected to a specific airport. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb}{get\+Cities\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of city names connected to a specific airport. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}{get\+Countries\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of country names connected to a specific airport. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}{get\+Reachable\+Airports}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of airport names reachable from a specific airport within a given distance. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a12c8f707304be0127849127da305d649}{get\+Reachable\+Cities}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of city names reachable from a specific airport within a given distance. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}{get\+Reachable\+Countries}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of country names reachable from a specific airport within a given distance. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}{maximum\+Trip}} (std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&airports)
-\item 
+\begin{DoxyCompactList}\small\item\em Find the maximum number of stops for a round-\/trip connecting the given airports. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}{get\+Greatest\+Traffic}} (const int \&k)
-\item 
+\begin{DoxyCompactList}\small\item\em Get the set of airports with the greatest traffic, considering both incoming and outgoing flights. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}{get\+Essential\+Airports}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em Perform a depth-\/first search to identify essential airports in the flight network. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}{code\+Criteria}} (const std\+::string \&code) const
-\item 
+\begin{DoxyCompactList}\small\item\em Find an airport by its code. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}{name\+Criteria}} (const std\+::string \&name) const
-\item 
+\begin{DoxyCompactList}\small\item\em Find an airport by its name. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}{city\+Criteria}} (const std\+::string \&city) const
-\item 
-std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56}{coordinate\+Criteria}} (const float \&lat, const float \&lon, const double \&radius) const
-\item 
+\begin{DoxyCompactList}\small\item\em Find airports in the specified city. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a70a801b251fcb490e0f7c6c13884adc3}{coordinate\+Criteria}} (const float \&lat, const float \&lon) const
+\begin{DoxyCompactList}\small\item\em Find airports near the specified coordinates. \end{DoxyCompactList}\item 
 std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}{best\+Flight}} (const \mbox{\hyperlink{classAirport}{Airport}} \&source, const \mbox{\hyperlink{classAirport}{Airport}} \&destination, const set$<$ string $>$ \&allowed\+Airlines=\{\}, bool minimize\+Airlines=false) const
-\item 
-std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4}{list\+Best\+Flights}} (const int \&flag1, const int \&flag2) const
-\item 
-bool \mbox{\hyperlink{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19}{is\+Path\+Valid}} (const vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&path, const set$<$ string $>$ \&allowed\+Airlines, bool minimize\+Airlines) const
-\item 
-std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50}{best\+Flight\+Filtered}} (const \mbox{\hyperlink{classAirport}{Airport}} \&source, const \mbox{\hyperlink{classAirport}{Airport}} \&destination, const set$<$ string $>$ \&allowed\+Airlines, bool minimize\+Airlines) const
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Find the best flight paths between source and destination airports. \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a44f3e5308ad0b9c7a545e5045f616ecd}{list\+Best\+Flights}} (const int \&flag1, const int \&flag2, const set$<$ string $>$ \&allowed\+Airlines, bool minimize\+Airlines) const
+\begin{DoxyCompactList}\small\item\em List the best flights based on user input for source and destination. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFlightNetwork_aa99f751fa3cdba998d3f3417c13b55e2}{airport\+Code\+To\+Name}} (const std\+::string \&code)
+\begin{DoxyCompactList}\small\item\em Convert an airport code to its corresponding name. \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{classFlightNetwork_a0b99a447c8652e94e1bff48ffa208d3b}{airline\+Code\+To\+Name}} (const std\+::string \&code)
+\begin{DoxyCompactList}\small\item\em Convert an airline code to its corresponding name. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86}{airports\+Graph}}
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em \doxylink{classGraph}{Graph} representing the network of airports and flights. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+Represents a flight network consisting of airports and flights. 
 
 \doxysubsection{Constructor \& Destructor Documentation}
 \Hypertarget{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}\label{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042} 
@@ -74,6 +82,10 @@ std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbo
 \index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{FlightNetwork()}{FlightNetwork()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
 {\footnotesize\ttfamily Flight\+Network\+::\+Flight\+Network (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. 
 
 \Hypertarget{classFlightNetwork_a678157c593366c44080e41b0d836ff86}\label{classFlightNetwork_a678157c593366c44080e41b0d836ff86} 
 \index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
@@ -83,151 +95,486 @@ std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbo
 
 
 
+Parameterized constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airlines\+\_\+filename} & Filename for the airlines data. \\
+\hline
+{\em airports\+\_\+filename} & Filename for the airports data. \\
+\hline
+{\em flights\+\_\+filename} & Filename for the flights data. \\
+\hline
+\end{DoxyParams}
+
+
 \doxysubsection{Member Function Documentation}
+\Hypertarget{classFlightNetwork_a0b99a447c8652e94e1bff48ffa208d3b}\label{classFlightNetwork_a0b99a447c8652e94e1bff48ffa208d3b} 
+\index{FlightNetwork@{FlightNetwork}!airlineCodeToName@{airlineCodeToName}}
+\index{airlineCodeToName@{airlineCodeToName}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{airlineCodeToName()}{airlineCodeToName()}}
+{\footnotesize\ttfamily string Flight\+Network\+::airline\+Code\+To\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption})}
+
+
+
+Convert an airline code to its corresponding name. 
+
+This function takes an airline code and searches the dataset to find the corresponding airline name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The unique ICAO code of the airline. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the airline. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the airline with the given code is not found. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classFlightNetwork_aa99f751fa3cdba998d3f3417c13b55e2}\label{classFlightNetwork_aa99f751fa3cdba998d3f3417c13b55e2} 
+\index{FlightNetwork@{FlightNetwork}!airportCodeToName@{airportCodeToName}}
+\index{airportCodeToName@{airportCodeToName}!FlightNetwork@{FlightNetwork}}
+\doxysubsubsection{\texorpdfstring{airportCodeToName()}{airportCodeToName()}}
+{\footnotesize\ttfamily string Flight\+Network\+::airport\+Code\+To\+Name (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption})}
+
+
+
+Convert an airport code to its corresponding name. 
+
+This function takes an airport code and searches the dataset to find the corresponding airport name.
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The unique IATA code of the airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::string The name of the airport. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::runtime\+\_\+error} & if the airport with the given code is not found. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}\label{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512} 
 \index{FlightNetwork@{FlightNetwork}!bestFlight@{bestFlight}}
 \index{bestFlight@{bestFlight}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{bestFlight()}{bestFlight()}}
 {\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::best\+Flight (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{source,  }\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{destination,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines = {\ttfamily \{\}},  }\item[{bool}]{minimize\+Airlines = {\ttfamily false} }\end{DoxyParamCaption}) const}
 
-\Hypertarget{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50}\label{classFlightNetwork_a3abdd2d58ed842676a8a87735cd6fd50} 
-\index{FlightNetwork@{FlightNetwork}!bestFlightFiltered@{bestFlightFiltered}}
-\index{bestFlightFiltered@{bestFlightFiltered}!FlightNetwork@{FlightNetwork}}
-\doxysubsubsection{\texorpdfstring{bestFlightFiltered()}{bestFlightFiltered()}}
-{\footnotesize\ttfamily std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::best\+Flight\+Filtered (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{source,  }\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{destination,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines,  }\item[{bool}]{minimize\+Airlines }\end{DoxyParamCaption}) const}
 
+
+Find the best flight paths between source and destination airports. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The source airport. \\
+\hline
+{\em destination} & The destination airport. \\
+\hline
+{\em allowed\+Airlines} & Set of allowed airlines (empty for any). \\
+\hline
+{\em minimize\+Airlines} & Flag to minimize the number of unique airlines in the path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of vector of airports representing the best flight paths. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}\label{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48} 
 \index{FlightNetwork@{FlightNetwork}!cityCriteria@{cityCriteria}}
 \index{cityCriteria@{cityCriteria}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{cityCriteria()}{cityCriteria()}}
 {\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::city\+Criteria (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{city }\end{DoxyParamCaption}) const}
 
+
+
+Find airports in the specified city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & The name of the city to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of airports in the given city. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if no city with the provided name is found. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}\label{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e} 
 \index{FlightNetwork@{FlightNetwork}!codeCriteria@{codeCriteria}}
 \index{codeCriteria@{codeCriteria}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{codeCriteria()}{codeCriteria()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classAirport}{Airport}} Flight\+Network\+::code\+Criteria (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{code }\end{DoxyParamCaption}) const}
 
-\Hypertarget{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56}\label{classFlightNetwork_a0327cb40d205b51fbe56cc7822b7aa56} 
+
+
+Find an airport by its code. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em code} & The code of the target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The airport matching the provided code. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if no airport is found with the given code. \\
+\hline
+\end{DoxyExceptions}
+\Hypertarget{classFlightNetwork_a70a801b251fcb490e0f7c6c13884adc3}\label{classFlightNetwork_a70a801b251fcb490e0f7c6c13884adc3} 
 \index{FlightNetwork@{FlightNetwork}!coordinateCriteria@{coordinateCriteria}}
 \index{coordinateCriteria@{coordinateCriteria}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{coordinateCriteria()}{coordinateCriteria()}}
-{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::coordinate\+Criteria (\begin{DoxyParamCaption}\item[{const float \&}]{lat,  }\item[{const float \&}]{lon,  }\item[{const double \&}]{radius }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::coordinate\+Criteria (\begin{DoxyParamCaption}\item[{const float \&}]{lat,  }\item[{const float \&}]{lon }\end{DoxyParamCaption}) const}
 
+
+
+Find airports near the specified coordinates. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em lat} & The latitude of the target location. \\
+\hline
+{\em lon} & The longitude of the target location. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of airports near the specified coordinates. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if no airports are found in the specified area. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}\label{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d} 
 \index{FlightNetwork@{FlightNetwork}!getAiportsGraph@{getAiportsGraph}}
 \index{getAiportsGraph@{getAiportsGraph}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getAiportsGraph()}{getAiportsGraph()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ Flight\+Network\+::get\+Aiports\+Graph (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Getter function to retrieve the airports graph. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classGraph}{Graph$<$\+Airport$>$} representing the airports and flights. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}\label{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d} 
 \index{FlightNetwork@{FlightNetwork}!getAirportsDestinations@{getAirportsDestinations}}
 \index{getAirportsDestinations@{getAirportsDestinations}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getAirportsDestinations()}{getAirportsDestinations()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Airports\+Destinations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
 
+
+
+Get the set of airport names connected to a specific airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of airport names. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb}\label{classFlightNetwork_a4b7233387859091497e753bcb6a04ceb} 
 \index{FlightNetwork@{FlightNetwork}!getCitiesDestinations@{getCitiesDestinations}}
 \index{getCitiesDestinations@{getCitiesDestinations}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getCitiesDestinations()}{getCitiesDestinations()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Cities\+Destinations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
 
+
+
+Get the set of city names connected to a specific airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of city names. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}\label{classFlightNetwork_a950669ecc0c36241638bb6d634daa322} 
 \index{FlightNetwork@{FlightNetwork}!getCountriesDestinations@{getCountriesDestinations}}
 \index{getCountriesDestinations@{getCountriesDestinations}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getCountriesDestinations()}{getCountriesDestinations()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Countries\+Destinations (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
 
+
+
+Get the set of country names connected to a specific airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of country names. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}\label{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970} 
 \index{FlightNetwork@{FlightNetwork}!getDiffCountriesAirport@{getDiffCountriesAirport}}
 \index{getDiffCountriesAirport@{getDiffCountriesAirport}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getDiffCountriesAirport()}{getDiffCountriesAirport()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Diff\+Countries\+Airport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption}) const}
 
+
+
+Get the set of different countries connected to a specific airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of countries. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}\label{classFlightNetwork_a4e74766e1af03668d285c5f028886cde} 
 \index{FlightNetwork@{FlightNetwork}!getDiffCountriesCity@{getDiffCountriesCity}}
 \index{getDiffCountriesCity@{getDiffCountriesCity}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getDiffCountriesCity()}{getDiffCountriesCity()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Diff\+Countries\+City (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{city }\end{DoxyParamCaption}) const}
 
+
+
+Get the set of different countries connected to airports in a specific city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & The target city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of countries. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}\label{classFlightNetwork_accd26591affed45d5e976809bf80b5e4} 
 \index{FlightNetwork@{FlightNetwork}!getEssentialAirports@{getEssentialAirports}}
 \index{getEssentialAirports@{getEssentialAirports}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getEssentialAirports()}{getEssentialAirports()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Essential\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Perform a depth-\/first search to identify essential airports in the flight network. 
+
+\begin{DoxyReturn}{Returns}
+Set of essential airport names. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}\label{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a} 
 \index{FlightNetwork@{FlightNetwork}!getGlobalNumOfAirports@{getGlobalNumOfAirports}}
 \index{getGlobalNumOfAirports@{getGlobalNumOfAirports}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getGlobalNumOfAirports()}{getGlobalNumOfAirports()}}
 {\footnotesize\ttfamily int Flight\+Network\+::get\+Global\+Num\+Of\+Airports (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the total number of airports in the network. 
+
+\begin{DoxyReturn}{Returns}
+Total number of airports. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}\label{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e} 
 \index{FlightNetwork@{FlightNetwork}!getGlobalNumOfFlights@{getGlobalNumOfFlights}}
 \index{getGlobalNumOfFlights@{getGlobalNumOfFlights}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getGlobalNumOfFlights()}{getGlobalNumOfFlights()}}
 {\footnotesize\ttfamily int Flight\+Network\+::get\+Global\+Num\+Of\+Flights (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
 
+
+
+Get the total number of flights in the network. 
+
+\begin{DoxyReturn}{Returns}
+Total number of flights. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}\label{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273} 
 \index{FlightNetwork@{FlightNetwork}!getGreatestTraffic@{getGreatestTraffic}}
 \index{getGreatestTraffic@{getGreatestTraffic}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getGreatestTraffic()}{getGreatestTraffic()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Greatest\+Traffic (\begin{DoxyParamCaption}\item[{const int \&}]{k }\end{DoxyParamCaption})}
 
+
+
+Get the set of airports with the greatest traffic, considering both incoming and outgoing flights. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em k} & The number of airports to retrieve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of airport names with the greatest traffic. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}\label{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16} 
 \index{FlightNetwork@{FlightNetwork}!getReachableAirports@{getReachableAirports}}
 \index{getReachableAirports@{getReachableAirports}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getReachableAirports()}{getReachableAirports()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Reachable\+Airports (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport,  }\item[{const int \&}]{distance }\end{DoxyParamCaption})}
 
+
+
+Get the set of airport names reachable from a specific airport within a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The source airport. \\
+\hline
+{\em distance} & The maximum distance to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of reachable airport names. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a12c8f707304be0127849127da305d649}\label{classFlightNetwork_a12c8f707304be0127849127da305d649} 
 \index{FlightNetwork@{FlightNetwork}!getReachableCities@{getReachableCities}}
 \index{getReachableCities@{getReachableCities}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getReachableCities()}{getReachableCities()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Reachable\+Cities (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport,  }\item[{const int \&}]{distance }\end{DoxyParamCaption})}
 
+
+
+Get the set of city names reachable from a specific airport within a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The source airport. \\
+\hline
+{\em distance} & The maximum distance to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of reachable city names. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}\label{classFlightNetwork_a983ab64ea8332373b1792e4be587d357} 
 \index{FlightNetwork@{FlightNetwork}!getReachableCountries@{getReachableCountries}}
 \index{getReachableCountries@{getReachableCountries}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{getReachableCountries()}{getReachableCountries()}}
 {\footnotesize\ttfamily set$<$ string $>$ Flight\+Network\+::get\+Reachable\+Countries (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport,  }\item[{const int \&}]{distance }\end{DoxyParamCaption})}
 
-\Hypertarget{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19}\label{classFlightNetwork_a40e12790b81541f1e41fc89743a47d19} 
-\index{FlightNetwork@{FlightNetwork}!isPathValid@{isPathValid}}
-\index{isPathValid@{isPathValid}!FlightNetwork@{FlightNetwork}}
-\doxysubsubsection{\texorpdfstring{isPathValid()}{isPathValid()}}
-{\footnotesize\ttfamily bool Flight\+Network\+::is\+Path\+Valid (\begin{DoxyParamCaption}\item[{const vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&}]{path,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines,  }\item[{bool}]{minimize\+Airlines }\end{DoxyParamCaption}) const}
 
-\Hypertarget{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4}\label{classFlightNetwork_ad1c24095a349de82a2a8b2f2a09baaf4} 
+
+Get the set of country names reachable from a specific airport within a given distance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The source airport. \\
+\hline
+{\em distance} & The maximum distance to consider. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Set of reachable country names. 
+\end{DoxyReturn}
+\Hypertarget{classFlightNetwork_a44f3e5308ad0b9c7a545e5045f616ecd}\label{classFlightNetwork_a44f3e5308ad0b9c7a545e5045f616ecd} 
 \index{FlightNetwork@{FlightNetwork}!listBestFlights@{listBestFlights}}
 \index{listBestFlights@{listBestFlights}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{listBestFlights()}{listBestFlights()}}
-{\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::list\+Best\+Flights (\begin{DoxyParamCaption}\item[{const int \&}]{flag1,  }\item[{const int \&}]{flag2 }\end{DoxyParamCaption}) const}
+{\footnotesize\ttfamily vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ Flight\+Network\+::list\+Best\+Flights (\begin{DoxyParamCaption}\item[{const int \&}]{flag1,  }\item[{const int \&}]{flag2,  }\item[{const set$<$ string $>$ \&}]{allowed\+Airlines,  }\item[{bool}]{minimize\+Airlines }\end{DoxyParamCaption}) const}
 
+
+
+List the best flights based on user input for source and destination. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em flag1} & Type of input for the source (1\+: code, 2\+: name, 3\+: city, 4\+: coordinate). \\
+\hline
+{\em flag2} & Type of input for the destination (1\+: code, 2\+: name, 3\+: city, 4\+: coordinate). \\
+\hline
+{\em allowed\+Airlines} & Set of allowed airlines (empty for any). \\
+\hline
+{\em minimize\+Airlines} & Flag to minimize the number of unique airlines in the path. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Vector of vector of airports representing the best flight paths. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}\label{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a} 
 \index{FlightNetwork@{FlightNetwork}!maximumTrip@{maximumTrip}}
 \index{maximumTrip@{maximumTrip}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{maximumTrip()}{maximumTrip()}}
 {\footnotesize\ttfamily int Flight\+Network\+::maximum\+Trip (\begin{DoxyParamCaption}\item[{std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&}]{airports }\end{DoxyParamCaption})}
 
+
+
+Find the maximum number of stops for a round-\/trip connecting the given airports. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airports} & A vector of pairs representing airport codes for the round-\/trip. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The maximum number of stops for the round-\/trip. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}\label{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915} 
 \index{FlightNetwork@{FlightNetwork}!nameCriteria@{nameCriteria}}
 \index{nameCriteria@{nameCriteria}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{nameCriteria()}{nameCriteria()}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classAirport}{Airport}} Flight\+Network\+::name\+Criteria (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{name }\end{DoxyParamCaption}) const}
 
+
+
+Find an airport by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The airport matching the provided name. 
+\end{DoxyReturn}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em runtime\+\_\+error} & if no airport is found with the given name. \\
+\hline
+\end{DoxyExceptions}
 \Hypertarget{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}\label{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1} 
 \index{FlightNetwork@{FlightNetwork}!numFlightsAirline@{numFlightsAirline}}
 \index{numFlightsAirline@{numFlightsAirline}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{numFlightsAirline()}{numFlightsAirline()}}
 {\footnotesize\ttfamily int Flight\+Network\+::num\+Flights\+Airline (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classAirline}{Airline}} \&}]{airline }\end{DoxyParamCaption}) const}
 
+
+
+Get the total number of flights operated by a specific airline. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airline} & The target airline. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total number of flights. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}\label{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50} 
 \index{FlightNetwork@{FlightNetwork}!numFlightsAirport@{numFlightsAirport}}
 \index{numFlightsAirport@{numFlightsAirport}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{numFlightsAirport()}{numFlightsAirport()}}
 {\footnotesize\ttfamily pair$<$ int, int $>$ Flight\+Network\+::num\+Flights\+Airport (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classAirport}{Airport}} \&}]{airport }\end{DoxyParamCaption})}
 
+
+
+Get the number of flights departing or arriving at a specific airport. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em airport} & The target airport. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A pair containing the total number of flights and the number of different airlines. 
+\end{DoxyReturn}
 \Hypertarget{classFlightNetwork_ae57015e499d5befbc9d712050111237a}\label{classFlightNetwork_ae57015e499d5befbc9d712050111237a} 
 \index{FlightNetwork@{FlightNetwork}!numFlightsCity@{numFlightsCity}}
 \index{numFlightsCity@{numFlightsCity}!FlightNetwork@{FlightNetwork}}
@@ -236,12 +583,28 @@ std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbo
 
 
 
+Get the total number of flights departing or arriving in a specific city. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em city} & The target city. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Total number of flights. 
+\end{DoxyReturn}
+
+
 \doxysubsection{Member Data Documentation}
 \Hypertarget{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86}\label{classFlightNetwork_a0f31ead1ddbbb1297bc6ff30106b5b86} 
 \index{FlightNetwork@{FlightNetwork}!airportsGraph@{airportsGraph}}
 \index{airportsGraph@{airportsGraph}!FlightNetwork@{FlightNetwork}}
 \doxysubsubsection{\texorpdfstring{airportsGraph}{airportsGraph}}
 {\footnotesize\ttfamily \mbox{\hyperlink{classGraph}{Graph}}$<$\mbox{\hyperlink{classAirport}{Airport}}$>$ Flight\+Network\+::airports\+Graph\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+\doxylink{classGraph}{Graph} representing the network of airports and flights. 
 
 
 

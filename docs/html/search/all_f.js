@@ -17,5 +17,7 @@ var searchData=
   ['setvisited_14',['setVisited',['../classVertex.html#aa1a1921cded8cb209382407b5a9433f3',1,'Vertex']]],
   ['setweight_15',['setWeight',['../classEdge.html#aff600b093dd6917feeeb35bb7947bdd4',1,'Edge']]],
   ['shownumflights_16',['showNumFlights',['../classApp.html#ab2f77a8f6346d30e9c7ec2c902c11e82',1,'App']]],
-  ['statisticsmenu_17',['statisticsMenu',['../classApp.html#ad223fc20d334d75f52fcce5e16a1e4b0',1,'App']]]
+  ['statistics_17',['Network Statistics',['../index.html#autotoc_md6',1,'']]],
+  ['statisticsmenu_18',['statisticsMenu',['../classApp.html#ad223fc20d334d75f52fcce5e16a1e4b0',1,'App']]],
+  ['system_19',['System',['../index.html',1,'Air Travel Flight Management System'],['../index.html#autotoc_md5',1,'Flight Management System']]]
 ];
