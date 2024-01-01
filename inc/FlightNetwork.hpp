@@ -119,7 +119,7 @@ public:
 
     /**
      * @brief Get the set of city names connected to a specific airport.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      * @param airport The target airport.
      * @return Set of city names.
      */
@@ -127,7 +127,7 @@ public:
 
     /**
      * @brief Get the set of country names connected to a specific airport.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      * @param airport The target airport.
      * @return Set of country names.
      */
@@ -135,7 +135,7 @@ public:
 
     /**
      * @brief Get the set of airport names reachable from a specific airport within a given distance.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
      * @return Set of reachable airport names.
@@ -144,7 +144,7 @@ public:
 
     /**
      * @brief Get the set of city names reachable from a specific airport within a given distance.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
      * @return Set of reachable city names.
