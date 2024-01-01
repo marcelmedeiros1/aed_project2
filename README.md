@@ -44,11 +44,11 @@ To get started, instantiate the `FlightNetwork` class with filenames for airline
 ### To run the code, run the following commands:
 
 ```
-mkdir build<br/>
-cd build<br/>
-cmake ..<br/>
+mkdir build
+cd build
+cmake ..
 make\n
-./aed_project2<br/>
+./aed_project2
 ```
 
 ## Authors
