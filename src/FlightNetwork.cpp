@@ -208,7 +208,7 @@ set<string> FlightNetwork::getDiffCountriesAirport(const Airport &airport) const
 set<string> FlightNetwork::getDiffCountriesCity(const string &city) const
 {
     set<string> countries;
-    
+
     for (const Vertex<Airport> *v : airportsGraph.getVertexSet())
         if (v->getInfo().getCity() == city)
             for (const Edge<Airport> &e : v->getAdj())
@@ -341,6 +341,7 @@ set<string> FlightNetwork::getGreatestTraffic(const int &k)
     {
         aux.insert(sourceVertex);
     }
+
     for (auto it = aux.begin(); it != aux.end() && greatest.size() < k; ++it)
     {
         Vertex<Airport> *sourceVertex = *it;

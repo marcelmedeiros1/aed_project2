@@ -134,7 +134,8 @@ public:
     std::set<std::string> getCountriesDestinations(const Airport &airport) const; // 3) v.
 
     /**
-     * @brief Get the set of airport names reachable from a specific airport within a given distance.
+     * @brief Get the set of airport names reachable from a specific airport within a given distance.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
@@ -143,7 +144,8 @@ public:
     std::set<std::string> getReachableAirports(const Airport &airport, const int &distance); // 3) vi.
 
     /**
-     * @brief Get the set of city names reachable from a specific airport within a given distance.
+     * @brief Get the set of city names reachable from a specific airport within a given distance.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
@@ -152,7 +154,8 @@ public:
     std::set<std::string> getReachableCities(const Airport &airport, const int &distance); // 3) vi.
 
     /**
-     * @brief Get the set of country names reachable from a specific airport within a given distance.
+     * @brief Get the set of country names reachable from a specific airport within a given distance.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
@@ -184,7 +187,8 @@ public:
     std::set<std::string> getEssentialAirports(); // 3) ix.
 
     /**
-     * @brief Find an airport by its code.
+     * @brief Find an airport by its code.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param code The code of the target airport.
      * @return The airport matching the provided code.
@@ -193,7 +197,8 @@ public:
     Airport codeCriteria(const std::string &code) const; // 4) i.
 
     /**
-     * @brief Find an airport by its name.
+     * @brief Find an airport by its name.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param name The name of the target airport.
      * @return The airport matching the provided name.
@@ -202,7 +207,8 @@ public:
     Airport nameCriteria(const std::string &name) const; // 4) i.
 
     /**
-     * @brief Find airports in the specified city.
+     * @brief Find airports in the specified city.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param city The name of the city to search for.
      * @return Vector of airports in the given city.
@@ -211,7 +217,8 @@ public:
     std::vector<Airport> cityCriteria(const std::string &city) const; // 4) ii.
 
     /**
-     * @brief Find airports near the specified coordinates.
+     * @brief Find airports near the specified coordinates.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param lat The latitude of the target location.
      * @param lon The longitude of the target location.
