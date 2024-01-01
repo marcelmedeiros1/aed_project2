@@ -26,12 +26,14 @@ class FlightNetwork
 
 public:
     /**
-     * @brief Default constructor for the FlightNetwork class.
+     * @brief Default constructor for the FlightNetwork class.\n
+     * Time complexity: O(1).
      */
     FlightNetwork();
 
     /**
-     * @brief Parameterized constructor for the FlightNetwork class.
+     * @brief Parameterized constructor for the FlightNetwork class.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airlines_filename Filename for the airlines data.
      * @param airports_filename Filename for the airports data.
@@ -40,28 +42,32 @@ public:
     FlightNetwork(const std::string &airlines_filename, const std::string &airports_filename, const std::string &flights_filename);
 
     /**
-     * @brief Getter function to retrieve the airports graph.
+     * @brief Getter function to retrieve the airports graph.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @return Graph<Airport> representing the airports and flights.
      */
     Graph<Airport> getAiportsGraph();
 
     /**
-     * @brief Get the total number of airports in the network.
+     * @brief Get the total number of airports in the network.\n
+     * Time complexity: O(1).
      *
      * @return Total number of airports.
      */
     int getGlobalNumOfAirports() const; // 3) i.
 
     /**
-     * @brief Get the total number of flights in the network.
+     * @brief Get the total number of flights in the network.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @return Total number of flights.
      */
     int getGlobalNumOfFlights() const; // 3) i.
 
     /**
-     * @brief Get the number of flights departing or arriving at a specific airport.
+     * @brief Get the number of flights departing or arriving at a specific airport.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airport The target airport.
      * @return A pair containing the total number of flights and the number of different airlines.
@@ -69,7 +75,8 @@ public:
     std::pair<int, int> numFlightsAirport(const Airport &airport); // 3) ii.
 
     /**
-     * @brief Get the total number of flights departing or arriving in a specific city.
+     * @brief Get the total number of flights departing or arriving in a specific city.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param city The target city.
      * @return Total number of flights.
@@ -77,7 +84,8 @@ public:
     int numFlightsCity(const std::string &city) const; // 3) iii.
 
     /**
-     * @brief Get the total number of flights operated by a specific airline.
+     * @brief Get the total number of flights operated by a specific airline.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airline The target airline.
      * @return Total number of flights.
@@ -85,7 +93,8 @@ public:
     int numFlightsAirline(Airline &airline) const; // 3) iii.
 
     /**
-     * @brief Get the set of different countries connected to a specific airport.
+     * @brief Get the set of different countries connected to a specific airport.\n
+     * Time complexity: O(N * log(P)), where N is the size of the adjacency list and P is the size of the set.
      *
      * @param airport The target airport.
      * @return Set of countries.

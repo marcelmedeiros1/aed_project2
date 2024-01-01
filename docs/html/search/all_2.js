@@ -6,6 +6,7 @@ var searchData=
   ['clearscreen_3',['clearScreen',['../App_8hpp.html#a9d7e8af417b6d543da691e9c0e2f6f9f',1,'clearScreen():&#160;App.cpp'],['../App_8cpp.html#a9d7e8af417b6d543da691e9c0e2f6f9f',1,'clearScreen():&#160;App.cpp']]],
   ['code_4',['code',['../classAirline.html#a3f455dba792b185073e3cf5e5b6dacb3',1,'Airline::code'],['../classAirport.html#a9d5275582b3d183d5fd756da38afee77',1,'Airport::code']]],
   ['codecriteria_5',['codeCriteria',['../classFlightNetwork.html#aff1967434e9cb2031eb9199aa630a53e',1,'FlightNetwork']]],
-  ['coordinatecriteria_6',['coordinateCriteria',['../classFlightNetwork.html#a70a801b251fcb490e0f7c6c13884adc3',1,'FlightNetwork']]],
-  ['country_7',['country',['../classAirline.html#a8da68cfac3035fc531dc9410ca46c0dc',1,'Airline::country'],['../classAirport.html#a7f26cdde932db3f9a34bcfd99ff17062',1,'Airport::country']]]
+  ['commands_3a_6',['To run the program, run the following commands:',['../index.html#autotoc_md13',1,'']]],
+  ['coordinatecriteria_7',['coordinateCriteria',['../classFlightNetwork.html#a70a801b251fcb490e0f7c6c13884adc3',1,'FlightNetwork']]],
+  ['country_8',['country',['../classAirline.html#a8da68cfac3035fc531dc9410ca46c0dc',1,'Airline::country'],['../classAirport.html#a7f26cdde932db3f9a34bcfd99ff17062',1,'Airport::country']]]
 ];

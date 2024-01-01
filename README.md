@@ -41,13 +41,13 @@ This system is implemented in C++ using the provided `Graph` class for managing 
 
 To get started, instantiate the `FlightNetwork` class with filenames for airlines, airports, and flights data. Then, use the provided functions to explore the features mentioned above.
 
-### To run the code, run the following commands:
+### To run the program, run the following commands:
 
 ```
 mkdir build
 cd build
 cmake ..
-make\n
+make
 ./aed_project2
 ```
 

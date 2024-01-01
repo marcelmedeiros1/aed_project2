@@ -13,23 +13,32 @@ Represents a flight network consisting of airports and flights.
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{classFlightNetwork_a5f0f3c66444cf96f4b88bd885f3d6042}{Flight\+Network}} ()
-\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class.~\newline
+Time complexity\+: O(1). \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classFlightNetwork_a678157c593366c44080e41b0d836ff86}{Flight\+Network}} (const std\+::string \&airlines\+\_\+filename, const std\+::string \&airports\+\_\+filename, const std\+::string \&flights\+\_\+filename)
-\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Parameterized constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a6bc3637e093009be56f4014d2f6da80d}{get\+Aiports\+Graph}} ()
-\begin{DoxyCompactList}\small\item\em Getter function to retrieve the airports graph. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Getter function to retrieve the airports graph.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_a525d1f2abe180f304fdfb0d856e31b7a}{get\+Global\+Num\+Of\+Airports}} () const
-\begin{DoxyCompactList}\small\item\em Get the total number of airports in the network. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of airports in the network.~\newline
+Time complexity\+: O(1). \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_acef13fbcb1baa375f4e32fed99952a5e}{get\+Global\+Num\+Of\+Flights}} () const
-\begin{DoxyCompactList}\small\item\em Get the total number of flights in the network. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of flights in the network.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 std\+::pair$<$ int, int $>$ \mbox{\hyperlink{classFlightNetwork_a47c6d8ac9b54f2b4d8bc05b435c84b50}{num\+Flights\+Airport}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport)
-\begin{DoxyCompactList}\small\item\em Get the number of flights departing or arriving at a specific airport. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the number of flights departing or arriving at a specific airport.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_ae57015e499d5befbc9d712050111237a}{num\+Flights\+City}} (const std\+::string \&city) const
-\begin{DoxyCompactList}\small\item\em Get the total number of flights departing or arriving in a specific city. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of flights departing or arriving in a specific city.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_a92e5993c3c9ac87e1b1957c32feb0ff1}{num\+Flights\+Airline}} (\mbox{\hyperlink{classAirline}{Airline}} \&airline) const
-\begin{DoxyCompactList}\small\item\em Get the total number of flights operated by a specific airline. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the total number of flights operated by a specific airline.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a64d75d3d94036b53e1384ccdcd883970}{get\+Diff\+Countries\+Airport}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
-\begin{DoxyCompactList}\small\item\em Get the set of different countries connected to a specific airport. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the set of different countries connected to a specific airport.~\newline
+Time complexity\+: O(\+N \texorpdfstring{$\ast$}{*} log(\+P)), where N is the size of the adjacency list and P is the size of the set. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a4e74766e1af03668d285c5f028886cde}{get\+Diff\+Countries\+City}} (const std\+::string \&city) const
 \begin{DoxyCompactList}\small\item\em Get the set of different countries connected to airports in a specific city. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_afe39abce19a711a4eed34c78ebd4374d}{get\+Airports\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
@@ -85,7 +94,8 @@ Represents a flight network consisting of airports and flights.
 
 
 
-Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. 
+Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class.~\newline
+Time complexity\+: O(1). 
 
 \Hypertarget{classFlightNetwork_a678157c593366c44080e41b0d836ff86}\label{classFlightNetwork_a678157c593366c44080e41b0d836ff86} 
 \index{FlightNetwork@{FlightNetwork}!FlightNetwork@{FlightNetwork}}
@@ -95,7 +105,8 @@ Default constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class
 
 
 
-Parameterized constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class. 
+Parameterized constructor for the \doxylink{classFlightNetwork}{Flight\+Network} class.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -262,7 +273,8 @@ Vector of airports near the specified coordinates.
 
 
 
-Getter function to retrieve the airports graph. 
+Getter function to retrieve the airports graph.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 \begin{DoxyReturn}{Returns}
 \doxylink{classGraph}{Graph$<$\+Airport$>$} representing the airports and flights. 
@@ -329,7 +341,8 @@ Set of country names.
 
 
 
-Get the set of different countries connected to a specific airport. 
+Get the set of different countries connected to a specific airport.~\newline
+Time complexity\+: O(\+N \texorpdfstring{$\ast$}{*} log(\+P)), where N is the size of the adjacency list and P is the size of the set. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -378,7 +391,8 @@ Set of essential airport names.
 
 
 
-Get the total number of airports in the network. 
+Get the total number of airports in the network.~\newline
+Time complexity\+: O(1). 
 
 \begin{DoxyReturn}{Returns}
 Total number of airports. 
@@ -391,7 +405,8 @@ Total number of airports.
 
 
 
-Get the total number of flights in the network. 
+Get the total number of flights in the network.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 \begin{DoxyReturn}{Returns}
 Total number of flights. 
@@ -547,7 +562,8 @@ The airport matching the provided name.
 
 
 
-Get the total number of flights operated by a specific airline. 
+Get the total number of flights operated by a specific airline.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -565,7 +581,8 @@ Total number of flights.
 
 
 
-Get the number of flights departing or arriving at a specific airport. 
+Get the number of flights departing or arriving at a specific airport.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -583,7 +600,8 @@ A pair containing the total number of flights and the number of different airlin
 
 
 
-Get the total number of flights departing or arriving in a specific city. 
+Get the total number of flights departing or arriving in a specific city.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}

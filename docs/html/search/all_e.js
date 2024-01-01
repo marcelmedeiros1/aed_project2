@@ -4,5 +4,6 @@ var searchData=
   ['readme_2emd_1',['README.md',['../README_8md.html',1,'']]],
   ['removeedge_2',['removeEdge',['../classGraph.html#a1106092a37366486cf55576f9ec01692',1,'Graph']]],
   ['removeedgeto_3',['removeEdgeTo',['../classVertex.html#ab2b5b43fb1709a901b78718436763a84',1,'Vertex']]],
-  ['removevertex_4',['removeVertex',['../classGraph.html#af9c903104ad69a7782979fa9caedf163',1,'Graph']]]
+  ['removevertex_4',['removeVertex',['../classGraph.html#af9c903104ad69a7782979fa9caedf163',1,'Graph']]],
+  ['run_20the_20program_20run_20the_20following_20commands_3a_5',['To run the program, run the following commands:',['../index.html#autotoc_md13',1,'']]]
 ];

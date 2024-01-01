@@ -146,7 +146,6 @@ int FlightNetwork::getGlobalNumOfFlights() const
 
 pair<int, int> FlightNetwork::numFlightsAirport(const Airport &airport)
 {
-
     vector<Edge<Airport>> res = airportsGraph.EdgesAtDistanceDFS(airport, 0);
 
     int numFlights = 0;
@@ -161,9 +160,11 @@ pair<int, int> FlightNetwork::numFlightsAirport(const Airport &airport)
 
     return final;
 }
+
 int FlightNetwork::numFlightsCity(const string &city) const
 {
     int res = 0;
+
     for (Vertex<Airport> *v : airportsGraph.getVertexSet())
     {
         Airport air = v->getInfo();
@@ -171,8 +172,10 @@ int FlightNetwork::numFlightsCity(const string &city) const
         if (air.getCity() == city)
             res += adj.size();
     }
+
     return res;
 }
+
 int FlightNetwork::numFlightsAirline(Airline &airline) const
 {
     int res = 0;
@@ -205,6 +208,7 @@ set<string> FlightNetwork::getDiffCountriesAirport(const Airport &airport) const
 set<string> FlightNetwork::getDiffCountriesCity(const string &city) const
 {
     set<string> countries;
+    
     for (const Vertex<Airport> *v : airportsGraph.getVertexSet())
         if (v->getInfo().getCity() == city)
             for (const Edge<Airport> &e : v->getAdj())

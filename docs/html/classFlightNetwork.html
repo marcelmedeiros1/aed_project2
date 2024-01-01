@@ -88,31 +88,40 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a5f0f3c66444cf96f4b88bd885f3d6042" id="r_a5f0f3c66444cf96f4b88bd885f3d6042"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5f0f3c66444cf96f4b88bd885f3d6042">FlightNetwork</a> ()</td></tr>
-<tr class="memdesc:a5f0f3c66444cf96f4b88bd885f3d6042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class.  <br /></td></tr>
+<tr class="memdesc:a5f0f3c66444cf96f4b88bd885f3d6042"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class.<br  />
+Time complexity: O(1).  <br /></td></tr>
 <tr class="separator:a5f0f3c66444cf96f4b88bd885f3d6042"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a678157c593366c44080e41b0d836ff86" id="r_a678157c593366c44080e41b0d836ff86"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a678157c593366c44080e41b0d836ff86">FlightNetwork</a> (const std::string &amp;airlines_filename, const std::string &amp;airports_filename, const std::string &amp;flights_filename)</td></tr>
-<tr class="memdesc:a678157c593366c44080e41b0d836ff86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class.  <br /></td></tr>
+<tr class="memdesc:a678157c593366c44080e41b0d836ff86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parameterized constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a678157c593366c44080e41b0d836ff86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bc3637e093009be56f4014d2f6da80d" id="r_a6bc3637e093009be56f4014d2f6da80d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classAirport.html">Airport</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6bc3637e093009be56f4014d2f6da80d">getAiportsGraph</a> ()</td></tr>
-<tr class="memdesc:a6bc3637e093009be56f4014d2f6da80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function to retrieve the airports graph.  <br /></td></tr>
+<tr class="memdesc:a6bc3637e093009be56f4014d2f6da80d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Getter function to retrieve the airports graph.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a6bc3637e093009be56f4014d2f6da80d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a525d1f2abe180f304fdfb0d856e31b7a" id="r_a525d1f2abe180f304fdfb0d856e31b7a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a525d1f2abe180f304fdfb0d856e31b7a">getGlobalNumOfAirports</a> () const</td></tr>
-<tr class="memdesc:a525d1f2abe180f304fdfb0d856e31b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of airports in the network.  <br /></td></tr>
+<tr class="memdesc:a525d1f2abe180f304fdfb0d856e31b7a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of airports in the network.<br  />
+Time complexity: O(1).  <br /></td></tr>
 <tr class="separator:a525d1f2abe180f304fdfb0d856e31b7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acef13fbcb1baa375f4e32fed99952a5e" id="r_acef13fbcb1baa375f4e32fed99952a5e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acef13fbcb1baa375f4e32fed99952a5e">getGlobalNumOfFlights</a> () const</td></tr>
-<tr class="memdesc:acef13fbcb1baa375f4e32fed99952a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of flights in the network.  <br /></td></tr>
+<tr class="memdesc:acef13fbcb1baa375f4e32fed99952a5e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of flights in the network.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:acef13fbcb1baa375f4e32fed99952a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47c6d8ac9b54f2b4d8bc05b435c84b50" id="r_a47c6d8ac9b54f2b4d8bc05b435c84b50"><td class="memItemLeft" align="right" valign="top">std::pair&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47c6d8ac9b54f2b4d8bc05b435c84b50">numFlightsAirport</a> (const <a class="el" href="classAirport.html">Airport</a> &amp;airport)</td></tr>
-<tr class="memdesc:a47c6d8ac9b54f2b4d8bc05b435c84b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of flights departing or arriving at a specific airport.  <br /></td></tr>
+<tr class="memdesc:a47c6d8ac9b54f2b4d8bc05b435c84b50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the number of flights departing or arriving at a specific airport.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a47c6d8ac9b54f2b4d8bc05b435c84b50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae57015e499d5befbc9d712050111237a" id="r_ae57015e499d5befbc9d712050111237a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae57015e499d5befbc9d712050111237a">numFlightsCity</a> (const std::string &amp;city) const</td></tr>
-<tr class="memdesc:ae57015e499d5befbc9d712050111237a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of flights departing or arriving in a specific city.  <br /></td></tr>
+<tr class="memdesc:ae57015e499d5befbc9d712050111237a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of flights departing or arriving in a specific city.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:ae57015e499d5befbc9d712050111237a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a92e5993c3c9ac87e1b1957c32feb0ff1" id="r_a92e5993c3c9ac87e1b1957c32feb0ff1"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92e5993c3c9ac87e1b1957c32feb0ff1">numFlightsAirline</a> (<a class="el" href="classAirline.html">Airline</a> &amp;airline) const</td></tr>
-<tr class="memdesc:a92e5993c3c9ac87e1b1957c32feb0ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of flights operated by a specific airline.  <br /></td></tr>
+<tr class="memdesc:a92e5993c3c9ac87e1b1957c32feb0ff1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the total number of flights operated by a specific airline.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a92e5993c3c9ac87e1b1957c32feb0ff1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a64d75d3d94036b53e1384ccdcd883970" id="r_a64d75d3d94036b53e1384ccdcd883970"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a64d75d3d94036b53e1384ccdcd883970">getDiffCountriesAirport</a> (const <a class="el" href="classAirport.html">Airport</a> &amp;airport) const</td></tr>
-<tr class="memdesc:a64d75d3d94036b53e1384ccdcd883970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of different countries connected to a specific airport.  <br /></td></tr>
+<tr class="memdesc:a64d75d3d94036b53e1384ccdcd883970"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of different countries connected to a specific airport.<br  />
+Time complexity: O(N * log(P)), where N is the size of the adjacency list and P is the size of the set.  <br /></td></tr>
 <tr class="separator:a64d75d3d94036b53e1384ccdcd883970"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4e74766e1af03668d285c5f028886cde" id="r_a4e74766e1af03668d285c5f028886cde"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4e74766e1af03668d285c5f028886cde">getDiffCountriesCity</a> (const std::string &amp;city) const</td></tr>
 <tr class="memdesc:a4e74766e1af03668d285c5f028886cde"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of different countries connected to airports in a specific city.  <br /></td></tr>
@@ -193,7 +202,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Default constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class. </p>
+<p>Default constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class.<br  />
+Time complexity: O(1). </p>
 
 </div>
 </div>
@@ -221,7 +231,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Parameterized constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class. </p>
+<p>Parameterized constructor for the <a class="el" href="classFlightNetwork.html" title="Represents a flight network consisting of airports and flights.">FlightNetwork</a> class.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airlines_filename</td><td>Filename for the airlines data. </td></tr>
@@ -459,7 +470,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Getter function to retrieve the airports graph. </p>
+<p>Getter function to retrieve the airports graph.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classGraph.html">Graph&lt;Airport&gt;</a> representing the airports and flights. </dd></dl>
 
 </div>
@@ -557,7 +569,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the set of different countries connected to a specific airport. </p>
+<p>Get the set of different countries connected to a specific airport.<br  />
+Time complexity: O(N * log(P)), where N is the size of the adjacency list and P is the size of the set. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airport</td><td>The target airport. </td></tr>
@@ -629,7 +642,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the total number of airports in the network. </p>
+<p>Get the total number of airports in the network.<br  />
+Time complexity: O(1). </p>
 <dl class="section return"><dt>Returns</dt><dd>Total number of airports. </dd></dl>
 
 </div>
@@ -649,7 +663,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the total number of flights in the network. </p>
+<p>Get the total number of flights in the network.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="section return"><dt>Returns</dt><dd>Total number of flights. </dd></dl>
 
 </div>
@@ -889,7 +904,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the total number of flights operated by a specific airline. </p>
+<p>Get the total number of flights operated by a specific airline.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airline</td><td>The target airline. </td></tr>
@@ -915,7 +931,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the number of flights departing or arriving at a specific airport. </p>
+<p>Get the number of flights departing or arriving at a specific airport.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airport</td><td>The target airport. </td></tr>
@@ -941,7 +958,8 @@ Private Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Get the total number of flights departing or arriving in a specific city. </p>
+<p>Get the total number of flights departing or arriving in a specific city.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">city</td><td>The target city. </td></tr>
