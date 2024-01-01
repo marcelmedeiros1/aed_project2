@@ -103,7 +103,8 @@ public:
 
     /**
      * @brief Get the set of different countries connected to airports in a specific city.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     * 
      * @param city The target city.
      * @return Set of countries.
      */
@@ -111,7 +112,8 @@ public:
 
     /**
      * @brief Get the set of airport names connected to a specific airport.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     * 
      * @param airport The target airport.
      * @return Set of airport names.
      */
@@ -120,6 +122,7 @@ public:
     /**
      * @brief Get the set of city names connected to a specific airport.
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     * 
      * @param airport The target airport.
      * @return Set of city names.
      */
@@ -128,14 +131,16 @@ public:
     /**
      * @brief Get the set of country names connected to a specific airport.
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     * 
      * @param airport The target airport.
      * @return Set of country names.
      */
     std::set<std::string> getCountriesDestinations(const Airport &airport) const; // 3) v.
 
     /**
-     * @brief Get the set of airport names reachable from a specific airport within a given distance.
+     * @brief Get the set of airport names reachable from a specific airport within a given distance.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     *
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
      * @return Set of reachable airport names.
@@ -143,8 +148,9 @@ public:
     std::set<std::string> getReachableAirports(const Airport &airport, const int &distance); // 3) vi.
 
     /**
-     * @brief Get the set of city names reachable from a specific airport within a given distance.
+     * @brief Get the set of city names reachable from a specific airport within a given distance.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     *
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
      * @return Set of reachable city names.
@@ -152,7 +158,8 @@ public:
     std::set<std::string> getReachableCities(const Airport &airport, const int &distance); // 3) vi.
 
     /**
-     * @brief Get the set of country names reachable from a specific airport within a given distance.
+     * @brief Get the set of country names reachable from a specific airport within a given distance.\n
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
      *
      * @param airport The source airport.
      * @param distance The maximum distance to consider.
@@ -162,7 +169,8 @@ public:
 
     /**
      * @brief Find the maximum number of stops for a round-trip connecting the given airports.
-     *
+     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     * 
      * @param airports A vector of pairs representing airport codes for the round-trip.
      * @return The maximum number of stops for the round-trip.
      */
@@ -170,7 +178,8 @@ public:
 
     /**
      * @brief Get the set of airports with the greatest traffic, considering both incoming and outgoing flights.
-     *
+     * Time complexity: O(V²*E), where V is the number of airports and E is the number of flights.
+     * 
      * @param k The number of airports to retrieve.
      * @return Set of airport names with the greatest traffic.
      */
@@ -178,13 +187,15 @@ public:
 
     /**
      * @brief Perform a depth-first search to identify essential airports in the flight network.
-     *
+     * Time complexity: O(V*(V+E)), where V is the number of airports and E is the number of flights.
+     * 
      * @return Set of essential airport names.
      */
     std::set<std::string> getEssentialAirports(); // 3) ix.
 
     /**
-     * @brief Find an airport by its code.
+     * @brief Find an airport by its code.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param code The code of the target airport.
      * @return The airport matching the provided code.
@@ -193,7 +204,8 @@ public:
     Airport codeCriteria(const std::string &code) const; // 4) i.
 
     /**
-     * @brief Find an airport by its name.
+     * @brief Find an airport by its name.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param name The name of the target airport.
      * @return The airport matching the provided name.
@@ -202,7 +214,8 @@ public:
     Airport nameCriteria(const std::string &name) const; // 4) i.
 
     /**
-     * @brief Find airports in the specified city.
+     * @brief Find airports in the specified city.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param city The name of the city to search for.
      * @return Vector of airports in the given city.
@@ -211,7 +224,8 @@ public:
     std::vector<Airport> cityCriteria(const std::string &city) const; // 4) ii.
 
     /**
-     * @brief Find airports near the specified coordinates.
+     * @brief Find airports near the specified coordinates.\n
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
      *
      * @param lat The latitude of the target location.
      * @param lon The longitude of the target location.
@@ -222,7 +236,8 @@ public:
 
     /**
      * @brief Find the best flight paths between source and destination airports.
-     *
+     * Time Complexity: O(V + E) where V is the number of vertices in the graph.
+     * 
      * @param source The source airport.
      * @param destination The destination airport.
      * @param allowedAirlines Set of allowed airlines (empty for any).
@@ -233,7 +248,8 @@ public:
 
     /**
      * @brief List the best flights based on user input for source and destination.
-     *
+     * Time Complexity: O(N * M * (V + E)) where V is the number of vertices in the graph, E is the number of flights, N and M is the number of origins and destinations.
+     * 
      * @param flag1 Type of input for the source (1: code, 2: name, 3: city, 4: coordinate).
      * @param flag2 Type of input for the destination (1: code, 2: name, 3: city, 4: coordinate).
      * @param allowedAirlines Set of allowed airlines (empty for any).
@@ -244,7 +260,8 @@ public:
 
     /**
      * @brief Convert an airport code to its corresponding name.
-     *
+     * Time Complexity: O(V) where V is the number of vertices in the graph.
+     * 
      * This function takes an airport code and searches the dataset to find the corresponding airport name.
      *
      * @param code The unique IATA code of the airport.
@@ -255,7 +272,8 @@ public:
 
     /**
      * @brief Convert an airline code to its corresponding name.
-     *
+     * Time Complexity: O(N) where N is the number of lines in airlines.csv.
+     * 
      * This function takes an airline code and searches the dataset to find the corresponding airline name.
      *
      * @param code The unique ICAO code of the airline.
@@ -267,7 +285,8 @@ public:
 
 /**
  * @brief Depth-first search for identifying articulation points in the airport graph.
- *
+ * Time Complexity: O(V + E) where V is the number of vertices in the graph.
+ * 
  * @param g The airport graph.
  * @param v The current vertex in the DFS traversal.
  * @param l Set to store the identified articulation points.
@@ -277,7 +296,7 @@ void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
 
 /**
  * @brief Calculates the Haversine distance between two geographical points.
- *
+ * Time Complexity: O(1)
  * @param lat1 Latitude of the first point.
  * @param lon1 Longitude of the first point.
  * @param lat2 Latitude of the second point.

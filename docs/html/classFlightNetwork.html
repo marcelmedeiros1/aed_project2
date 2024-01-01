@@ -136,13 +136,16 @@ Time complexity: O(N * log(P)), where N is the size of the adjacency list and P 
 <tr class="memdesc:a950669ecc0c36241638bb6d634daa322"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of country names connected to a specific airport.  <br /></td></tr>
 <tr class="separator:a950669ecc0c36241638bb6d634daa322"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a148dc22300bf2c62b55501c12b5f6f16" id="r_a148dc22300bf2c62b55501c12b5f6f16"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a148dc22300bf2c62b55501c12b5f6f16">getReachableAirports</a> (const <a class="el" href="classAirport.html">Airport</a> &amp;airport, const int &amp;distance)</td></tr>
-<tr class="memdesc:a148dc22300bf2c62b55501c12b5f6f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of airport names reachable from a specific airport within a given distance.  <br /></td></tr>
+<tr class="memdesc:a148dc22300bf2c62b55501c12b5f6f16"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of airport names reachable from a specific airport within a given distance.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a148dc22300bf2c62b55501c12b5f6f16"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c8f707304be0127849127da305d649" id="r_a12c8f707304be0127849127da305d649"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a12c8f707304be0127849127da305d649">getReachableCities</a> (const <a class="el" href="classAirport.html">Airport</a> &amp;airport, const int &amp;distance)</td></tr>
-<tr class="memdesc:a12c8f707304be0127849127da305d649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of city names reachable from a specific airport within a given distance.  <br /></td></tr>
+<tr class="memdesc:a12c8f707304be0127849127da305d649"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of city names reachable from a specific airport within a given distance.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a12c8f707304be0127849127da305d649"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983ab64ea8332373b1792e4be587d357" id="r_a983ab64ea8332373b1792e4be587d357"><td class="memItemLeft" align="right" valign="top">std::set&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a983ab64ea8332373b1792e4be587d357">getReachableCountries</a> (const <a class="el" href="classAirport.html">Airport</a> &amp;airport, const int &amp;distance)</td></tr>
-<tr class="memdesc:a983ab64ea8332373b1792e4be587d357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of country names reachable from a specific airport within a given distance.  <br /></td></tr>
+<tr class="memdesc:a983ab64ea8332373b1792e4be587d357"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the set of country names reachable from a specific airport within a given distance.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights.  <br /></td></tr>
 <tr class="separator:a983ab64ea8332373b1792e4be587d357"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:accbbed5455fac46850e9e4675136dd3a" id="r_accbbed5455fac46850e9e4675136dd3a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#accbbed5455fac46850e9e4675136dd3a">maximumTrip</a> (std::vector&lt; std::pair&lt; std::string, std::string &gt; &gt; &amp;airports)</td></tr>
 <tr class="memdesc:accbbed5455fac46850e9e4675136dd3a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the maximum number of stops for a round-trip connecting the given airports.  <br /></td></tr>
@@ -154,16 +157,20 @@ Time complexity: O(N * log(P)), where N is the size of the adjacency list and P 
 <tr class="memdesc:accd26591affed45d5e976809bf80b5e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform a depth-first search to identify essential airports in the flight network.  <br /></td></tr>
 <tr class="separator:accd26591affed45d5e976809bf80b5e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff1967434e9cb2031eb9199aa630a53e" id="r_aff1967434e9cb2031eb9199aa630a53e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAirport.html">Airport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aff1967434e9cb2031eb9199aa630a53e">codeCriteria</a> (const std::string &amp;code) const</td></tr>
-<tr class="memdesc:aff1967434e9cb2031eb9199aa630a53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an airport by its code.  <br /></td></tr>
+<tr class="memdesc:aff1967434e9cb2031eb9199aa630a53e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an airport by its code.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph.  <br /></td></tr>
 <tr class="separator:aff1967434e9cb2031eb9199aa630a53e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a89db9117e7909ad56fc8372c44ed6915" id="r_a89db9117e7909ad56fc8372c44ed6915"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classAirport.html">Airport</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a89db9117e7909ad56fc8372c44ed6915">nameCriteria</a> (const std::string &amp;name) const</td></tr>
-<tr class="memdesc:a89db9117e7909ad56fc8372c44ed6915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an airport by its name.  <br /></td></tr>
+<tr class="memdesc:a89db9117e7909ad56fc8372c44ed6915"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find an airport by its name.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph.  <br /></td></tr>
 <tr class="separator:a89db9117e7909ad56fc8372c44ed6915"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfbf4be1e9caa4bfdcfe268d7105fd48" id="r_adfbf4be1e9caa4bfdcfe268d7105fd48"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classAirport.html">Airport</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adfbf4be1e9caa4bfdcfe268d7105fd48">cityCriteria</a> (const std::string &amp;city) const</td></tr>
-<tr class="memdesc:adfbf4be1e9caa4bfdcfe268d7105fd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find airports in the specified city.  <br /></td></tr>
+<tr class="memdesc:adfbf4be1e9caa4bfdcfe268d7105fd48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find airports in the specified city.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph.  <br /></td></tr>
 <tr class="separator:adfbf4be1e9caa4bfdcfe268d7105fd48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a70a801b251fcb490e0f7c6c13884adc3" id="r_a70a801b251fcb490e0f7c6c13884adc3"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classAirport.html">Airport</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a70a801b251fcb490e0f7c6c13884adc3">coordinateCriteria</a> (const float &amp;lat, const float &amp;lon) const</td></tr>
-<tr class="memdesc:a70a801b251fcb490e0f7c6c13884adc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find airports near the specified coordinates.  <br /></td></tr>
+<tr class="memdesc:a70a801b251fcb490e0f7c6c13884adc3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find airports near the specified coordinates.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph.  <br /></td></tr>
 <tr class="separator:a70a801b251fcb490e0f7c6c13884adc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26ceb6f6dc3eeb76c7a9aeb475f64512" id="r_a26ceb6f6dc3eeb76c7a9aeb475f64512"><td class="memItemLeft" align="right" valign="top">std::vector&lt; vector&lt; <a class="el" href="classAirport.html">Airport</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a26ceb6f6dc3eeb76c7a9aeb475f64512">bestFlight</a> (const <a class="el" href="classAirport.html">Airport</a> &amp;source, const <a class="el" href="classAirport.html">Airport</a> &amp;destination, const set&lt; string &gt; &amp;allowedAirlines={}, bool minimizeAirlines=false) const</td></tr>
 <tr class="memdesc:a26ceb6f6dc3eeb76c7a9aeb475f64512"><td class="mdescLeft">&#160;</td><td class="mdescRight">Find the best flight paths between source and destination airports.  <br /></td></tr>
@@ -369,7 +376,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Find airports in the specified city. </p>
+<p>Find airports in the specified city.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">city</td><td>The name of the city to search for. </td></tr>
@@ -401,7 +409,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Find an airport by its code. </p>
+<p>Find an airport by its code.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">code</td><td>The code of the target airport. </td></tr>
@@ -437,7 +446,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Find airports near the specified coordinates. </p>
+<p>Find airports near the specified coordinates.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lat</td><td>The latitude of the target location. </td></tr>
@@ -714,7 +724,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Get the set of airport names reachable from a specific airport within a given distance. </p>
+<p>Get the set of airport names reachable from a specific airport within a given distance.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airport</td><td>The source airport. </td></tr>
@@ -745,7 +756,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Get the set of city names reachable from a specific airport within a given distance. </p>
+<p>Get the set of city names reachable from a specific airport within a given distance.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airport</td><td>The source airport. </td></tr>
@@ -776,7 +788,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Get the set of country names reachable from a specific airport within a given distance. </p>
+<p>Get the set of country names reachable from a specific airport within a given distance.<br  />
+Time complexity: O(V + E), where V is the number of airports and E is the number of flights. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">airport</td><td>The source airport. </td></tr>
@@ -872,7 +885,8 @@ Time complexity: O(V + E), where V is the number of airports and E is the number
       </table>
 </div><div class="memdoc">
 
-<p>Find an airport by its name. </p>
+<p>Find an airport by its name.<br  />
+Time Complexity: O(V) where V is the number of vertices in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">name</td><td>The name of the target airport. </td></tr>

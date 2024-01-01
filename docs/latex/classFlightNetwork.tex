@@ -48,11 +48,14 @@ std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a4b723338785
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a950669ecc0c36241638bb6d634daa322}{get\+Countries\+Destinations}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport) const
 \begin{DoxyCompactList}\small\item\em Get the set of country names connected to a specific airport. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a148dc22300bf2c62b55501c12b5f6f16}{get\+Reachable\+Airports}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
-\begin{DoxyCompactList}\small\item\em Get the set of airport names reachable from a specific airport within a given distance. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the set of airport names reachable from a specific airport within a given distance.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a12c8f707304be0127849127da305d649}{get\+Reachable\+Cities}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
-\begin{DoxyCompactList}\small\item\em Get the set of city names reachable from a specific airport within a given distance. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the set of city names reachable from a specific airport within a given distance.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_a983ab64ea8332373b1792e4be587d357}{get\+Reachable\+Countries}} (const \mbox{\hyperlink{classAirport}{Airport}} \&airport, const int \&distance)
-\begin{DoxyCompactList}\small\item\em Get the set of country names reachable from a specific airport within a given distance. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Get the set of country names reachable from a specific airport within a given distance.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{classFlightNetwork_accbbed5455fac46850e9e4675136dd3a}{maximum\+Trip}} (std\+::vector$<$ std\+::pair$<$ std\+::string, std\+::string $>$ $>$ \&airports)
 \begin{DoxyCompactList}\small\item\em Find the maximum number of stops for a round-\/trip connecting the given airports. \end{DoxyCompactList}\item 
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_af65ea5a5caf535de660256b0a4c2d273}{get\+Greatest\+Traffic}} (const int \&k)
@@ -60,13 +63,17 @@ std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_af65ea5a5caf
 std\+::set$<$ std\+::string $>$ \mbox{\hyperlink{classFlightNetwork_accd26591affed45d5e976809bf80b5e4}{get\+Essential\+Airports}} ()
 \begin{DoxyCompactList}\small\item\em Perform a depth-\/first search to identify essential airports in the flight network. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classFlightNetwork_aff1967434e9cb2031eb9199aa630a53e}{code\+Criteria}} (const std\+::string \&code) const
-\begin{DoxyCompactList}\small\item\em Find an airport by its code. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Find an airport by its code.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. \end{DoxyCompactList}\item 
 \mbox{\hyperlink{classAirport}{Airport}} \mbox{\hyperlink{classFlightNetwork_a89db9117e7909ad56fc8372c44ed6915}{name\+Criteria}} (const std\+::string \&name) const
-\begin{DoxyCompactList}\small\item\em Find an airport by its name. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Find an airport by its name.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_adfbf4be1e9caa4bfdcfe268d7105fd48}{city\+Criteria}} (const std\+::string \&city) const
-\begin{DoxyCompactList}\small\item\em Find airports in the specified city. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Find airports in the specified city.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. \end{DoxyCompactList}\item 
 std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \mbox{\hyperlink{classFlightNetwork_a70a801b251fcb490e0f7c6c13884adc3}{coordinate\+Criteria}} (const float \&lat, const float \&lon) const
-\begin{DoxyCompactList}\small\item\em Find airports near the specified coordinates. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Find airports near the specified coordinates.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. \end{DoxyCompactList}\item 
 std\+::vector$<$ vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a26ceb6f6dc3eeb76c7a9aeb475f64512}{best\+Flight}} (const \mbox{\hyperlink{classAirport}{Airport}} \&source, const \mbox{\hyperlink{classAirport}{Airport}} \&destination, const set$<$ string $>$ \&allowed\+Airlines=\{\}, bool minimize\+Airlines=false) const
 \begin{DoxyCompactList}\small\item\em Find the best flight paths between source and destination airports. \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::vector$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ $>$ \mbox{\hyperlink{classFlightNetwork_a44f3e5308ad0b9c7a545e5045f616ecd}{list\+Best\+Flights}} (const int \&flag1, const int \&flag2, const set$<$ string $>$ \&allowed\+Airlines, bool minimize\+Airlines) const
@@ -202,7 +209,8 @@ Vector of vector of airports representing the best flight paths.
 
 
 
-Find airports in the specified city. 
+Find airports in the specified city.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -225,7 +233,8 @@ Vector of airports in the given city.
 
 
 
-Find an airport by its code. 
+Find an airport by its code.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -248,7 +257,8 @@ The airport matching the provided code.
 
 
 
-Find airports near the specified coordinates. 
+Find airports near the specified coordinates.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -437,7 +447,8 @@ Set of airport names with the greatest traffic.
 
 
 
-Get the set of airport names reachable from a specific airport within a given distance. 
+Get the set of airport names reachable from a specific airport within a given distance.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -457,7 +468,8 @@ Set of reachable airport names.
 
 
 
-Get the set of city names reachable from a specific airport within a given distance. 
+Get the set of city names reachable from a specific airport within a given distance.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -477,7 +489,8 @@ Set of reachable city names.
 
 
 
-Get the set of country names reachable from a specific airport within a given distance. 
+Get the set of country names reachable from a specific airport within a given distance.~\newline
+Time complexity\+: O(V + E), where V is the number of airports and E is the number of flights. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -539,7 +552,8 @@ The maximum number of stops for the round-\/trip.
 
 
 
-Find an airport by its name. 
+Find an airport by its name.~\newline
+Time Complexity\+: O(\+V) where V is the number of vertices in the graph. 
 
 
 \begin{DoxyParams}{Parameters}

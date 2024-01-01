@@ -103,115 +103,115 @@
 \contentsline {subsection}{\numberline {4.5.3}Member Function Documentation}{24}{subsection.4.5.3}%
 \contentsline {subsubsection}{\numberline {4.5.3.1}airlineCodeToName()}{24}{subsubsection.4.5.3.1}%
 \contentsline {subsubsection}{\numberline {4.5.3.2}airportCodeToName()}{24}{subsubsection.4.5.3.2}%
-\contentsline {subsubsection}{\numberline {4.5.3.3}bestFlight()}{24}{subsubsection.4.5.3.3}%
+\contentsline {subsubsection}{\numberline {4.5.3.3}bestFlight()}{25}{subsubsection.4.5.3.3}%
 \contentsline {subsubsection}{\numberline {4.5.3.4}cityCriteria()}{25}{subsubsection.4.5.3.4}%
-\contentsline {subsubsection}{\numberline {4.5.3.5}codeCriteria()}{25}{subsubsection.4.5.3.5}%
+\contentsline {subsubsection}{\numberline {4.5.3.5}codeCriteria()}{26}{subsubsection.4.5.3.5}%
 \contentsline {subsubsection}{\numberline {4.5.3.6}coordinateCriteria()}{26}{subsubsection.4.5.3.6}%
 \contentsline {subsubsection}{\numberline {4.5.3.7}getAiportsGraph()}{26}{subsubsection.4.5.3.7}%
-\contentsline {subsubsection}{\numberline {4.5.3.8}getAirportsDestinations()}{26}{subsubsection.4.5.3.8}%
+\contentsline {subsubsection}{\numberline {4.5.3.8}getAirportsDestinations()}{27}{subsubsection.4.5.3.8}%
 \contentsline {subsubsection}{\numberline {4.5.3.9}getCitiesDestinations()}{27}{subsubsection.4.5.3.9}%
 \contentsline {subsubsection}{\numberline {4.5.3.10}getCountriesDestinations()}{27}{subsubsection.4.5.3.10}%
-\contentsline {subsubsection}{\numberline {4.5.3.11}getDiffCountriesAirport()}{27}{subsubsection.4.5.3.11}%
+\contentsline {subsubsection}{\numberline {4.5.3.11}getDiffCountriesAirport()}{28}{subsubsection.4.5.3.11}%
 \contentsline {subsubsection}{\numberline {4.5.3.12}getDiffCountriesCity()}{28}{subsubsection.4.5.3.12}%
 \contentsline {subsubsection}{\numberline {4.5.3.13}getEssentialAirports()}{28}{subsubsection.4.5.3.13}%
-\contentsline {subsubsection}{\numberline {4.5.3.14}getGlobalNumOfAirports()}{28}{subsubsection.4.5.3.14}%
+\contentsline {subsubsection}{\numberline {4.5.3.14}getGlobalNumOfAirports()}{29}{subsubsection.4.5.3.14}%
 \contentsline {subsubsection}{\numberline {4.5.3.15}getGlobalNumOfFlights()}{29}{subsubsection.4.5.3.15}%
 \contentsline {subsubsection}{\numberline {4.5.3.16}getGreatestTraffic()}{29}{subsubsection.4.5.3.16}%
 \contentsline {subsubsection}{\numberline {4.5.3.17}getReachableAirports()}{29}{subsubsection.4.5.3.17}%
-\contentsline {subsubsection}{\numberline {4.5.3.18}getReachableCities()}{29}{subsubsection.4.5.3.18}%
-\contentsline {subsubsection}{\numberline {4.5.3.19}getReachableCountries()}{31}{subsubsection.4.5.3.19}%
-\contentsline {subsubsection}{\numberline {4.5.3.20}listBestFlights()}{31}{subsubsection.4.5.3.20}%
-\contentsline {subsubsection}{\numberline {4.5.3.21}maximumTrip()}{32}{subsubsection.4.5.3.21}%
-\contentsline {subsubsection}{\numberline {4.5.3.22}nameCriteria()}{32}{subsubsection.4.5.3.22}%
+\contentsline {subsubsection}{\numberline {4.5.3.18}getReachableCities()}{30}{subsubsection.4.5.3.18}%
+\contentsline {subsubsection}{\numberline {4.5.3.19}getReachableCountries()}{30}{subsubsection.4.5.3.19}%
+\contentsline {subsubsection}{\numberline {4.5.3.20}listBestFlights()}{30}{subsubsection.4.5.3.20}%
+\contentsline {subsubsection}{\numberline {4.5.3.21}maximumTrip()}{31}{subsubsection.4.5.3.21}%
+\contentsline {subsubsection}{\numberline {4.5.3.22}nameCriteria()}{31}{subsubsection.4.5.3.22}%
 \contentsline {subsubsection}{\numberline {4.5.3.23}numFlightsAirline()}{32}{subsubsection.4.5.3.23}%
-\contentsline {subsubsection}{\numberline {4.5.3.24}numFlightsAirport()}{33}{subsubsection.4.5.3.24}%
-\contentsline {subsubsection}{\numberline {4.5.3.25}numFlightsCity()}{33}{subsubsection.4.5.3.25}%
+\contentsline {subsubsection}{\numberline {4.5.3.24}numFlightsAirport()}{32}{subsubsection.4.5.3.24}%
+\contentsline {subsubsection}{\numberline {4.5.3.25}numFlightsCity()}{32}{subsubsection.4.5.3.25}%
 \contentsline {subsection}{\numberline {4.5.4}Member Data Documentation}{33}{subsection.4.5.4}%
 \contentsline {subsubsection}{\numberline {4.5.4.1}airportsGraph}{33}{subsubsection.4.5.4.1}%
-\contentsline {section}{\numberline {4.6}Graph$<$ T $>$ Class Template Reference}{34}{section.4.6}%
+\contentsline {section}{\numberline {4.6}Graph$<$ T $>$ Class Template Reference}{33}{section.4.6}%
 \contentsline {subsection}{\numberline {4.6.1}Detailed Description}{34}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Member Function Documentation}{35}{subsection.4.6.2}%
-\contentsline {subsubsection}{\numberline {4.6.2.1}addEdge()}{35}{subsubsection.4.6.2.1}%
-\contentsline {subsubsection}{\numberline {4.6.2.2}addVertex()}{35}{subsubsection.4.6.2.2}%
+\contentsline {subsection}{\numberline {4.6.2}Member Function Documentation}{34}{subsection.4.6.2}%
+\contentsline {subsubsection}{\numberline {4.6.2.1}addEdge()}{34}{subsubsection.4.6.2.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.2}addVertex()}{34}{subsubsection.4.6.2.2}%
 \contentsline {subsubsection}{\numberline {4.6.2.3}bfs()}{35}{subsubsection.4.6.2.3}%
-\contentsline {subsubsection}{\numberline {4.6.2.4}bfsDistance()}{36}{subsubsection.4.6.2.4}%
-\contentsline {subsubsection}{\numberline {4.6.2.5}dfs()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{36}{subsubsection.4.6.2.5}%
+\contentsline {subsubsection}{\numberline {4.6.2.4}bfsDistance()}{35}{subsubsection.4.6.2.4}%
+\contentsline {subsubsection}{\numberline {4.6.2.5}dfs()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{35}{subsubsection.4.6.2.5}%
 \contentsline {subsubsection}{\numberline {4.6.2.6}dfs()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{36}{subsubsection.4.6.2.6}%
-\contentsline {subsubsection}{\numberline {4.6.2.7}dfsVisit()}{37}{subsubsection.4.6.2.7}%
-\contentsline {subsubsection}{\numberline {4.6.2.8}EdgesAtDistanceDFS()}{37}{subsubsection.4.6.2.8}%
+\contentsline {subsubsection}{\numberline {4.6.2.7}dfsVisit()}{36}{subsubsection.4.6.2.7}%
+\contentsline {subsubsection}{\numberline {4.6.2.8}EdgesAtDistanceDFS()}{36}{subsubsection.4.6.2.8}%
 \contentsline {subsubsection}{\numberline {4.6.2.9}findVertex()}{37}{subsubsection.4.6.2.9}%
-\contentsline {subsubsection}{\numberline {4.6.2.10}getNumVertex()}{38}{subsubsection.4.6.2.10}%
-\contentsline {subsubsection}{\numberline {4.6.2.11}getVertexSet()}{38}{subsubsection.4.6.2.11}%
-\contentsline {subsubsection}{\numberline {4.6.2.12}inDegree()}{38}{subsubsection.4.6.2.12}%
+\contentsline {subsubsection}{\numberline {4.6.2.10}getNumVertex()}{37}{subsubsection.4.6.2.10}%
+\contentsline {subsubsection}{\numberline {4.6.2.11}getVertexSet()}{37}{subsubsection.4.6.2.11}%
+\contentsline {subsubsection}{\numberline {4.6.2.12}inDegree()}{37}{subsubsection.4.6.2.12}%
 \contentsline {subsubsection}{\numberline {4.6.2.13}nodesAtDistanceDFS()}{38}{subsubsection.4.6.2.13}%
-\contentsline {subsubsection}{\numberline {4.6.2.14}removeEdge()}{39}{subsubsection.4.6.2.14}%
-\contentsline {subsubsection}{\numberline {4.6.2.15}removeVertex()}{39}{subsubsection.4.6.2.15}%
-\contentsline {subsection}{\numberline {4.6.3}Member Data Documentation}{40}{subsection.4.6.3}%
-\contentsline {subsubsection}{\numberline {4.6.3.1}vertexSet}{40}{subsubsection.4.6.3.1}%
-\contentsline {section}{\numberline {4.7}Vertex$<$ T $>$ Class Template Reference}{40}{section.4.7}%
-\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{41}{subsection.4.7.1}%
+\contentsline {subsubsection}{\numberline {4.6.2.14}removeEdge()}{38}{subsubsection.4.6.2.14}%
+\contentsline {subsubsection}{\numberline {4.6.2.15}removeVertex()}{38}{subsubsection.4.6.2.15}%
+\contentsline {subsection}{\numberline {4.6.3}Member Data Documentation}{39}{subsection.4.6.3}%
+\contentsline {subsubsection}{\numberline {4.6.3.1}vertexSet}{39}{subsubsection.4.6.3.1}%
+\contentsline {section}{\numberline {4.7}Vertex$<$ T $>$ Class Template Reference}{39}{section.4.7}%
+\contentsline {subsection}{\numberline {4.7.1}Detailed Description}{40}{subsection.4.7.1}%
 \contentsline {subsection}{\numberline {4.7.2}Constructor \& Destructor Documentation}{41}{subsection.4.7.2}%
 \contentsline {subsubsection}{\numberline {4.7.2.1}Vertex()}{41}{subsubsection.4.7.2.1}%
-\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{42}{subsection.4.7.3}%
-\contentsline {subsubsection}{\numberline {4.7.3.1}addEdge()}{42}{subsubsection.4.7.3.1}%
-\contentsline {subsubsection}{\numberline {4.7.3.2}getAdj()}{42}{subsubsection.4.7.3.2}%
-\contentsline {subsubsection}{\numberline {4.7.3.3}getDistance()}{42}{subsubsection.4.7.3.3}%
-\contentsline {subsubsection}{\numberline {4.7.3.4}getInDegree()}{43}{subsubsection.4.7.3.4}%
-\contentsline {subsubsection}{\numberline {4.7.3.5}getInfo()}{43}{subsubsection.4.7.3.5}%
-\contentsline {subsubsection}{\numberline {4.7.3.6}getLow()}{43}{subsubsection.4.7.3.6}%
-\contentsline {subsubsection}{\numberline {4.7.3.7}getNum()}{43}{subsubsection.4.7.3.7}%
-\contentsline {subsubsection}{\numberline {4.7.3.8}isProcessing()}{44}{subsubsection.4.7.3.8}%
-\contentsline {subsubsection}{\numberline {4.7.3.9}isVisited()}{44}{subsubsection.4.7.3.9}%
-\contentsline {subsubsection}{\numberline {4.7.3.10}removeEdgeTo()}{44}{subsubsection.4.7.3.10}%
-\contentsline {subsubsection}{\numberline {4.7.3.11}setAdj()}{44}{subsubsection.4.7.3.11}%
-\contentsline {subsubsection}{\numberline {4.7.3.12}setDistance()}{45}{subsubsection.4.7.3.12}%
-\contentsline {subsubsection}{\numberline {4.7.3.13}setInDegree()}{45}{subsubsection.4.7.3.13}%
-\contentsline {subsubsection}{\numberline {4.7.3.14}setInfo()}{45}{subsubsection.4.7.3.14}%
-\contentsline {subsubsection}{\numberline {4.7.3.15}setLow()}{45}{subsubsection.4.7.3.15}%
-\contentsline {subsubsection}{\numberline {4.7.3.16}setNum()}{46}{subsubsection.4.7.3.16}%
-\contentsline {subsubsection}{\numberline {4.7.3.17}setProcessing()}{46}{subsubsection.4.7.3.17}%
-\contentsline {subsubsection}{\numberline {4.7.3.18}setVisited()}{46}{subsubsection.4.7.3.18}%
-\contentsline {subsection}{\numberline {4.7.4}Friends And Related Symbol Documentation}{46}{subsection.4.7.4}%
-\contentsline {subsubsection}{\numberline {4.7.4.1}Graph$<$ T $>$}{46}{subsubsection.4.7.4.1}%
-\contentsline {subsection}{\numberline {4.7.5}Member Data Documentation}{47}{subsection.4.7.5}%
-\contentsline {subsubsection}{\numberline {4.7.5.1}adj}{47}{subsubsection.4.7.5.1}%
-\contentsline {subsubsection}{\numberline {4.7.5.2}distance}{47}{subsubsection.4.7.5.2}%
-\contentsline {subsubsection}{\numberline {4.7.5.3}indegree}{47}{subsubsection.4.7.5.3}%
-\contentsline {subsubsection}{\numberline {4.7.5.4}info}{47}{subsubsection.4.7.5.4}%
-\contentsline {subsubsection}{\numberline {4.7.5.5}low}{47}{subsubsection.4.7.5.5}%
-\contentsline {subsubsection}{\numberline {4.7.5.6}num}{47}{subsubsection.4.7.5.6}%
-\contentsline {subsubsection}{\numberline {4.7.5.7}processing}{47}{subsubsection.4.7.5.7}%
-\contentsline {subsubsection}{\numberline {4.7.5.8}visited}{47}{subsubsection.4.7.5.8}%
-\contentsline {chapter}{\numberline {5}File Documentation}{49}{chapter.5}%
-\contentsline {section}{\numberline {5.1}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airline.hpp File Reference}{49}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Airline.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{49}{section.5.2}%
-\contentsline {section}{\numberline {5.3}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airport.hpp File Reference}{50}{section.5.3}%
-\contentsline {section}{\numberline {5.4}Airport.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{50}{section.5.4}%
-\contentsline {section}{\numberline {5.5}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.hpp File Reference}{50}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Function Documentation}{51}{subsection.5.5.1}%
-\contentsline {subsubsection}{\numberline {5.5.1.1}clearScreen()}{51}{subsubsection.5.5.1.1}%
-\contentsline {section}{\numberline {5.6}App.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{51}{section.5.6}%
-\contentsline {section}{\numberline {5.7}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Network.hpp File Reference}{51}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Function Documentation}{52}{subsection.5.7.1}%
-\contentsline {subsubsection}{\numberline {5.7.1.1}dfs\_art()}{52}{subsubsection.5.7.1.1}%
-\contentsline {subsubsection}{\numberline {5.7.1.2}haversineDistance()}{52}{subsubsection.5.7.1.2}%
-\contentsline {section}{\numberline {5.8}Flight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Network.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{53}{section.5.8}%
-\contentsline {section}{\numberline {5.9}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graph.hpp File Reference}{54}{section.5.9}%
-\contentsline {subsection}{\numberline {5.9.1}Function Documentation}{54}{subsection.5.9.1}%
-\contentsline {subsubsection}{\numberline {5.9.1.1}nodesAtDistanceDFSVisit()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{54}{subsubsection.5.9.1.1}%
-\contentsline {subsubsection}{\numberline {5.9.1.2}nodesAtDistanceDFSVisit()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{54}{subsubsection.5.9.1.2}%
-\contentsline {section}{\numberline {5.10}Graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{55}{section.5.10}%
-\contentsline {section}{\numberline {5.11}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{62}{section.5.11}%
-\contentsline {section}{\numberline {5.12}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airline.cpp File Reference}{62}{section.5.12}%
-\contentsline {section}{\numberline {5.13}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airport.cpp File Reference}{62}{section.5.13}%
-\contentsline {section}{\numberline {5.14}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.cpp File Reference}{62}{section.5.14}%
-\contentsline {subsection}{\numberline {5.14.1}Function Documentation}{62}{subsection.5.14.1}%
-\contentsline {subsubsection}{\numberline {5.14.1.1}clearScreen()}{62}{subsubsection.5.14.1.1}%
-\contentsline {section}{\numberline {5.15}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Network.cpp File Reference}{62}{section.5.15}%
-\contentsline {subsection}{\numberline {5.15.1}Function Documentation}{63}{subsection.5.15.1}%
-\contentsline {subsubsection}{\numberline {5.15.1.1}dfs\_art()}{63}{subsubsection.5.15.1.1}%
-\contentsline {subsubsection}{\numberline {5.15.1.2}haversineDistance()}{63}{subsubsection.5.15.1.2}%
-\contentsline {section}{\numberline {5.16}src/main.cpp File Reference}{64}{section.5.16}%
-\contentsline {subsection}{\numberline {5.16.1}Function Documentation}{64}{subsection.5.16.1}%
-\contentsline {subsubsection}{\numberline {5.16.1.1}main()}{64}{subsubsection.5.16.1.1}%
-\contentsline {chapter}{Index}{65}{section*.31}%
+\contentsline {subsection}{\numberline {4.7.3}Member Function Documentation}{41}{subsection.4.7.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.1}addEdge()}{41}{subsubsection.4.7.3.1}%
+\contentsline {subsubsection}{\numberline {4.7.3.2}getAdj()}{41}{subsubsection.4.7.3.2}%
+\contentsline {subsubsection}{\numberline {4.7.3.3}getDistance()}{41}{subsubsection.4.7.3.3}%
+\contentsline {subsubsection}{\numberline {4.7.3.4}getInDegree()}{42}{subsubsection.4.7.3.4}%
+\contentsline {subsubsection}{\numberline {4.7.3.5}getInfo()}{42}{subsubsection.4.7.3.5}%
+\contentsline {subsubsection}{\numberline {4.7.3.6}getLow()}{42}{subsubsection.4.7.3.6}%
+\contentsline {subsubsection}{\numberline {4.7.3.7}getNum()}{42}{subsubsection.4.7.3.7}%
+\contentsline {subsubsection}{\numberline {4.7.3.8}isProcessing()}{43}{subsubsection.4.7.3.8}%
+\contentsline {subsubsection}{\numberline {4.7.3.9}isVisited()}{43}{subsubsection.4.7.3.9}%
+\contentsline {subsubsection}{\numberline {4.7.3.10}removeEdgeTo()}{43}{subsubsection.4.7.3.10}%
+\contentsline {subsubsection}{\numberline {4.7.3.11}setAdj()}{43}{subsubsection.4.7.3.11}%
+\contentsline {subsubsection}{\numberline {4.7.3.12}setDistance()}{44}{subsubsection.4.7.3.12}%
+\contentsline {subsubsection}{\numberline {4.7.3.13}setInDegree()}{44}{subsubsection.4.7.3.13}%
+\contentsline {subsubsection}{\numberline {4.7.3.14}setInfo()}{44}{subsubsection.4.7.3.14}%
+\contentsline {subsubsection}{\numberline {4.7.3.15}setLow()}{44}{subsubsection.4.7.3.15}%
+\contentsline {subsubsection}{\numberline {4.7.3.16}setNum()}{45}{subsubsection.4.7.3.16}%
+\contentsline {subsubsection}{\numberline {4.7.3.17}setProcessing()}{45}{subsubsection.4.7.3.17}%
+\contentsline {subsubsection}{\numberline {4.7.3.18}setVisited()}{45}{subsubsection.4.7.3.18}%
+\contentsline {subsection}{\numberline {4.7.4}Friends And Related Symbol Documentation}{45}{subsection.4.7.4}%
+\contentsline {subsubsection}{\numberline {4.7.4.1}Graph$<$ T $>$}{45}{subsubsection.4.7.4.1}%
+\contentsline {subsection}{\numberline {4.7.5}Member Data Documentation}{46}{subsection.4.7.5}%
+\contentsline {subsubsection}{\numberline {4.7.5.1}adj}{46}{subsubsection.4.7.5.1}%
+\contentsline {subsubsection}{\numberline {4.7.5.2}distance}{46}{subsubsection.4.7.5.2}%
+\contentsline {subsubsection}{\numberline {4.7.5.3}indegree}{46}{subsubsection.4.7.5.3}%
+\contentsline {subsubsection}{\numberline {4.7.5.4}info}{46}{subsubsection.4.7.5.4}%
+\contentsline {subsubsection}{\numberline {4.7.5.5}low}{46}{subsubsection.4.7.5.5}%
+\contentsline {subsubsection}{\numberline {4.7.5.6}num}{46}{subsubsection.4.7.5.6}%
+\contentsline {subsubsection}{\numberline {4.7.5.7}processing}{46}{subsubsection.4.7.5.7}%
+\contentsline {subsubsection}{\numberline {4.7.5.8}visited}{46}{subsubsection.4.7.5.8}%
+\contentsline {chapter}{\numberline {5}File Documentation}{47}{chapter.5}%
+\contentsline {section}{\numberline {5.1}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airline.hpp File Reference}{47}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Airline.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{47}{section.5.2}%
+\contentsline {section}{\numberline {5.3}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airport.hpp File Reference}{48}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Airport.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{48}{section.5.4}%
+\contentsline {section}{\numberline {5.5}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.hpp File Reference}{48}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Function Documentation}{49}{subsection.5.5.1}%
+\contentsline {subsubsection}{\numberline {5.5.1.1}clearScreen()}{49}{subsubsection.5.5.1.1}%
+\contentsline {section}{\numberline {5.6}App.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{49}{section.5.6}%
+\contentsline {section}{\numberline {5.7}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Network.hpp File Reference}{49}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Function Documentation}{50}{subsection.5.7.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.1}dfs\_art()}{50}{subsubsection.5.7.1.1}%
+\contentsline {subsubsection}{\numberline {5.7.1.2}haversineDistance()}{50}{subsubsection.5.7.1.2}%
+\contentsline {section}{\numberline {5.8}Flight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Network.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{51}{section.5.8}%
+\contentsline {section}{\numberline {5.9}inc/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Graph.hpp File Reference}{52}{section.5.9}%
+\contentsline {subsection}{\numberline {5.9.1}Function Documentation}{52}{subsection.5.9.1}%
+\contentsline {subsubsection}{\numberline {5.9.1.1}nodesAtDistanceDFSVisit()\hspace {0.1cm}{\footnotesize \ttfamily [1/2]}}{52}{subsubsection.5.9.1.1}%
+\contentsline {subsubsection}{\numberline {5.9.1.2}nodesAtDistanceDFSVisit()\hspace {0.1cm}{\footnotesize \ttfamily [2/2]}}{52}{subsubsection.5.9.1.2}%
+\contentsline {section}{\numberline {5.10}Graph.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}hpp}{53}{section.5.10}%
+\contentsline {section}{\numberline {5.11}README.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}md File Reference}{60}{section.5.11}%
+\contentsline {section}{\numberline {5.12}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airline.cpp File Reference}{60}{section.5.12}%
+\contentsline {section}{\numberline {5.13}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Airport.cpp File Reference}{60}{section.5.13}%
+\contentsline {section}{\numberline {5.14}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}App.cpp File Reference}{60}{section.5.14}%
+\contentsline {subsection}{\numberline {5.14.1}Function Documentation}{60}{subsection.5.14.1}%
+\contentsline {subsubsection}{\numberline {5.14.1.1}clearScreen()}{60}{subsubsection.5.14.1.1}%
+\contentsline {section}{\numberline {5.15}src/\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Flight\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Network.cpp File Reference}{60}{section.5.15}%
+\contentsline {subsection}{\numberline {5.15.1}Function Documentation}{61}{subsection.5.15.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.1}dfs\_art()}{61}{subsubsection.5.15.1.1}%
+\contentsline {subsubsection}{\numberline {5.15.1.2}haversineDistance()}{61}{subsubsection.5.15.1.2}%
+\contentsline {section}{\numberline {5.16}src/main.cpp File Reference}{62}{section.5.16}%
+\contentsline {subsection}{\numberline {5.16.1}Function Documentation}{62}{subsection.5.16.1}%
+\contentsline {subsubsection}{\numberline {5.16.1.1}main()}{62}{subsubsection.5.16.1.1}%
+\contentsline {chapter}{Index}{63}{section*.31}%
