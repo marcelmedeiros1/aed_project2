@@ -122,175 +122,175 @@
 \indexentry{airlineCodeToName@{airlineCodeToName}!FlightNetwork@{FlightNetwork}|hyperpage}{24}
 \indexentry{FlightNetwork@{FlightNetwork}!airportCodeToName@{airportCodeToName}|hyperpage}{24}
 \indexentry{airportCodeToName@{airportCodeToName}!FlightNetwork@{FlightNetwork}|hyperpage}{24}
-\indexentry{FlightNetwork@{FlightNetwork}!bestFlight@{bestFlight}|hyperpage}{25}
-\indexentry{bestFlight@{bestFlight}!FlightNetwork@{FlightNetwork}|hyperpage}{25}
-\indexentry{FlightNetwork@{FlightNetwork}!cityCriteria@{cityCriteria}|hyperpage}{25}
-\indexentry{cityCriteria@{cityCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{25}
-\indexentry{FlightNetwork@{FlightNetwork}!codeCriteria@{codeCriteria}|hyperpage}{25}
-\indexentry{codeCriteria@{codeCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{25}
-\indexentry{FlightNetwork@{FlightNetwork}!coordinateCriteria@{coordinateCriteria}|hyperpage}{26}
-\indexentry{coordinateCriteria@{coordinateCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{26}
-\indexentry{FlightNetwork@{FlightNetwork}!getAiportsGraph@{getAiportsGraph}|hyperpage}{26}
-\indexentry{getAiportsGraph@{getAiportsGraph}!FlightNetwork@{FlightNetwork}|hyperpage}{26}
-\indexentry{FlightNetwork@{FlightNetwork}!getAirportsDestinations@{getAirportsDestinations}|hyperpage}{27}
-\indexentry{getAirportsDestinations@{getAirportsDestinations}!FlightNetwork@{FlightNetwork}|hyperpage}{27}
-\indexentry{FlightNetwork@{FlightNetwork}!getCitiesDestinations@{getCitiesDestinations}|hyperpage}{27}
-\indexentry{getCitiesDestinations@{getCitiesDestinations}!FlightNetwork@{FlightNetwork}|hyperpage}{27}
-\indexentry{FlightNetwork@{FlightNetwork}!getCountriesDestinations@{getCountriesDestinations}|hyperpage}{27}
-\indexentry{getCountriesDestinations@{getCountriesDestinations}!FlightNetwork@{FlightNetwork}|hyperpage}{27}
-\indexentry{FlightNetwork@{FlightNetwork}!getDiffCountriesAirport@{getDiffCountriesAirport}|hyperpage}{28}
-\indexentry{getDiffCountriesAirport@{getDiffCountriesAirport}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
-\indexentry{FlightNetwork@{FlightNetwork}!getDiffCountriesCity@{getDiffCountriesCity}|hyperpage}{28}
-\indexentry{getDiffCountriesCity@{getDiffCountriesCity}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
-\indexentry{FlightNetwork@{FlightNetwork}!getEssentialAirports@{getEssentialAirports}|hyperpage}{28}
-\indexentry{getEssentialAirports@{getEssentialAirports}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
-\indexentry{FlightNetwork@{FlightNetwork}!getGlobalNumOfAirports@{getGlobalNumOfAirports}|hyperpage}{28}
-\indexentry{getGlobalNumOfAirports@{getGlobalNumOfAirports}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
-\indexentry{FlightNetwork@{FlightNetwork}!getGlobalNumOfFlights@{getGlobalNumOfFlights}|hyperpage}{29}
-\indexentry{getGlobalNumOfFlights@{getGlobalNumOfFlights}!FlightNetwork@{FlightNetwork}|hyperpage}{29}
-\indexentry{FlightNetwork@{FlightNetwork}!getGreatestTraffic@{getGreatestTraffic}|hyperpage}{29}
-\indexentry{getGreatestTraffic@{getGreatestTraffic}!FlightNetwork@{FlightNetwork}|hyperpage}{29}
-\indexentry{FlightNetwork@{FlightNetwork}!getReachableAirports@{getReachableAirports}|hyperpage}{29}
-\indexentry{getReachableAirports@{getReachableAirports}!FlightNetwork@{FlightNetwork}|hyperpage}{29}
-\indexentry{FlightNetwork@{FlightNetwork}!getReachableCities@{getReachableCities}|hyperpage}{30}
-\indexentry{getReachableCities@{getReachableCities}!FlightNetwork@{FlightNetwork}|hyperpage}{30}
-\indexentry{FlightNetwork@{FlightNetwork}!getReachableCountries@{getReachableCountries}|hyperpage}{30}
-\indexentry{getReachableCountries@{getReachableCountries}!FlightNetwork@{FlightNetwork}|hyperpage}{30}
-\indexentry{FlightNetwork@{FlightNetwork}!listBestFlights@{listBestFlights}|hyperpage}{30}
-\indexentry{listBestFlights@{listBestFlights}!FlightNetwork@{FlightNetwork}|hyperpage}{30}
-\indexentry{FlightNetwork@{FlightNetwork}!maximumTrip@{maximumTrip}|hyperpage}{31}
-\indexentry{maximumTrip@{maximumTrip}!FlightNetwork@{FlightNetwork}|hyperpage}{31}
-\indexentry{FlightNetwork@{FlightNetwork}!nameCriteria@{nameCriteria}|hyperpage}{31}
-\indexentry{nameCriteria@{nameCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{31}
-\indexentry{FlightNetwork@{FlightNetwork}!numFlightsAirline@{numFlightsAirline}|hyperpage}{32}
-\indexentry{numFlightsAirline@{numFlightsAirline}!FlightNetwork@{FlightNetwork}|hyperpage}{32}
-\indexentry{FlightNetwork@{FlightNetwork}!numFlightsAirport@{numFlightsAirport}|hyperpage}{32}
-\indexentry{numFlightsAirport@{numFlightsAirport}!FlightNetwork@{FlightNetwork}|hyperpage}{32}
-\indexentry{FlightNetwork@{FlightNetwork}!numFlightsCity@{numFlightsCity}|hyperpage}{32}
-\indexentry{numFlightsCity@{numFlightsCity}!FlightNetwork@{FlightNetwork}|hyperpage}{32}
-\indexentry{FlightNetwork@{FlightNetwork}!airportsGraph@{airportsGraph}|hyperpage}{33}
-\indexentry{airportsGraph@{airportsGraph}!FlightNetwork@{FlightNetwork}|hyperpage}{33}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{33}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!addEdge@{addEdge}|hyperpage}{34}
-\indexentry{addEdge@{addEdge}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{34}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!addVertex@{addVertex}|hyperpage}{34}
-\indexentry{addVertex@{addVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{34}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!bfs@{bfs}|hyperpage}{35}
-\indexentry{bfs@{bfs}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{35}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!bfsDistance@{bfsDistance}|hyperpage}{35}
-\indexentry{bfsDistance@{bfsDistance}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{35}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!dfs@{dfs}|hyperpage}{35}
-\indexentry{dfs@{dfs}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{35}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!dfs@{dfs}|hyperpage}{36}
-\indexentry{dfs@{dfs}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{36}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!dfsVisit@{dfsVisit}|hyperpage}{36}
-\indexentry{dfsVisit@{dfsVisit}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{36}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!EdgesAtDistanceDFS@{EdgesAtDistanceDFS}|hyperpage}{36}
-\indexentry{EdgesAtDistanceDFS@{EdgesAtDistanceDFS}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{36}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!findVertex@{findVertex}|hyperpage}{37}
-\indexentry{findVertex@{findVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!getNumVertex@{getNumVertex}|hyperpage}{37}
-\indexentry{getNumVertex@{getNumVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!getVertexSet@{getVertexSet}|hyperpage}{37}
-\indexentry{getVertexSet@{getVertexSet}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!inDegree@{inDegree}|hyperpage}{37}
-\indexentry{inDegree@{inDegree}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!nodesAtDistanceDFS@{nodesAtDistanceDFS}|hyperpage}{38}
-\indexentry{nodesAtDistanceDFS@{nodesAtDistanceDFS}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{38}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!removeEdge@{removeEdge}|hyperpage}{38}
-\indexentry{removeEdge@{removeEdge}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{38}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!removeVertex@{removeVertex}|hyperpage}{38}
-\indexentry{removeVertex@{removeVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{38}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!vertexSet@{vertexSet}|hyperpage}{39}
-\indexentry{vertexSet@{vertexSet}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{39}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{39}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!Vertex@{Vertex}|hyperpage}{41}
-\indexentry{Vertex@{Vertex}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{41}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!addEdge@{addEdge}|hyperpage}{41}
-\indexentry{addEdge@{addEdge}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{41}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getAdj@{getAdj}|hyperpage}{41}
-\indexentry{getAdj@{getAdj}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{41}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getDistance@{getDistance}|hyperpage}{41}
-\indexentry{getDistance@{getDistance}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{41}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getInDegree@{getInDegree}|hyperpage}{42}
-\indexentry{getInDegree@{getInDegree}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getInfo@{getInfo}|hyperpage}{42}
-\indexentry{getInfo@{getInfo}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getLow@{getLow}|hyperpage}{42}
-\indexentry{getLow@{getLow}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getNum@{getNum}|hyperpage}{42}
-\indexentry{getNum@{getNum}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!isProcessing@{isProcessing}|hyperpage}{42}
-\indexentry{isProcessing@{isProcessing}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!isVisited@{isVisited}|hyperpage}{43}
-\indexentry{isVisited@{isVisited}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!removeEdgeTo@{removeEdgeTo}|hyperpage}{43}
-\indexentry{removeEdgeTo@{removeEdgeTo}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setAdj@{setAdj}|hyperpage}{43}
-\indexentry{setAdj@{setAdj}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setDistance@{setDistance}|hyperpage}{44}
-\indexentry{setDistance@{setDistance}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setInDegree@{setInDegree}|hyperpage}{44}
-\indexentry{setInDegree@{setInDegree}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setInfo@{setInfo}|hyperpage}{44}
-\indexentry{setInfo@{setInfo}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setLow@{setLow}|hyperpage}{44}
-\indexentry{setLow@{setLow}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setNum@{setNum}|hyperpage}{45}
-\indexentry{setNum@{setNum}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setProcessing@{setProcessing}|hyperpage}{45}
-\indexentry{setProcessing@{setProcessing}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setVisited@{setVisited}|hyperpage}{45}
-\indexentry{setVisited@{setVisited}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{45}
-\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!adj@{adj}|hyperpage}{46}
-\indexentry{adj@{adj}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!distance@{distance}|hyperpage}{46}
-\indexentry{distance@{distance}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!indegree@{indegree}|hyperpage}{46}
-\indexentry{indegree@{indegree}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!info@{info}|hyperpage}{46}
-\indexentry{info@{info}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!low@{low}|hyperpage}{46}
-\indexentry{low@{low}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!num@{num}|hyperpage}{46}
-\indexentry{num@{num}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!processing@{processing}|hyperpage}{46}
-\indexentry{processing@{processing}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!visited@{visited}|hyperpage}{46}
-\indexentry{visited@{visited}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
-\indexentry{inc/Airline.hpp@{inc/Airline.hpp}|hyperpage}{47}
-\indexentry{inc/Airline.hpp@{inc/Airline.hpp}|hyperpage}{47}
-\indexentry{inc/Airport.hpp@{inc/Airport.hpp}|hyperpage}{48}
-\indexentry{inc/Airport.hpp@{inc/Airport.hpp}|hyperpage}{48}
-\indexentry{inc/App.hpp@{inc/App.hpp}|hyperpage}{48}
-\indexentry{App.hpp@{App.hpp}!clearScreen@{clearScreen}|hyperpage}{49}
-\indexentry{clearScreen@{clearScreen}!App.hpp@{App.hpp}|hyperpage}{49}
-\indexentry{inc/App.hpp@{inc/App.hpp}|hyperpage}{49}
-\indexentry{inc/FlightNetwork.hpp@{inc/FlightNetwork.hpp}|hyperpage}{49}
-\indexentry{FlightNetwork.hpp@{FlightNetwork.hpp}!dfs\_art@{dfs\_art}|hyperpage}{50}
-\indexentry{dfs\_art@{dfs\_art}!FlightNetwork.hpp@{FlightNetwork.hpp}|hyperpage}{50}
-\indexentry{FlightNetwork.hpp@{FlightNetwork.hpp}!haversineDistance@{haversineDistance}|hyperpage}{50}
-\indexentry{haversineDistance@{haversineDistance}!FlightNetwork.hpp@{FlightNetwork.hpp}|hyperpage}{50}
+\indexentry{FlightNetwork@{FlightNetwork}!bestFlight@{bestFlight}|hyperpage}{26}
+\indexentry{bestFlight@{bestFlight}!FlightNetwork@{FlightNetwork}|hyperpage}{26}
+\indexentry{FlightNetwork@{FlightNetwork}!cityCriteria@{cityCriteria}|hyperpage}{26}
+\indexentry{cityCriteria@{cityCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{26}
+\indexentry{FlightNetwork@{FlightNetwork}!codeCriteria@{codeCriteria}|hyperpage}{27}
+\indexentry{codeCriteria@{codeCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{27}
+\indexentry{FlightNetwork@{FlightNetwork}!coordinateCriteria@{coordinateCriteria}|hyperpage}{27}
+\indexentry{coordinateCriteria@{coordinateCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{27}
+\indexentry{FlightNetwork@{FlightNetwork}!getAiportsGraph@{getAiportsGraph}|hyperpage}{28}
+\indexentry{getAiportsGraph@{getAiportsGraph}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
+\indexentry{FlightNetwork@{FlightNetwork}!getAirportsDestinations@{getAirportsDestinations}|hyperpage}{28}
+\indexentry{getAirportsDestinations@{getAirportsDestinations}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
+\indexentry{FlightNetwork@{FlightNetwork}!getCitiesDestinations@{getCitiesDestinations}|hyperpage}{28}
+\indexentry{getCitiesDestinations@{getCitiesDestinations}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
+\indexentry{FlightNetwork@{FlightNetwork}!getCountriesDestinations@{getCountriesDestinations}|hyperpage}{28}
+\indexentry{getCountriesDestinations@{getCountriesDestinations}!FlightNetwork@{FlightNetwork}|hyperpage}{28}
+\indexentry{FlightNetwork@{FlightNetwork}!getDiffCountriesAirport@{getDiffCountriesAirport}|hyperpage}{29}
+\indexentry{getDiffCountriesAirport@{getDiffCountriesAirport}!FlightNetwork@{FlightNetwork}|hyperpage}{29}
+\indexentry{FlightNetwork@{FlightNetwork}!getDiffCountriesCity@{getDiffCountriesCity}|hyperpage}{29}
+\indexentry{getDiffCountriesCity@{getDiffCountriesCity}!FlightNetwork@{FlightNetwork}|hyperpage}{29}
+\indexentry{FlightNetwork@{FlightNetwork}!getEssentialAirports@{getEssentialAirports}|hyperpage}{29}
+\indexentry{getEssentialAirports@{getEssentialAirports}!FlightNetwork@{FlightNetwork}|hyperpage}{29}
+\indexentry{FlightNetwork@{FlightNetwork}!getGlobalNumOfAirports@{getGlobalNumOfAirports}|hyperpage}{30}
+\indexentry{getGlobalNumOfAirports@{getGlobalNumOfAirports}!FlightNetwork@{FlightNetwork}|hyperpage}{30}
+\indexentry{FlightNetwork@{FlightNetwork}!getGlobalNumOfFlights@{getGlobalNumOfFlights}|hyperpage}{30}
+\indexentry{getGlobalNumOfFlights@{getGlobalNumOfFlights}!FlightNetwork@{FlightNetwork}|hyperpage}{30}
+\indexentry{FlightNetwork@{FlightNetwork}!getGreatestTraffic@{getGreatestTraffic}|hyperpage}{30}
+\indexentry{getGreatestTraffic@{getGreatestTraffic}!FlightNetwork@{FlightNetwork}|hyperpage}{30}
+\indexentry{FlightNetwork@{FlightNetwork}!getReachableAirports@{getReachableAirports}|hyperpage}{31}
+\indexentry{getReachableAirports@{getReachableAirports}!FlightNetwork@{FlightNetwork}|hyperpage}{31}
+\indexentry{FlightNetwork@{FlightNetwork}!getReachableCities@{getReachableCities}|hyperpage}{31}
+\indexentry{getReachableCities@{getReachableCities}!FlightNetwork@{FlightNetwork}|hyperpage}{31}
+\indexentry{FlightNetwork@{FlightNetwork}!getReachableCountries@{getReachableCountries}|hyperpage}{31}
+\indexentry{getReachableCountries@{getReachableCountries}!FlightNetwork@{FlightNetwork}|hyperpage}{31}
+\indexentry{FlightNetwork@{FlightNetwork}!listBestFlights@{listBestFlights}|hyperpage}{32}
+\indexentry{listBestFlights@{listBestFlights}!FlightNetwork@{FlightNetwork}|hyperpage}{32}
+\indexentry{FlightNetwork@{FlightNetwork}!maximumTrip@{maximumTrip}|hyperpage}{32}
+\indexentry{maximumTrip@{maximumTrip}!FlightNetwork@{FlightNetwork}|hyperpage}{32}
+\indexentry{FlightNetwork@{FlightNetwork}!nameCriteria@{nameCriteria}|hyperpage}{32}
+\indexentry{nameCriteria@{nameCriteria}!FlightNetwork@{FlightNetwork}|hyperpage}{32}
+\indexentry{FlightNetwork@{FlightNetwork}!numFlightsAirline@{numFlightsAirline}|hyperpage}{33}
+\indexentry{numFlightsAirline@{numFlightsAirline}!FlightNetwork@{FlightNetwork}|hyperpage}{33}
+\indexentry{FlightNetwork@{FlightNetwork}!numFlightsAirport@{numFlightsAirport}|hyperpage}{33}
+\indexentry{numFlightsAirport@{numFlightsAirport}!FlightNetwork@{FlightNetwork}|hyperpage}{33}
+\indexentry{FlightNetwork@{FlightNetwork}!numFlightsCity@{numFlightsCity}|hyperpage}{34}
+\indexentry{numFlightsCity@{numFlightsCity}!FlightNetwork@{FlightNetwork}|hyperpage}{34}
+\indexentry{FlightNetwork@{FlightNetwork}!airportsGraph@{airportsGraph}|hyperpage}{34}
+\indexentry{airportsGraph@{airportsGraph}!FlightNetwork@{FlightNetwork}|hyperpage}{34}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{34}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!addEdge@{addEdge}|hyperpage}{36}
+\indexentry{addEdge@{addEdge}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{36}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!addVertex@{addVertex}|hyperpage}{36}
+\indexentry{addVertex@{addVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{36}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!bfs@{bfs}|hyperpage}{36}
+\indexentry{bfs@{bfs}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{36}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!bfsDistance@{bfsDistance}|hyperpage}{37}
+\indexentry{bfsDistance@{bfsDistance}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!dfs@{dfs}|hyperpage}{37}
+\indexentry{dfs@{dfs}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!dfs@{dfs}|hyperpage}{37}
+\indexentry{dfs@{dfs}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{37}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!dfsVisit@{dfsVisit}|hyperpage}{38}
+\indexentry{dfsVisit@{dfsVisit}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{38}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!EdgesAtDistanceDFS@{EdgesAtDistanceDFS}|hyperpage}{38}
+\indexentry{EdgesAtDistanceDFS@{EdgesAtDistanceDFS}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{38}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!findVertex@{findVertex}|hyperpage}{38}
+\indexentry{findVertex@{findVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{38}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!getNumVertex@{getNumVertex}|hyperpage}{39}
+\indexentry{getNumVertex@{getNumVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{39}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!getVertexSet@{getVertexSet}|hyperpage}{39}
+\indexentry{getVertexSet@{getVertexSet}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{39}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!inDegree@{inDegree}|hyperpage}{39}
+\indexentry{inDegree@{inDegree}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{39}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!nodesAtDistanceDFS@{nodesAtDistanceDFS}|hyperpage}{39}
+\indexentry{nodesAtDistanceDFS@{nodesAtDistanceDFS}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{39}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!removeEdge@{removeEdge}|hyperpage}{40}
+\indexentry{removeEdge@{removeEdge}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{40}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!removeVertex@{removeVertex}|hyperpage}{40}
+\indexentry{removeVertex@{removeVertex}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{40}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!vertexSet@{vertexSet}|hyperpage}{40}
+\indexentry{vertexSet@{vertexSet}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{40}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{41}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!Vertex@{Vertex}|hyperpage}{42}
+\indexentry{Vertex@{Vertex}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!addEdge@{addEdge}|hyperpage}{42}
+\indexentry{addEdge@{addEdge}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{42}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getAdj@{getAdj}|hyperpage}{43}
+\indexentry{getAdj@{getAdj}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getDistance@{getDistance}|hyperpage}{43}
+\indexentry{getDistance@{getDistance}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getInDegree@{getInDegree}|hyperpage}{43}
+\indexentry{getInDegree@{getInDegree}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getInfo@{getInfo}|hyperpage}{43}
+\indexentry{getInfo@{getInfo}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{43}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getLow@{getLow}|hyperpage}{44}
+\indexentry{getLow@{getLow}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!getNum@{getNum}|hyperpage}{44}
+\indexentry{getNum@{getNum}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!isProcessing@{isProcessing}|hyperpage}{44}
+\indexentry{isProcessing@{isProcessing}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!isVisited@{isVisited}|hyperpage}{44}
+\indexentry{isVisited@{isVisited}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!removeEdgeTo@{removeEdgeTo}|hyperpage}{44}
+\indexentry{removeEdgeTo@{removeEdgeTo}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{44}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setAdj@{setAdj}|hyperpage}{45}
+\indexentry{setAdj@{setAdj}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setDistance@{setDistance}|hyperpage}{45}
+\indexentry{setDistance@{setDistance}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setInDegree@{setInDegree}|hyperpage}{45}
+\indexentry{setInDegree@{setInDegree}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setInfo@{setInfo}|hyperpage}{45}
+\indexentry{setInfo@{setInfo}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{45}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setLow@{setLow}|hyperpage}{46}
+\indexentry{setLow@{setLow}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setNum@{setNum}|hyperpage}{46}
+\indexentry{setNum@{setNum}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setProcessing@{setProcessing}|hyperpage}{46}
+\indexentry{setProcessing@{setProcessing}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!setVisited@{setVisited}|hyperpage}{46}
+\indexentry{setVisited@{setVisited}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{46}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!Graph$<$ T $>$@{Graph$<$ T $>$}|hyperpage}{47}
+\indexentry{Graph$<$ T $>$@{Graph$<$ T $>$}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{47}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!adj@{adj}|hyperpage}{47}
+\indexentry{adj@{adj}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{47}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!distance@{distance}|hyperpage}{47}
+\indexentry{distance@{distance}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{47}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!indegree@{indegree}|hyperpage}{47}
+\indexentry{indegree@{indegree}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{47}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!info@{info}|hyperpage}{47}
+\indexentry{info@{info}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{47}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!low@{low}|hyperpage}{47}
+\indexentry{low@{low}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{47}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!num@{num}|hyperpage}{48}
+\indexentry{num@{num}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{48}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!processing@{processing}|hyperpage}{48}
+\indexentry{processing@{processing}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{48}
+\indexentry{Vertex$<$ T $>$@{Vertex$<$ T $>$}!visited@{visited}|hyperpage}{48}
+\indexentry{visited@{visited}!Vertex$<$ T $>$@{Vertex$<$ T $>$}|hyperpage}{48}
+\indexentry{inc/Airline.hpp@{inc/Airline.hpp}|hyperpage}{49}
+\indexentry{inc/Airline.hpp@{inc/Airline.hpp}|hyperpage}{49}
+\indexentry{inc/Airport.hpp@{inc/Airport.hpp}|hyperpage}{50}
+\indexentry{inc/Airport.hpp@{inc/Airport.hpp}|hyperpage}{50}
+\indexentry{inc/App.hpp@{inc/App.hpp}|hyperpage}{50}
+\indexentry{App.hpp@{App.hpp}!clearScreen@{clearScreen}|hyperpage}{51}
+\indexentry{clearScreen@{clearScreen}!App.hpp@{App.hpp}|hyperpage}{51}
+\indexentry{inc/App.hpp@{inc/App.hpp}|hyperpage}{51}
 \indexentry{inc/FlightNetwork.hpp@{inc/FlightNetwork.hpp}|hyperpage}{51}
-\indexentry{inc/Graph.hpp@{inc/Graph.hpp}|hyperpage}{52}
-\indexentry{Graph.hpp@{Graph.hpp}!nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}|hyperpage}{52}
-\indexentry{nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}!Graph.hpp@{Graph.hpp}|hyperpage}{52}
-\indexentry{Graph.hpp@{Graph.hpp}!nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}|hyperpage}{52}
-\indexentry{nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}!Graph.hpp@{Graph.hpp}|hyperpage}{52}
-\indexentry{inc/Graph.hpp@{inc/Graph.hpp}|hyperpage}{53}
-\indexentry{README.md@{README.md}|hyperpage}{60}
-\indexentry{src/Airline.cpp@{src/Airline.cpp}|hyperpage}{60}
-\indexentry{src/Airport.cpp@{src/Airport.cpp}|hyperpage}{60}
-\indexentry{src/App.cpp@{src/App.cpp}|hyperpage}{60}
-\indexentry{App.cpp@{App.cpp}!clearScreen@{clearScreen}|hyperpage}{60}
-\indexentry{clearScreen@{clearScreen}!App.cpp@{App.cpp}|hyperpage}{60}
-\indexentry{src/FlightNetwork.cpp@{src/FlightNetwork.cpp}|hyperpage}{60}
-\indexentry{FlightNetwork.cpp@{FlightNetwork.cpp}!dfs\_art@{dfs\_art}|hyperpage}{61}
-\indexentry{dfs\_art@{dfs\_art}!FlightNetwork.cpp@{FlightNetwork.cpp}|hyperpage}{61}
-\indexentry{FlightNetwork.cpp@{FlightNetwork.cpp}!haversineDistance@{haversineDistance}|hyperpage}{61}
-\indexentry{haversineDistance@{haversineDistance}!FlightNetwork.cpp@{FlightNetwork.cpp}|hyperpage}{61}
-\indexentry{src/main.cpp@{src/main.cpp}|hyperpage}{62}
-\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{62}
-\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{62}
+\indexentry{FlightNetwork.hpp@{FlightNetwork.hpp}!dfs\_art@{dfs\_art}|hyperpage}{52}
+\indexentry{dfs\_art@{dfs\_art}!FlightNetwork.hpp@{FlightNetwork.hpp}|hyperpage}{52}
+\indexentry{FlightNetwork.hpp@{FlightNetwork.hpp}!haversineDistance@{haversineDistance}|hyperpage}{52}
+\indexentry{haversineDistance@{haversineDistance}!FlightNetwork.hpp@{FlightNetwork.hpp}|hyperpage}{52}
+\indexentry{inc/FlightNetwork.hpp@{inc/FlightNetwork.hpp}|hyperpage}{53}
+\indexentry{inc/Graph.hpp@{inc/Graph.hpp}|hyperpage}{54}
+\indexentry{Graph.hpp@{Graph.hpp}!nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}|hyperpage}{54}
+\indexentry{nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}!Graph.hpp@{Graph.hpp}|hyperpage}{54}
+\indexentry{Graph.hpp@{Graph.hpp}!nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}|hyperpage}{54}
+\indexentry{nodesAtDistanceDFSVisit@{nodesAtDistanceDFSVisit}!Graph.hpp@{Graph.hpp}|hyperpage}{54}
+\indexentry{inc/Graph.hpp@{inc/Graph.hpp}|hyperpage}{55}
+\indexentry{README.md@{README.md}|hyperpage}{62}
+\indexentry{src/Airline.cpp@{src/Airline.cpp}|hyperpage}{62}
+\indexentry{src/Airport.cpp@{src/Airport.cpp}|hyperpage}{62}
+\indexentry{src/App.cpp@{src/App.cpp}|hyperpage}{62}
+\indexentry{App.cpp@{App.cpp}!clearScreen@{clearScreen}|hyperpage}{62}
+\indexentry{clearScreen@{clearScreen}!App.cpp@{App.cpp}|hyperpage}{62}
+\indexentry{src/FlightNetwork.cpp@{src/FlightNetwork.cpp}|hyperpage}{62}
+\indexentry{FlightNetwork.cpp@{FlightNetwork.cpp}!dfs\_art@{dfs\_art}|hyperpage}{63}
+\indexentry{dfs\_art@{dfs\_art}!FlightNetwork.cpp@{FlightNetwork.cpp}|hyperpage}{63}
+\indexentry{FlightNetwork.cpp@{FlightNetwork.cpp}!haversineDistance@{haversineDistance}|hyperpage}{63}
+\indexentry{haversineDistance@{haversineDistance}!FlightNetwork.cpp@{FlightNetwork.cpp}|hyperpage}{63}
+\indexentry{src/main.cpp@{src/main.cpp}|hyperpage}{64}
+\indexentry{main.cpp@{main.cpp}!main@{main}|hyperpage}{64}
+\indexentry{main@{main}!main.cpp@{main.cpp}|hyperpage}{64}

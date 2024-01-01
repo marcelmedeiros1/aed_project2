@@ -6,9 +6,11 @@
 \begin{DoxyCompactItemize}
 \item 
 double \mbox{\hyperlink{FlightNetwork_8cpp_ae8b1f9c1793fb1626fb141b9fdf126e2}{haversine\+Distance}} (double lat1, double lon1, double lat2, double lon2)
-\begin{DoxyCompactList}\small\item\em Calculates the Haversine distance between two geographical points. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Calculates the Haversine distance between two geographical points.~\newline
+Time Complexity\+: O(1) \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{FlightNetwork_8cpp_a59084262fd494b809693ffbb010d68fc}{dfs\+\_\+art}} (\mbox{\hyperlink{classGraph}{Graph}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \&g, \mbox{\hyperlink{classVertex}{Vertex}}$<$ \mbox{\hyperlink{classAirport}{Airport}} $>$ \texorpdfstring{$\ast$}{*}v, set$<$ string $>$ \&l, int \&i)
-\begin{DoxyCompactList}\small\item\em Depth-\/first search for identifying articulation points in the airport graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Depth-\/first search for identifying articulation points in the airport graph.~\newline
+Time Complexity\+: O(V + E) where V is the number of vertices in the graph. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Function Documentation}
@@ -20,7 +22,8 @@ void \mbox{\hyperlink{FlightNetwork_8cpp_a59084262fd494b809693ffbb010d68fc}{dfs\
 
 
 
-Depth-\/first search for identifying articulation points in the airport graph. 
+Depth-\/first search for identifying articulation points in the airport graph.~\newline
+Time Complexity\+: O(V + E) where V is the number of vertices in the graph. 
 
 
 \begin{DoxyParams}{Parameters}
@@ -41,7 +44,8 @@ Depth-\/first search for identifying articulation points in the airport graph.
 
 
 
-Calculates the Haversine distance between two geographical points. 
+Calculates the Haversine distance between two geographical points.~\newline
+Time Complexity\+: O(1) 
 
 
 \begin{DoxyParams}{Parameters}

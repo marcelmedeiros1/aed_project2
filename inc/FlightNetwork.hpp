@@ -33,7 +33,7 @@ public:
 
     /**
      * @brief Parameterized constructor for the FlightNetwork class.\n
-     * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
+     * Time complexity: O(V + E), where V is the number of lines in the airports.csv file and E is the number of lines in the flights.csv file.
      *
      * @param airlines_filename Filename for the airlines data.
      * @param airports_filename Filename for the airports data.
@@ -102,36 +102,36 @@ public:
     std::set<std::string> getDiffCountriesAirport(const Airport &airport) const; // 3) iv.
 
     /**
-     * @brief Get the set of different countries connected to airports in a specific city.
+     * @brief Get the set of different countries connected to airports in a specific city.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @param city The target city.
      * @return Set of countries.
      */
     std::set<std::string> getDiffCountriesCity(const std::string &city) const; // 3) iv.
 
     /**
-     * @brief Get the set of airport names connected to a specific airport.
+     * @brief Get the set of airport names connected to a specific airport.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @param airport The target airport.
      * @return Set of airport names.
      */
     std::set<std::string> getAirportsDestinations(const Airport &airport) const; // 3) v.
 
     /**
-     * @brief Get the set of city names connected to a specific airport.
+     * @brief Get the set of city names connected to a specific airport.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @param airport The target airport.
      * @return Set of city names.
      */
     std::set<std::string> getCitiesDestinations(const Airport &airport) const; // 3) v.
 
     /**
-     * @brief Get the set of country names connected to a specific airport.
+     * @brief Get the set of country names connected to a specific airport.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @param airport The target airport.
      * @return Set of country names.
      */
@@ -168,27 +168,27 @@ public:
     std::set<std::string> getReachableCountries(const Airport &airport, const int &distance); // 3) vi.
 
     /**
-     * @brief Find the maximum number of stops for a round-trip connecting the given airports.
+     * @brief Find the maximum number of stops for a round-trip connecting the given airports.\n
      * Time complexity: O(V + E), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @param airports A vector of pairs representing airport codes for the round-trip.
      * @return The maximum number of stops for the round-trip.
      */
     int maximumTrip(std::vector<std::pair<std::string, std::string>> &airports); // 3) vii.
 
     /**
-     * @brief Get the set of airports with the greatest traffic, considering both incoming and outgoing flights.
+     * @brief Get the set of airports with the greatest traffic, considering both incoming and outgoing flights.\n
      * Time complexity: O(V²*E), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @param k The number of airports to retrieve.
      * @return Set of airport names with the greatest traffic.
      */
     std::set<std::string> getGreatestTraffic(const int &k); // 3) viii.
 
     /**
-     * @brief Perform a depth-first search to identify essential airports in the flight network.
+     * @brief Perform a depth-first search to identify essential airports in the flight network.\n
      * Time complexity: O(V*(V+E)), where V is the number of airports and E is the number of flights.
-     * 
+     *
      * @return Set of essential airport names.
      */
     std::set<std::string> getEssentialAirports(); // 3) ix.
@@ -235,9 +235,9 @@ public:
     std::vector<Airport> coordinateCriteria(const float &lat, const float &lon) const; // 4) iii.
 
     /**
-     * @brief Find the best flight paths between source and destination airports.
+     * @brief Find the best flight paths between source and destination airports.\n
      * Time Complexity: O(V + E) where V is the number of vertices in the graph.
-     * 
+     *
      * @param source The source airport.
      * @param destination The destination airport.
      * @param allowedAirlines Set of allowed airlines (empty for any).
@@ -247,9 +247,9 @@ public:
     std::vector<vector<Airport>> bestFlight(const Airport &source, const Airport &destination, const set<string> &allowedAirlines = {}, bool minimizeAirlines = false) const; // 4)
 
     /**
-     * @brief List the best flights based on user input for source and destination.
+     * @brief List the best flights based on user input for source and destination.\n
      * Time Complexity: O(N * M * (V + E)) where V is the number of vertices in the graph, E is the number of flights, N and M is the number of origins and destinations.
-     * 
+     *
      * @param flag1 Type of input for the source (1: code, 2: name, 3: city, 4: coordinate).
      * @param flag2 Type of input for the destination (1: code, 2: name, 3: city, 4: coordinate).
      * @param allowedAirlines Set of allowed airlines (empty for any).
@@ -259,9 +259,9 @@ public:
     std::vector<std::vector<Airport>> listBestFlights(const int &flag1, const int &flag2, const set<string> &allowedAirlines, bool minimizeAirlines) const;
 
     /**
-     * @brief Convert an airport code to its corresponding name.
+     * @brief Convert an airport code to its corresponding name.\n
      * Time Complexity: O(V) where V is the number of vertices in the graph.
-     * 
+     *
      * This function takes an airport code and searches the dataset to find the corresponding airport name.
      *
      * @param code The unique IATA code of the airport.
@@ -271,9 +271,9 @@ public:
     std::string airportCodeToName(const std::string &code);
 
     /**
-     * @brief Convert an airline code to its corresponding name.
-     * Time Complexity: O(N) where N is the number of lines in airlines.csv.
-     * 
+     * @brief Convert an airline code to its corresponding name.\n
+     * Time Complexity: O(N) where N is the number of lines in the airlines.csv.
+     *
      * This function takes an airline code and searches the dataset to find the corresponding airline name.
      *
      * @param code The unique ICAO code of the airline.
@@ -284,9 +284,9 @@ public:
 };
 
 /**
- * @brief Depth-first search for identifying articulation points in the airport graph.
+ * @brief Depth-first search for identifying articulation points in the airport graph.\n
  * Time Complexity: O(V + E) where V is the number of vertices in the graph.
- * 
+ *
  * @param g The airport graph.
  * @param v The current vertex in the DFS traversal.
  * @param l Set to store the identified articulation points.
@@ -295,7 +295,7 @@ public:
 void dfs_art(Graph<Airport> &g, Vertex<Airport> *v, set<string> &l, int &i);
 
 /**
- * @brief Calculates the Haversine distance between two geographical points.
+ * @brief Calculates the Haversine distance between two geographical points.\n
  * Time Complexity: O(1)
  * @param lat1 Latitude of the first point.
  * @param lon1 Longitude of the first point.

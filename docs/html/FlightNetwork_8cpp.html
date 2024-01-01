@@ -87,10 +87,12 @@ $(function() {
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:ae8b1f9c1793fb1626fb141b9fdf126e2" id="r_ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8b1f9c1793fb1626fb141b9fdf126e2">haversineDistance</a> (double lat1, double lon1, double lat2, double lon2)</td></tr>
-<tr class="memdesc:ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Haversine distance between two geographical points.  <br /></td></tr>
+<tr class="memdesc:ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Calculates the Haversine distance between two geographical points.<br  />
+Time Complexity: O(1)  <br /></td></tr>
 <tr class="separator:ae8b1f9c1793fb1626fb141b9fdf126e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a59084262fd494b809693ffbb010d68fc" id="r_a59084262fd494b809693ffbb010d68fc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a59084262fd494b809693ffbb010d68fc">dfs_art</a> (<a class="el" href="classGraph.html">Graph</a>&lt; <a class="el" href="classAirport.html">Airport</a> &gt; &amp;g, <a class="el" href="classVertex.html">Vertex</a>&lt; <a class="el" href="classAirport.html">Airport</a> &gt; *v, set&lt; string &gt; &amp;l, int &amp;i)</td></tr>
-<tr class="memdesc:a59084262fd494b809693ffbb010d68fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth-first search for identifying articulation points in the airport graph.  <br /></td></tr>
+<tr class="memdesc:a59084262fd494b809693ffbb010d68fc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Depth-first search for identifying articulation points in the airport graph.<br  />
+Time Complexity: O(V + E) where V is the number of vertices in the graph.  <br /></td></tr>
 <tr class="separator:a59084262fd494b809693ffbb010d68fc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
@@ -123,7 +125,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Depth-first search for identifying articulation points in the airport graph. </p>
+<p>Depth-first search for identifying articulation points in the airport graph.<br  />
+Time Complexity: O(V + E) where V is the number of vertices in the graph. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">g</td><td>The airport graph. </td></tr>
@@ -165,7 +168,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Calculates the Haversine distance between two geographical points. </p>
+<p>Calculates the Haversine distance between two geographical points.<br  />
+Time Complexity: O(1) </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">lat1</td><td>Latitude of the first point. </td></tr>
